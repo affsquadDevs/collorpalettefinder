@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --bg: #f8f8f8;
+    --surface: #ffffff;
+    --border: #e3e3e3;
+    --border2: #d0d0d0;
+    --text: #1a1a1a;
+    --text-muted: #777;
+    --text-light: #aaa;
+    --accent: #0070f3;
+    --panel-w: 280px;
+    --radius: 8px;
+  }
+
+  html,
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", system-ui, sans-serif;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  button {
+    font-family: inherit;
+  }
+}
+
+::selection {
+  background: rgba(0, 112, 243, 0.15);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 3px;
+}
+
+@keyframes rgb {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--rot, 0deg));
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(var(--rot, 0deg));
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-rgb {
+    animation: rgb 4s linear infinite;
+    background-size: 300% 300%;
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+    will-change: transform;
+  }
+}

@@ -1,0 +1,515 @@
+/* ═══════════════════════════════════════════════
+   page.module.css — Adobe Color–style
+═══════════════════════════════════════════════ */
+
+/* ── Root ──────────────────────────────────────────── */
+.root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f4f4f4;
+}
+
+/* ── Topbar ────────────────────────────────────────── */
+.topbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 0 28px;
+    height: 56px;
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #1a1a1a;
+    flex-shrink: 0;
+}
+
+.brandIcon {
+    font-size: 20px;
+    color: #1473e6;
+}
+
+.brandName strong {
+    font-weight: 700;
+}
+
+/* ── Harmony Dropdown ──────────────────────────────── */
+.dropdownWrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.dropdownGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.dropdownMeta {
+    font-size: 10px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+}
+
+.dropdownTrigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    padding: 0;
+    font-family: inherit;
+}
+
+.dropdownTrigger:hover {
+    color: #1473e6;
+}
+
+.dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
+    min-width: 220px;
+    z-index: 200;
+    padding: 6px 0;
+    animation: fadeIn 0.12s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdownItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 9px 16px;
+    font-size: 14px;
+    color: #1a1a1a;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    transition: background 0.1s;
+}
+
+.dropdownItem:hover {
+    background: #f0f0f0;
+}
+
+.dropdownItemActive {
+    color: #1473e6;
+    font-weight: 600;
+}
+
+.checkmark {
+    font-size: 12px;
+    color: #1473e6;
+}
+
+/* ── Top hex input ─────────────────────────────────── */
+.topHexWrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px 10px;
+    position: relative;
+    height: 34px;
+    margin-left: auto;
+}
+
+.topHexSwatch {
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
+    transition: background 0.2s;
+}
+
+.hashSign {
+    font-size: 13px;
+    color: #888;
+    font-family: "Courier New", monospace;
+}
+
+.topHexInput {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    font-family: "Courier New", monospace;
+    color: #1a1a1a;
+    width: 72px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.topNativePicker {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* ── Main wrapper ──────────────────────────────────── */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding-bottom: 64px;
+    width: 100%;
+}
+
+/* ── Wheel section ─────────────────────────────────── */
+.wheelSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 44px 24px 36px;
+    background: #ffffff;
+    width: 100%;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+/* ── Hue slider ────────────────────────────────────── */
+.sliderRow {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hueSlider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 14px;
+    border-radius: 7px;
+    background: linear-gradient(to right,
+            hsl(0, 90%, 55%), hsl(30, 90%, 55%), hsl(60, 90%, 55%),
+            hsl(90, 90%, 55%), hsl(120, 90%, 55%), hsl(150, 90%, 55%),
+            hsl(180, 90%, 55%), hsl(210, 90%, 55%), hsl(240, 90%, 55%),
+            hsl(270, 90%, 55%), hsl(300, 90%, 55%), hsl(330, 90%, 55%),
+            hsl(360, 90%, 55%));
+    outline: none;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.hueSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: white;
+    border: 2.5px solid rgba(0, 0, 0, 0.28);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    cursor: grab;
+    transition: box-shadow 0.15s;
+}
+
+.hueSlider::-webkit-slider-thumb:active {
+    cursor: grabbing;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.32);
+}
+
+/* ── Palette strip ─────────────────────────────────── */
+.paletteStrip {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid #e0e0e0;
+    background: #fff;
+}
+
+.swatch {
+    flex: 1;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: flex 0.25s ease;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 8px;
+    overflow: hidden;
+}
+
+.swatch:hover {
+    flex: 1.6;
+}
+
+.swatchHex {
+    font-size: 11px;
+    font-family: "Courier New", monospace;
+    padding: 3px 7px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.18);
+    opacity: 0;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+}
+
+.swatch:hover .swatchHex {
+    opacity: 1;
+}
+
+/* ── Contrast Checker ──────────────────────────────── */
+.contrastCard {
+    width: 100%;
+    max-width: 800px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-top: 32px;
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contrastHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contrastTitle {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.contrastRatio {
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    line-height: 1;
+}
+
+.contrastLevel {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: currentColor;
+    color: white;
+    opacity: 0.85;
+}
+
+.contrastRow {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.contrastLabel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 11px;
+    color: #666;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.contrastInputWrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f5f5f5;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    padding: 6px 10px;
+    position: relative;
+    height: 40px;
+}
+
+.contrastColorBox {
+    width: 22px;
+    height: 22px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+}
+
+.contrastInput {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-family: "Courier New", monospace;
+    color: #1a1a1a;
+    width: 80px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.contrastNative {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 36px;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.contrastPreviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+@media (max-width: 640px) {
+    .contrastPreviews {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contrastPreview {
+    border-radius: 6px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-height: 90px;
+    justify-content: center;
+}
+
+.contrastPreviewLabel {
+    font-size: 11px;
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+.contrastPreviewText {
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* ── All palettes ──────────────────────────────────── */
+.allPalettes {
+    width: 100%;
+    max-width: 960px;
+    padding: 32px 24px 0;
+}
+
+.sectionTitle {
+    font-size: 13px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.palettesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 14px;
+}
+
+.paletteCard {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.2s, border-color 0.2s, transform 0.18s;
+}
+
+.paletteCard:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.paletteCardActive {
+    border-color: #1473e6;
+    box-shadow: 0 0 0 2px rgba(20, 115, 230, 0.2);
+}
+
+.paletteCardStrip {
+    display: flex;
+    height: 64px;
+}
+
+.paletteCardChip {
+    flex: 1;
+}
+
+.paletteCardMeta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+}
+
+.paletteCardTitle {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.paletteCardCount {
+    font-size: 11px;
+    color: #aaa;
+}
+
+/* ── Footer ────────────────────────────────────────── */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: #aaa;
+    border-top: 1px solid #e8e8e8;
+    margin-top: 40px;
+    background: #fff;
+    width: 100%;
+}
