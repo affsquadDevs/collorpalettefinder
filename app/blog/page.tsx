@@ -50,7 +50,7 @@ export default function BlogPage() {
             <section className="px-6 sm:px-10 lg:px-16 pb-24">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-                        {BLOG_POSTS.map((post) => (
+                        {[...BLOG_POSTS].sort((a, b) => b.date.localeCompare(a.date)).map((post) => (
                             <Link
                                 key={post.slug}
                                 href={`/blog/${post.slug}`}
