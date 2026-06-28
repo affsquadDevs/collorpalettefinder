@@ -18,22 +18,12 @@ export const metadata: Metadata = {
     siteName: "colorPaletteFinder",
     type: "website",
     locale: "en_US",
-    images: [
-      {
-        url: "/og/og-image.png",
-        width: 640,
-        height: 640,
-        alt: "colorPaletteFinder — Free Color Palette Generator",
-        type: "image/jpeg",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Free Color Palette Generator — Hex Color Schemes Online",
     description:
       "Free color palette generator built on color theory. Complementary, analogous & triadic hex schemes, instantly. No signup.",
-    images: ["/og/og-image.png"],
   },
 };
 

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
     title: "Contact colorPaletteFinder — Questions & Feedback",
     description: "Contact the colorPaletteFinder team with questions, feedback, bug reports or support requests. We reply within 24–48 hours — just send us an email today.",
     openGraph: {
+            images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
         title: "Contact colorPaletteFinder — Questions & Feedback",
         description: "Reach out to us if you have any questions or feedback.",
         type: "website",

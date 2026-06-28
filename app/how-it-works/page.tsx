@@ -8,6 +8,7 @@ export const metadata: Metadata = {
         canonical: "https://colorpalettefinder.com/how-it-works",
     },
     openGraph: {
+            images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
         title: "How to Use a Color Palette Generator & Color Wheel",
         description: "Step-by-step guide to building harmonious, accessible color palettes — using the color wheel, 7 harmony rules, and a WCAG contrast checker.",
         url: "https://colorpalettefinder.com/how-it-works",

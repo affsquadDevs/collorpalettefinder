@@ -8,6 +8,7 @@ export const metadata: Metadata = {
         canonical: "https://colorpalettefinder.com/color-palette-generator",
     },
     openGraph: {
+            images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
         title: "Color Palette Generator with Color Wheel & Contrast Checker",
         description:
             "Interactive color palette generator with a color wheel, 7 harmony rules, HSL/RGB values and a WCAG contrast checker. Generate hex schemes free.",
@@ -15,22 +16,13 @@ export const metadata: Metadata = {
         siteName: "colorPaletteFinder",
         type: "website",
         locale: "en_US",
-        images: [
-            {
-                url: "/og/og-image.png",
-                width: 640,
-                height: 640,
-                alt: "colorPaletteFinder — Free Color Palette Generator Tool",
-                type: "image/jpeg",
-            },
-        ],
     },
     twitter: {
+            images: ["/opengraph-image"],
         card: "summary_large_image",
         title: "Color Palette Generator with Color Wheel & Contrast",
         description:
             "Interactive color palette generator: color wheel, 7 harmony rules, HSL/RGB and a WCAG contrast checker. Free, no signup.",
-        images: ["/og/og-image.png"],
     },
 };
 

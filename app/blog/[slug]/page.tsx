@@ -31,13 +31,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             type: "article",
             publishedTime: post.date,
             authors: [AUTHOR_NAME],
-            images: ["/og/og-image.png"],
         },
         twitter: {
             card: "summary_large_image",
             title: post.metaTitle,
             description: post.metaDescription,
-            images: ["/og/og-image.png"],
         },
     };
 }
@@ -134,7 +132,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 216, height: 255 },
         },
         mainEntityOfPage: { "@type": "WebPage", "@id": url },
-        image: { "@type": "ImageObject", url: `${SITE_URL}/og/og-image.png`, width: 640, height: 640 },
+        image: { "@type": "ImageObject", url: `${SITE_URL}/blog/${post.slug}/opengraph-image`, width: 1200, height: 630 },
         keywords: post.keywords.join(", "),
         articleSection: post.category,
         wordCount,

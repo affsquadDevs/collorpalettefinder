@@ -27,21 +27,11 @@ export const metadata: Metadata = {
     siteName: "colorPaletteFinder",
     type: "website",
     locale: "en_US",
-    images: [
-      {
-        url: "/og/og-image.png",
-        width: 640,
-        height: 640,
-        alt: "colorPaletteFinder — Free Color Palette Generator",
-        type: "image/jpeg",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "colorPaletteFinder — Free Color Palette Generator",
     description: "Generate harmonious color palettes using color theory — complementary, analogous, triadic, and more. Free tool for designers and developers.",
-    images: ["/og/og-image.png"],
   },
 };
 

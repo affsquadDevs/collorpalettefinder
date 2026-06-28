@@ -12,6 +12,7 @@ export const metadata: Metadata = {
         canonical: `${SITE_URL}/blog`,
     },
     openGraph: {
+            images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
         title: "Color Theory Blog — Design, Harmony & Accessibility",
         description:
             "Color theory blog with articles on color harmony, palettes, accessibility and UI design. Practical color and design tips for developers and designers.",
@@ -19,22 +20,13 @@ export const metadata: Metadata = {
         siteName: "colorPaletteFinder",
         type: "website",
         locale: "en_US",
-        images: [
-            {
-                url: "/og/og-image.png",
-                width: 640,
-                height: 640,
-                alt: "colorPaletteFinder — Color Theory Blog",
-                type: "image/png",
-            },
-        ],
     },
     twitter: {
+            images: ["/opengraph-image"],
         card: "summary_large_image",
         title: "Color Theory Blog — Design, Harmony & Accessibility",
         description:
             "Color theory blog with articles on color harmony, palettes, accessibility and UI design. Practical color and design tips for developers and designers.",
-        images: ["/og/og-image.png"],
     },
 };
 

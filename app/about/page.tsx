@@ -8,6 +8,7 @@ export const metadata: Metadata = {
         canonical: "https://colorpalettefinder.com/about",
     },
     openGraph: {
+            images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
         title: "About colorPaletteFinder",
         description: "Learn about the mission behind colorPaletteFinder — the ultimate free color palette generator for professionals.",
         type: "website",
