@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -29,10 +30,10 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og/og-image.png",
-        width: 1200,
-        height: 630,
+        width: 640,
+        height: 640,
         alt: "colorPaletteFinder — Free Color Palette Generator",
-        type: "image/png",
+        type: "image/jpeg",
       },
     ],
   },
@@ -47,19 +48,30 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.className}>
-      <head>
-        <script
+      <body>
+        {/* Google Consent Mode v2 + Google Tag Manager. Consent defaults are set FIRST
+            (non-essential storage denied) so no ad-personalization data is processed
+            before the published Google CMP ("Privacy & messaging") message records a
+            choice. Runs before the page is interactive and before the AdSense loader. */}
+        <Script
+          id="consent-and-gtm"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TCGB8Z42');`,
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
+gtag('set','ads_data_redaction',true);
+gtag('set','url_passthrough',true);
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TCGB8Z42');`,
           }}
         />
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2980943706375055" crossOrigin="anonymous"></script>
-      </head>
-      <body>
+        {/* Google AdSense loader — ad serving is gated by the CMP / Consent Mode above. */}
+        <Script
+          id="adsbygoogle-loader"
+          async
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2980943706375055"
+        />
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TCGB8Z42"
@@ -76,7 +88,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "@type": "Organization",
               name: "colorPaletteFinder",
               url: "https://colorpalettefinder.com",
-              logo: "https://colorpalettefinder.com/logo.svg",
+              logo: "https://colorpalettefinder.com/logo.png",
+              description:
+                "A free color palette generator and WCAG contrast checker built on color theory, for designers and developers.",
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer support",
+                email: "hello@colorpalettefinder.com",
+                url: "https://colorpalettefinder.com/contact",
+              },
               sameAs: [
                 "https://www.facebook.com/people/Color-Palette-Finder/61587989738551/",
                 "https://www.instagram.com/colorpalettefinder/",

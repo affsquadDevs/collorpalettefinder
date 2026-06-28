@@ -2,18 +2,34 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "How It Works | colorPaletteFinder",
-    description: "Learn how to use colorPaletteFinder, our free color palette generator. Understand color harmony rules, interactive color wheels, and WCAG contrast checking.",
+    title: "How to Use a Color Palette Generator & Color Wheel",
+    description: "Learn how to use a color palette generator: pick colors on the color wheel, apply harmony rules, and check WCAG contrast. Step-by-step guide with hex tips.",
+    alternates: {
+        canonical: "https://colorpalettefinder.com/how-it-works",
+    },
     openGraph: {
-        title: "How colorPaletteFinder Works",
-        description: "Master color theory with colorPaletteFinder. Learn to build harmonious, accessible palettes using our interactive tools.",
+        title: "How to Use a Color Palette Generator & Color Wheel",
+        description: "Step-by-step guide to building harmonious, accessible color palettes — using the color wheel, 7 harmony rules, and a WCAG contrast checker.",
+        url: "https://colorpalettefinder.com/how-it-works",
+        siteName: "colorPaletteFinder",
         type: "article",
     },
 };
 
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://colorpalettefinder.com" },
+        { "@type": "ListItem", position: 2, name: "How It Works" },
+    ],
+};
+
 export default function HowItWorksPage() {
     return (
-        <main className="flex flex-col min-h-screen bg-[#fafafa] text-gray-900 font-sans pb-32">
+        <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <main className="flex flex-col min-h-screen bg-[#fafafa] text-gray-900 font-sans pb-32">
 
             {/* Header Section */}
             <section className="px-6 sm:px-10 lg:px-16 pt-12 pb-16 bg-white border-b border-gray-100">
@@ -39,7 +55,7 @@ export default function HowItWorksPage() {
                     {/* Intro */}
                     <article className="prose prose-lg md:prose-xl prose-blue max-w-none text-gray-600">
                         <p className="lead text-gray-800 font-medium text-xl mb-12">
-                            colorPaletteFinder is built on classic color theory principles combined with modern digital design requirements. We’ve designed a seamless interface where you don't need to manually calculate hues or verify contrast ratios — the tool does the heavy lifting for you.
+                            colorPaletteFinder is built on classic color theory principles combined with modern digital design requirements. We’ve designed a seamless interface where you don’t need to manually calculate hues or verify contrast ratios — the tool does the heavy lifting for you.
                         </p>
 
                         <h2 className="text-3xl font-bold text-gray-900 mt-16 mb-6">1. The Interactive Color Wheel</h2>
@@ -133,6 +149,7 @@ export default function HowItWorksPage() {
                 </div>
             </section>
 
-        </main>
+            </main>
+        </>
     );
 }

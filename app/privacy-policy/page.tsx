@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Privacy Policy | colorPaletteFinder",
-    description: "Learn how colorPaletteFinder collects, uses, and protects your data.",
+    title: "Privacy Policy — colorPaletteFinder",
+    description: "Read the colorPaletteFinder privacy policy: how we collect, use, and protect your data, plus cookies, advertising, analytics and your consent choices.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -52,7 +52,7 @@ export default function PrivacyPolicyPage() {
                         </p>
                         <ul className="list-disc pl-6 space-y-2 my-4">
                             <li>To provide, operate, and maintain our website.</li>
-                            <li>To improve, personalize, and expand our website's functionality based on user interactions.</li>
+                            <li>To improve, personalize, and expand our website’s functionality based on user interactions.</li>
                             <li>To understand and analyze how users interact with our color palette tools.</li>
                             <li>To communicate with you, including responding to inquiries or providing customer support.</li>
                             <li>To detect, prevent, and address technical issues or security breaches.</li>
@@ -60,18 +60,36 @@ export default function PrivacyPolicyPage() {
 
                         <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">3. Cookies and Tracking Technologies</h2>
                         <p>
-                            We may use cookies and similar tracking technologies to track the activity on our website and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier.
+                            We use cookies and similar tracking technologies to operate our website, remember your preferences, analyze traffic, and — together with our advertising partners — deliver and measure advertising. Cookies are small data files that may include an anonymous unique identifier.
                         </p>
                         <p>
-                            You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some functional portions of our website efficiently.
+                            The cookies we use fall into three broad categories: <strong>essential cookies</strong> required for the site to function, <strong>analytics cookies</strong> that help us understand how the site is used, and <strong>advertising cookies</strong> set by Google and other third-party vendors (described in Section 4 below).
+                        </p>
+                        <p>
+                            You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. If you are located in the European Economic Area (EEA), the United Kingdom, or Switzerland, we ask for your consent before setting non-essential cookies, and you can change or withdraw that consent at any time using the privacy settings on our site. However, if you do not accept cookies, some functional portions of our website may not work efficiently.
                         </p>
 
-                        <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">4. Third-Party Services</h2>
+                        <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">4. Advertising, Analytics &amp; Third-Party Services</h2>
                         <p>
-                            We may employ third-party companies and individuals globally to facilitate our website ("Service Providers"), to provide the service on our behalf, or to assist us in analyzing how our website is used (e.g., Google Analytics).
+                            colorPaletteFinder is free to use. To cover our hosting and development costs, we display advertising served by Google and other third-party vendors. This section explains how advertising and other third-party services work on our site and how you can control them.
+                        </p>
+                        <ul className="list-disc pl-6 space-y-2 my-4">
+                            <li><strong>Google AdSense:</strong> We use Google AdSense to display ads. Google, as a third-party vendor, uses cookies to serve ads on our site.</li>
+                            <li><strong>Google advertising cookies:</strong> Google&apos;s use of advertising cookies (including cookies served from the <code>google.com</code> and <code>doubleclick.net</code> domains) enables Google and its partners to serve ads to you based on your visit to colorPaletteFinder and/or other sites on the Internet.</li>
+                            <li><strong>Third-party vendors &amp; ad networks:</strong> Third-party vendors and ad networks may also use cookies, web beacons, and similar technologies to collect information and serve ads they believe are relevant to your interests.</li>
+                            <li><strong>Analytics:</strong> We use services such as Google Analytics and Google Tag Manager to understand how visitors use our site. These providers may set their own cookies and process usage data on our behalf.</li>
+                        </ul>
+                        <p>
+                            <strong>How to opt out of personalized advertising:</strong> You may opt out of personalized advertising by visiting <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Google Ads Settings</a>. You can opt out of some third-party vendors&apos; use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">www.aboutads.info/choices</a>, or, if you are in the EEA or UK, <a href="https://www.youronlinechoices.eu" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">www.youronlinechoices.eu</a>.
                         </p>
                         <p>
-                            These third parties have access to your identifying data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.
+                            For more information on how Google uses data when you use our site, please review <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">How Google uses information from sites or apps that use our services</a>.
+                        </p>
+                        <p>
+                            <strong>Consent (EEA, UK &amp; Switzerland):</strong> For visitors in the European Economic Area, the United Kingdom, and Switzerland, we use a Google-certified Consent Management Platform to request your consent before any non-essential or advertising cookies are set. By default, ad personalization and analytics storage are disabled until you provide consent. You can change or withdraw your consent at any time through the privacy settings on our site.
+                        </p>
+                        <p>
+                            Any other third parties we employ have access to your data only to perform tasks on our behalf and are obligated not to disclose or use it for any other purpose. We are not responsible for the privacy practices of these third parties; we encourage you to review their respective privacy policies.
                         </p>
 
                         <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">5. Data Security</h2>
@@ -79,14 +97,14 @@ export default function PrivacyPolicyPage() {
                             We take the security of your data seriously and strive to use commercially acceptable means to protect it. However, please be aware that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we endeavor to protect your personal data, we cannot guarantee its absolute security.
                         </p>
 
-                        <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">6. Children's Privacy</h2>
+                        <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">6. Children’s Privacy</h2>
                         <p>
                             Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If you are a parent or guardian and you are aware that your child has provided us with Personal Data, please contact us.
                         </p>
 
                         <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">7. Changes to This Privacy Policy</h2>
                         <p>
-                            We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this document. We advise you to review this Privacy Policy periodically for any changes.
+                            We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the “Last Updated” date at the top of this document. We advise you to review this Privacy Policy periodically for any changes.
                         </p>
 
                         <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">8. Contact Us</h2>

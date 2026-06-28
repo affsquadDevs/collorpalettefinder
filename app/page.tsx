@@ -4,16 +4,16 @@ import Link from "next/link";
 const SITE_URL = "https://colorpalettefinder.com";
 
 export const metadata: Metadata = {
-  title: "Free Color Palette Generator — colorPaletteFinder",
+  title: "Free Color Palette Generator — Hex Color Schemes Online",
   description:
-    "Generate harmonious color palettes instantly using color theory. Complementary, analogous, triadic, and more. Free tool for designers and developers.",
+    "Free color palette generator built on color theory. Create complementary, analogous & triadic schemes with hex codes instantly — no signup. Start now.",
   alternates: {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: "Free Color Palette Generator — colorPaletteFinder",
+    title: "Free Color Palette Generator — Hex Color Schemes Online",
     description:
-      "Generate harmonious color palettes using color theory. Complementary, analogous, triadic, split-complementary, and more.",
+      "Free color palette generator built on color theory. Create complementary, analogous & triadic color schemes with hex codes instantly — no signup.",
     url: SITE_URL,
     siteName: "colorPaletteFinder",
     type: "website",
@@ -21,18 +21,18 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og/og-image.png",
-        width: 1200,
-        height: 630,
+        width: 640,
+        height: 640,
         alt: "colorPaletteFinder — Free Color Palette Generator",
-        type: "image/png",
+        type: "image/jpeg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free Color Palette Generator — colorPaletteFinder",
+    title: "Free Color Palette Generator — Hex Color Schemes Online",
     description:
-      "Generate harmonious color palettes using color theory. Free tool for designers and developers.",
+      "Free color palette generator built on color theory. Complementary, analogous & triadic hex schemes, instantly. No signup.",
     images: ["/og/og-image.png"],
   },
 };
@@ -145,11 +145,26 @@ export default function HomePage() {
                 Built for designers, developers, and creatives.
               </p>
 
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Link
+                  href="/color-palette-generator"
+                  className="inline-flex items-center justify-center bg-gray-900 text-white text-base font-semibold py-3.5 px-8 rounded-full transition-all duration-200 hover:bg-black hover:shadow-[0_6px_20px_rgba(0,0,0,0.18)] hover:-translate-y-[1px] active:scale-95"
+                >
+                  Open the Generator
+                </Link>
+                <Link
+                  href="/how-it-works"
+                  className="inline-flex items-center justify-center text-base font-semibold py-3.5 px-8 rounded-full border border-gray-300 text-gray-700 transition-colors hover:border-gray-400 hover:text-gray-900"
+                >
+                  How it works
+                </Link>
+              </div>
+
             </div>
 
             {/* Right Column: Animated Colorful Cards */}
             <div className="hidden lg:flex flex-1 justify-center items-center w-full min-h-[350px] md:min-h-[450px] relative mt-10 lg:mt-0 lg:pr-10">
-              <div className="relative flex items-center justify-center w-full h-full">
+              <Link href="/color-palette-generator" aria-label="Open the color palette generator" className="relative flex items-center justify-center w-full h-full">
                 {[
                   { color: 'bg-rose-500', rotate: '-24deg', delay: '0s', offset: '-120px' },
                   { color: 'bg-orange-400', rotate: '-12deg', delay: '0.2s', offset: '-60px' },
@@ -171,7 +186,7 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
                   </div>
                 ))}
-              </div>
+              </Link>
             </div>
 
           </div>
