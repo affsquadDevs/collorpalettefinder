@@ -15,42 +15,29 @@ function languagesFor(path: string): Record<string, string> {
     return languages
 }
 
+type Entry = { path: string; priority: number; changeFrequency: 'weekly' | 'monthly' | 'yearly'; lastModified?: Date }
+
 export default function sitemap(): MetadataRoute.Sitemap {
-    // Core pages that are fully translated → list all-locale hreflang alternates.
-    const translated: { path: string; priority: number; changeFrequency: 'weekly' | 'monthly' | 'yearly' }[] = [
+    // Every route is fully localized → emit the default-locale URL with all-locale hreflang alternates.
+    const routes: Entry[] = [
         { path: '', priority: 1, changeFrequency: 'weekly' },
         { path: '/color-palette-generator', priority: 0.9, changeFrequency: 'weekly' },
+        { path: '/interior-color-palettes', priority: 0.85, changeFrequency: 'monthly' },
+        ...INTERIOR_ROOM_GUIDES.map((g): Entry => ({ path: `/interior-color-palettes/${g.slug}`, priority: 0.75, changeFrequency: 'monthly' })),
+        { path: '/blog', priority: 0.8, changeFrequency: 'weekly' },
+        ...BLOG_POSTS.map((post): Entry => ({ path: `/blog/${post.slug}`, priority: 0.6, changeFrequency: 'monthly', lastModified: new Date(post.date) })),
         { path: '/how-it-works', priority: 0.8, changeFrequency: 'monthly' },
         { path: '/about', priority: 0.8, changeFrequency: 'monthly' },
         { path: '/contact', priority: 0.8, changeFrequency: 'monthly' },
         { path: '/privacy-policy', priority: 0.5, changeFrequency: 'yearly' },
         { path: '/terms-of-service', priority: 0.5, changeFrequency: 'yearly' },
     ]
-    const coreEntries: MetadataRoute.Sitemap = translated.map((p) => ({
-        url: urlFor(routing.defaultLocale, p.path),
-        lastModified: new Date(),
-        changeFrequency: p.changeFrequency,
-        priority: p.priority,
-        alternates: { languages: languagesFor(p.path) },
+
+    return routes.map((r) => ({
+        url: urlFor(routing.defaultLocale, r.path),
+        lastModified: r.lastModified ?? new Date(),
+        changeFrequency: r.changeFrequency,
+        priority: r.priority,
+        alternates: { languages: languagesFor(r.path) },
     }))
-
-    // Blog + interior content is not translated yet (phase 2) → English only.
-    const enOnly: MetadataRoute.Sitemap = [
-        { url: `${baseUrl}/interior-color-palettes`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
-        ...INTERIOR_ROOM_GUIDES.map((g) => ({
-            url: `${baseUrl}/interior-color-palettes/${g.slug}`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly' as const,
-            priority: 0.75,
-        })),
-        { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
-        ...BLOG_POSTS.map((post) => ({
-            url: `${baseUrl}/blog/${post.slug}`,
-            lastModified: new Date(post.date),
-            changeFrequency: 'monthly' as const,
-            priority: 0.6,
-        })),
-    ]
-
-    return [...coreEntries, ...enOnly]
 }

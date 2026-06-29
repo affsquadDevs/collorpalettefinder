@@ -187,5 +187,43 @@
     "lastUpdatedLabel": "Last Updated:",
     "intro": "Welcome to colorPaletteFinder. By accessing or using our website, tools, and services, you agree to comply with and be bound by the following Terms of Service. Please read them carefully.",
     "body": "## 1. Acceptance of Terms\n\nThese terms govern your use of colorPaletteFinder. If you do not agree with any part of these terms, you must not use our website. Your continued use of the site constitutes your acceptance of these Terms.\n\n## 2. Website Usage Rules\n\nTo ensure a safe and reliable environment for all users, you agree to abide by the following basic rules when using colorPaletteFinder:\n\n- **Lawful Use:** You agree not to use the site for any unlawful purpose or in any way that violates applicable local, national, or international law.\n- **No Scraping or Automated Access:** You may not use automated systems, bots, scrapers, or similar data gathering tools to extract information, colors, or palettes from our site in bulk without our express written permission.\n- **No Interference:** You agree not to interfere with, disrupt, or attempt to gain unauthorized access to the servers or networks connected to our website.\n- **Personal and Professional Use:** The generated palettes and tools are completely free for both your personal and professional/commercial use.\n\n## 3. Monetization and Partner Promotions\n\n**Free to Use:** Our color generation tools and content are offered entirely for free. To keep the website running, pay server costs, and continue development, the website is monetized through advertisements and partner promotions.\n\n- You may see display ads or third-party banners while navigating the site.\n- We may include affiliate links or partner promotions in our blog content or interface. Clicking these links or purchasing through them may earn us a small commission at no extra cost to you.\n- We are not responsible for the content, privacy policies, or practices of any third-party websites or services linked to from our ads or promotions.\n\n## 4. Risk Warning and Disclaimer of Liability\n\n**CRITICAL RISK WARNING:** colorPaletteFinder provides educational color theory tools and palette generators for designers and developers. However, all calculations, color harmonies, and contrast ratios are intended for **guidance only**.\n\n- **No Guarantee of Accuracy:** While we strive to use precise mathematical formulas for generating color harmonies and verifying WCAG contrast ratios, we make no warranties regarding the absolute accuracy, reliability, or completeness of the tools.\n- **Accessibility Compliance:** You are solely responsible for ensuring that the colors you choose comply with legal accessibility standards (such as WCAG guidelines, ADA compliance) in your final products. **Do not rely solely on our tool for legal or critical compliance testing.**\n- **“As Is” Basis:** The website and its tools are provided on an “AS IS” and “AS AVAILABLE” basis, without any warranties of any kind, either express or implied.\n- **Limitation of Liability:** In no event shall colorPaletteFinder, its creators, or its team be liable for any direct, indirect, incidental, consequential, or special damages arising out of or in connection with your use of the website, including, but not limited to, design flaws, accessibility lawsuits, or loss of profits.\n\n## 5. Intellectual Property\n\nThe website’s original content, features, layout, and functionality (excluding the generated hex codes, which are yours to use freely) are owned by colorPaletteFinder and are protected by international copyright, trademark, and intellectual property laws. You may not reproduce our branding, logo, or proprietary code without permission.\n\n## 6. Modifications to Terms\n\nWe reserve the right to modify or replace these Terms of Service at any time. If a revision is material, we will try to provide at least 30 days’ notice prior to any new terms taking effect. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.\n\n## 7. Contact Us\n\nIf you have any questions about these Terms of Service, please contact us:\n\n**Legal Inquiry**\n\n[hello@colorpalettefinder.com](mailto:hello@colorpalettefinder.com)"
+  },
+  "blog": {
+    "metaTitle": "Color Theory Blog — Design, Harmony & Accessibility",
+    "metaDescription": "Color theory blog with articles on color harmony, palettes, accessibility and UI design. Practical color and design tips for developers and designers.",
+    "heroTitle": "Color Theory",
+    "heroAccent": "Blog",
+    "heroSub": "Articles and guides about color theory, UI design, color harmony rules, and web accessibility.",
+    "minRead": "{count} min read",
+    "homeLabel": "Home",
+    "blogLabel": "Blog",
+    "faqHeading": "Frequently Asked Questions",
+    "byline": "By the colorPaletteFinder Team",
+    "authorBio": "We are designers and developers who build colorPaletteFinder and write about color theory, UI design, and web accessibility from hands-on experience. Have feedback on this article?",
+    "authorBioLink": "Get in touch",
+    "ctaTitle": "Want to experiment with colors?",
+    "ctaText": "Try our free color palette generator to find your perfect harmony — with a built-in WCAG contrast checker.",
+    "ctaButton": "Open the Generator"
+  },
+  "interior": {
+    "homeLabel": "Home",
+    "pillarLabel": "Interior Color Palettes",
+    "ctaBuild": "Build your own in the generator",
+    "curatedTitle": "Curated palettes, room by room",
+    "curatedSub": "Livable, harmonious schemes to start from. Click any swatch to copy its hex code.",
+    "moreRoom": "More {room} color schemes",
+    "faqHeading": "Frequently Asked Questions",
+    "pillarCtaTitle": "Ready to build your room palette?",
+    "pillarCtaText": "Sample a color from your floor, rug, or a piece you love, then generate a harmonious scheme around it — with a built-in contrast check.",
+    "ctaButton": "Open the Generator",
+    "schemesSuffix": "Color Schemes",
+    "roomPalettesTitle": "{room} palettes to start from",
+    "roomPalettesSub": "Livable, harmonious schemes for the {room}. Click any swatch to copy its hex code.",
+    "otherRooms": "Color schemes for other rooms",
+    "allPalettes": "All interior palettes",
+    "roomCtaTitle": "Make it your own",
+    "roomCtaText": "Drop a color you love into the generator, pick a harmony rule, and check the contrast before you commit a single can of paint.",
+    "pillarTitle": "Interior Color Palettes &",
+    "pillarTitleAccent": "Room Color Schemes"
   }
 }

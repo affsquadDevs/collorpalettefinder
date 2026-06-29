@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
-import { getPost, BLOG_POSTS } from "@/app/lib/blog";
+import { BLOG_POSTS } from "@/app/lib/blog";
+import { getBlogPost } from "@/app/lib/localizedContent";
 
 // Per-article 1200x630 Open Graph image (shows the post title), generated at build time.
 export const alt = "colorPaletteFinder article";
@@ -12,9 +13,9 @@ export function generateStaticParams() {
 
 const PALETTE = ["#FF7B54", "#FFB26B", "#FFD56F", "#5B5EA6", "#0096C7", "#2D6A4F"];
 
-export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
-    const { slug } = await params;
-    const post = getPost(slug);
+export default async function Image({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+    const { locale, slug } = await params;
+    const post = await getBlogPost(locale, slug);
     const title = post?.title ?? "Color Theory Blog";
     const category = (post?.category ?? "colorPaletteFinder").toUpperCase();
 

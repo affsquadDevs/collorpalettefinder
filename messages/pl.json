@@ -187,5 +187,43 @@
     "lastUpdatedLabel": "Ostatnia aktualizacja:",
     "intro": "Witamy w colorPaletteFinder. Uzyskując dostęp do naszej witryny, narzędzi i usług lub korzystając z nich, zgadzasz się przestrzegać poniższego Regulaminu i być nim związany. Prosimy o uważne zapoznanie się z nim.",
     "body": "## 1. Akceptacja warunków\n\nNiniejszy regulamin reguluje korzystanie z colorPaletteFinder. Jeśli nie zgadzasz się z jakąkolwiek częścią tych warunków, nie możesz korzystać z naszej witryny. Dalsze korzystanie z witryny stanowi akceptację niniejszego Regulaminu.\n\n## 2. Zasady korzystania z witryny\n\nAby zapewnić bezpieczne i niezawodne środowisko dla wszystkich użytkowników, zgadzasz się przestrzegać następujących podstawowych zasad podczas korzystania z colorPaletteFinder:\n\n- **Korzystanie zgodne z prawem:** Zgadzasz się nie używać witryny w żadnym celu niezgodnym z prawem ani w sposób naruszający obowiązujące prawo lokalne, krajowe lub międzynarodowe.\n- **Zakaz scrapingu i automatycznego dostępu:** Nie możesz używać zautomatyzowanych systemów, botów, scraperów ani podobnych narzędzi do gromadzenia danych w celu masowego pozyskiwania informacji, kolorów lub palet z naszej witryny bez naszej wyraźnej pisemnej zgody.\n- **Zakaz zakłócania:** Zgadzasz się nie zakłócać, nie przerywać ani nie próbować uzyskać nieautoryzowanego dostępu do serwerów lub sieci połączonych z naszą witryną.\n- **Użytek prywatny i profesjonalny:** Wygenerowane palety i narzędzia są całkowicie bezpłatne zarówno do użytku prywatnego, jak i profesjonalnego/komercyjnego.\n\n## 3. Monetyzacja i promocje partnerskie\n\n**Bezpłatne korzystanie:** Nasze narzędzia do generowania kolorów i treści są oferowane całkowicie bezpłatnie. Aby utrzymać działanie witryny, pokryć koszty serwerów i kontynuować rozwój, witryna jest monetyzowana poprzez reklamy i promocje partnerskie.\n\n- Podczas przeglądania witryny możesz widzieć reklamy displayowe lub banery podmiotów zewnętrznych.\n- W treściach naszego bloga lub interfejsie możemy zamieszczać linki afiliacyjne lub promocje partnerskie. Kliknięcie tych linków lub dokonanie zakupu za ich pośrednictwem może przynieść nam niewielką prowizję, bez dodatkowych kosztów dla Ciebie.\n- Nie ponosimy odpowiedzialności za treści, polityki prywatności ani praktyki jakichkolwiek witryn lub usług podmiotów zewnętrznych, do których prowadzą nasze reklamy lub promocje.\n\n## 4. Ostrzeżenie o ryzyku i wyłączenie odpowiedzialności\n\n**KLUCZOWE OSTRZEŻENIE O RYZYKU:** colorPaletteFinder oferuje edukacyjne narzędzia z zakresu teorii barw oraz generatory palet dla projektantów i programistów. Jednakże wszystkie obliczenia, harmonie kolorów i współczynniki kontrastu mają charakter **wyłącznie poglądowy**.\n\n- **Brak gwarancji dokładności:** Choć staramy się stosować precyzyjne formuły matematyczne do generowania harmonii kolorów i weryfikowania współczynników kontrastu WCAG, nie udzielamy żadnych gwarancji co do absolutnej dokładności, niezawodności ani kompletności narzędzi.\n- **Zgodność z zasadami dostępności:** Ponosisz wyłączną odpowiedzialność za zapewnienie, że wybrane przez Ciebie kolory są zgodne z prawnymi standardami dostępności (takimi jak wytyczne WCAG, zgodność z ADA) w Twoich finalnych produktach. **Nie polegaj wyłącznie na naszym narzędziu w przypadku prawnego lub krytycznego testowania zgodności.**\n- **Zasada „w stanie, w jakim jest”:** Witryna i jej narzędzia są udostępniane na zasadzie „W STANIE, W JAKIM SĄ” oraz „W MIARĘ DOSTĘPNOŚCI”, bez jakichkolwiek gwarancji, wyraźnych lub dorozumianych.\n- **Ograniczenie odpowiedzialności:** W żadnym wypadku colorPaletteFinder, jego twórcy ani zespół nie ponoszą odpowiedzialności za jakiekolwiek bezpośrednie, pośrednie, przypadkowe, wynikowe lub szczególne szkody wynikające z korzystania z witryny lub z nim związane, w tym między innymi za wady projektowe, pozwy dotyczące dostępności lub utratę zysków.\n\n## 5. Własność intelektualna\n\nOryginalne treści, funkcje, układ i funkcjonalność witryny (z wyłączeniem wygenerowanych kodów hex, które możesz wykorzystywać dowolnie) są własnością colorPaletteFinder i są chronione międzynarodowymi przepisami o prawie autorskim, znakach towarowych i własności intelektualnej. Nie możesz reprodukować naszej identyfikacji wizualnej, logo ani kodu własnościowego bez zezwolenia.\n\n## 6. Zmiany w regulaminie\n\nZastrzegamy sobie prawo do modyfikowania lub zastępowania niniejszego Regulaminu w dowolnym momencie. Jeśli zmiana będzie istotna, postaramy się powiadomić o niej z co najmniej 30-dniowym wyprzedzeniem przed wejściem w życie nowych warunków. Kontynuując dostęp do naszej Usługi lub korzystanie z niej po wejściu tych zmian w życie, zgadzasz się być związany zmienionymi warunkami.\n\n## 7. Skontaktuj się z nami\n\nJeśli masz jakiekolwiek pytania dotyczące niniejszego Regulaminu, skontaktuj się z nami:\n\n**Zapytania prawne**\n\n[hello@colorpalettefinder.com](mailto:hello@colorpalettefinder.com)"
+  },
+  "blog": {
+    "metaTitle": "Blog o teorii koloru — projektowanie, harmonia i dostępność",
+    "metaDescription": "Blog o teorii koloru z artykułami o harmonii barw, paletach, dostępności i projektowaniu UI. Praktyczne porady o kolorach i designie dla programistów i projektantów.",
+    "heroTitle": "Teoria koloru",
+    "heroAccent": "Blog",
+    "heroSub": "Artykuły i poradniki o teorii koloru, projektowaniu UI, zasadach harmonii barw i dostępności w sieci.",
+    "minRead": "{count} min czytania",
+    "homeLabel": "Strona główna",
+    "blogLabel": "Blog",
+    "faqHeading": "Najczęściej zadawane pytania",
+    "byline": "Zespół colorPaletteFinder",
+    "authorBio": "Jesteśmy projektantami i programistami, którzy tworzą colorPaletteFinder i piszą o teorii koloru, projektowaniu UI oraz dostępności w sieci z perspektywy praktyków. Masz uwagi do tego artykułu?",
+    "authorBioLink": "Skontaktuj się z nami",
+    "ctaTitle": "Chcesz poeksperymentować z kolorami?",
+    "ctaText": "Wypróbuj nasz darmowy generator palet kolorów, aby znaleźć idealną harmonię — z wbudowanym sprawdzaniem kontrastu WCAG.",
+    "ctaButton": "Otwórz generator"
+  },
+  "interior": {
+    "homeLabel": "Strona główna",
+    "pillarLabel": "Palety kolorów do wnętrz",
+    "ctaBuild": "Stwórz własną w generatorze",
+    "curatedTitle": "Wyselekcjonowane palety, pokój po pokoju",
+    "curatedSub": "Przyjazne dla oka, harmonijne zestawienia na dobry początek. Kliknij dowolną próbkę, aby skopiować jej kod hex.",
+    "moreRoom": "Więcej schematów kolorystycznych — {room}",
+    "faqHeading": "Najczęściej zadawane pytania",
+    "pillarCtaTitle": "Gotowy, by stworzyć paletę dla swojego pokoju?",
+    "pillarCtaText": "Pobierz kolor z podłogi, dywanu albo ulubionego przedmiotu, a następnie zbuduj wokół niego harmonijne zestawienie — z wbudowanym sprawdzaniem kontrastu.",
+    "ctaButton": "Otwórz generator",
+    "schemesSuffix": "Schematy kolorystyczne",
+    "roomPalettesTitle": "Palety na dobry początek — {room}",
+    "roomPalettesSub": "Przyjazne dla oka, harmonijne zestawienia do takiego pomieszczenia jak {room}. Kliknij dowolną próbkę, aby skopiować jej kod hex.",
+    "otherRooms": "Schematy kolorystyczne do innych pomieszczeń",
+    "allPalettes": "Wszystkie palety do wnętrz",
+    "roomCtaTitle": "Dostosuj ją do siebie",
+    "roomCtaText": "Wrzuć do generatora ulubiony kolor, wybierz zasadę harmonii i sprawdź kontrast, zanim sięgniesz po pierwszą puszkę farby.",
+    "pillarTitle": "Palety kolorów do wnętrz i",
+    "pillarTitleAccent": "Schematy kolorystyczne pomieszczeń"
   }
 }
