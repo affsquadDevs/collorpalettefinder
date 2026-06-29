@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { BLOG_POSTS } from './lib/blog'
+import { INTERIOR_ROOM_GUIDES } from './lib/interiorRooms'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://colorpalettefinder.com'
@@ -9,6 +10,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(post.date),
         changeFrequency: 'monthly',
         priority: 0.6,
+    }))
+
+    const roomPages: MetadataRoute.Sitemap = INTERIOR_ROOM_GUIDES.map((g) => ({
+        url: `${baseUrl}/interior-color-palettes/${g.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.75,
     }))
 
     return [
@@ -48,6 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'monthly',
             priority: 0.85,
         },
+        ...roomPages,
         {
             url: `${baseUrl}/blog`,
             lastModified: new Date(),

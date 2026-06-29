@@ -4,9 +4,13 @@ import { Markdown } from "../components/Markdown";
 import PaletteCard from "../components/PaletteCard";
 import { INTERIOR_PALETTES, INTERIOR_ROOMS } from "../lib/interiorPalettes";
 import { INTERIOR_HUB } from "../lib/interiorContent";
+import { INTERIOR_ROOM_GUIDES } from "../lib/interiorRooms";
 
 const SITE_URL = "https://colorpalettefinder.com";
 const PAGE_URL = `${SITE_URL}/interior-color-palettes`;
+const ROOM_TO_SLUG: Record<string, string> = Object.fromEntries(
+    INTERIOR_ROOM_GUIDES.map((g) => [g.room, g.slug]),
+);
 
 export const metadata: Metadata = {
     title: INTERIOR_HUB.metaTitle,
@@ -80,11 +84,19 @@ export default function InteriorColorPalettesPage() {
                     </p>
 
                     {INTERIOR_ROOMS.map((room) => {
-                        const palettes = INTERIOR_PALETTES.filter((p) => p.room === room);
+                        const palettes = INTERIOR_PALETTES.filter((p) => p.room === room).slice(0, 3);
+                        const slug = ROOM_TO_SLUG[room];
                         if (palettes.length === 0) return null;
                         return (
                             <div key={room} className="mb-16 last:mb-0">
-                                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">{room}</h3>
+                                <div className="flex flex-wrap items-end justify-between gap-3 mb-6">
+                                    <h3 className="text-xl md:text-2xl font-bold text-gray-900">{room}</h3>
+                                    {slug && (
+                                        <Link href={`/interior-color-palettes/${slug}`} className="shrink-0 text-sm font-semibold text-blue-600 hover:text-blue-700">
+                                            More {room.toLowerCase()} color schemes &rarr;
+                                        </Link>
+                                    )}
+                                </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                                     {palettes.map((p) => (
                                         <PaletteCard
