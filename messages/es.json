@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "siteTitle": "colorPaletteFinder — Generador de paletas de colores gratis",
+    "siteDescription": "Genera paletas de colores armónicas usando teoría del color: complementaria, análoga, triádica y más. Herramienta gratuita para diseñadores y desarrolladores."
+  },
+  "nav": {
+    "home": "Inicio",
+    "howItWorks": "Cómo funciona",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "blog": "Blog",
+    "interiorColors": "Colores de interiores",
+    "openTool": "Abrir herramienta",
+    "menu": "Mostrar u ocultar menú"
+  },
+  "footer": {
+    "tagline": "colorPaletteFinder ofrece herramientas educativas de teoría del color y generadores de paletas para diseñadores y desarrolladores. Todos los cálculos son solo orientativos.",
+    "company": "Empresa",
+    "legal": "Legal",
+    "getStarted": "Empezar",
+    "home": "Inicio",
+    "about": "Acerca de",
+    "blog": "Blog",
+    "interiorColors": "Colores de interiores",
+    "contact": "Contacto",
+    "privacy": "Política de privacidad",
+    "terms": "Términos del servicio",
+    "howItWorks": "Cómo funciona",
+    "rights": "© 2026 colorPaletteFinder. Todos los derechos reservados."
+  },
+  "language": {
+    "label": "Idioma"
+  },
+  "home": {
+    "metaTitle": "Generador de paletas de colores gratis — Esquemas hex online",
+    "metaDescription": "Generador de paletas de colores gratis basado en teoría del color. Crea esquemas complementarios, análogos y triádicos con códigos hex al instante, sin registro. Empieza ya.",
+    "ogDescription": "Generador de paletas de colores gratis basado en teoría del color. Crea esquemas de color complementarios, análogos y triádicos con códigos hex al instante, sin registro.",
+    "twitterDescription": "Generador de paletas de colores gratis basado en teoría del color. Esquemas hex complementarios, análogos y triádicos, al instante. Sin registro.",
+    "heroLine1": "Encuentra tu",
+    "heroLine2": "paleta de colores perfecta",
+    "heroSub": "Genera al instante paletas armónicas con reglas de teoría del color probadas. Diseñado para diseñadores, desarrolladores y creativos.",
+    "ctaOpen": "Abrir el generador",
+    "ctaHow": "Cómo funciona",
+    "openWheelAria": "Abrir el generador de paletas de colores",
+    "featuresTitle": "Todo lo que necesitas",
+    "featuresSub": "Potentes herramientas de color reunidas en una interfaz limpia e interactiva.",
+    "features": [
+      {
+        "title": "Rueda de color interactiva",
+        "desc": "Arrastra los puntos directamente sobre la rueda HSL para explorar las relaciones de tono y saturación en tiempo real."
+      },
+      {
+        "title": "7 reglas de armonía",
+        "desc": "Complementaria, análoga, triádica, complementaria dividida, tetrádica, cuadrada y monocromática."
+      },
+      {
+        "title": "Copia instantánea",
+        "desc": "Haz clic en cualquier muestra para copiar el código hex. Comparte paletas y úsalas directamente en tu código."
+      },
+      {
+        "title": "Verificador de contraste",
+        "desc": "Comprueba los ratios de accesibilidad WCAG AA / AAA entre dos colores cualesquiera de tu paleta."
+      },
+      {
+        "title": "Valores HSL y RGB",
+        "desc": "Cada color muestra su desglose completo en HSL y RGB, sin necesidad de conversiones manuales."
+      },
+      {
+        "title": "Todas las paletas a la vez",
+        "desc": "Compara los 7 esquemas de armonía de tu color base en una cuadrícula fácil de revisar al final de la herramienta."
+      }
+    ],
+    "faqTitle": "Preguntas frecuentes",
+    "faqSub": "Todo lo que necesitas saber sobre colorPaletteFinder",
+    "faq": [
+      {
+        "q": "¿Qué es una paleta de colores?",
+        "a": "Una paleta de colores es un conjunto seleccionado de colores pensados para combinar de forma armónica. Los diseñadores usan las paletas para crear coherencia visual en interfaces, branding y obras gráficas."
+      },
+      {
+        "q": "¿Cómo funciona la armonía del color?",
+        "a": "La armonía del color se basa en las relaciones entre los tonos de la rueda de color. Reglas como la complementaria, la análoga y la triádica garantizan que las combinaciones resulten visualmente agradables."
+      },
+      {
+        "q": "¿Cuál es la diferencia entre la complementaria y la complementaria dividida?",
+        "a": "La complementaria usa dos tonos opuestos para lograr el máximo contraste. La complementaria dividida usa el color base más dos colores a ±30° del complemento directo: más suave y menos brusca."
+      },
+      {
+        "q": "¿Cómo uso colorPaletteFinder?",
+        "a": "Abre la herramienta, elige tu color principal con la rueda de color o introduciendo un hex y, a continuación, selecciona una regla de armonía. La herramienta genera al instante una paleta que combina y que puedes copiar con un solo clic."
+      },
+      {
+        "q": "¿Qué es el contraste WCAG y por qué importa?",
+        "a": "Las WCAG definen ratios de contraste para garantizar que el texto sea legible para todos los usuarios, incluidas las personas con discapacidad visual. Un ratio de 4.5:1 cumple el nivel AA; 7:1 cumple el nivel AAA."
+      },
+      {
+        "q": "¿Puedo copiar los códigos hex de la paleta generada?",
+        "a": "Sí: pasa el cursor sobre cualquier muestra de la tira de la paleta y haz clic para copiar al instante su código hex al portapapeles."
+      }
+    ]
+  },
+  "tool": {
+    "metaTitle": "Generador de paletas con rueda de color y contraste",
+    "metaDescription": "Generador de paletas de colores interactivo con rueda de color, 7 reglas de armonía, valores HSL/RGB y verificador de contraste WCAG. Genera esquemas hex gratis: pruébalo ya.",
+    "ogDescription": "Generador de paletas de colores interactivo con rueda de color, 7 reglas de armonía, valores HSL/RGB y verificador de contraste WCAG. Genera esquemas hex gratis.",
+    "twitterDescription": "Generador de paletas de colores interactivo: rueda de color, 7 reglas de armonía, HSL/RGB y verificador de contraste WCAG. Gratis, sin registro.",
+    "ruleAnalogous": "Análoga",
+    "ruleMonochromatic": "Monocromática",
+    "ruleTriadic": "Triádica",
+    "ruleComplementary": "Complementaria",
+    "ruleSplitComplementary": "Complementaria dividida",
+    "ruleSquare": "Cuadrada",
+    "ruleCompound": "Compuesta",
+    "harmonyLabel": "Armonía de color",
+    "allHarmonyTitle": "Todas las paletas de armonía",
+    "curatedTitle": "Paletas seleccionadas",
+    "colorsSuffix": "colores",
+    "contrastTitle": "Verificador de contraste WCAG",
+    "contrastTextColor": "Color del texto",
+    "contrastBgColor": "Color de fondo",
+    "contrastNormal": "Texto normal (AA 4.5:1)",
+    "contrastLarge": "Texto grande (AA 3:1)",
+    "contrastUiGraphics": "Interfaz y gráficos (3:1)",
+    "contrastSample": "El veloz zorro marrón",
+    "footerNote": "Herramienta de teoría del color · 7 reglas de armonía",
+    "proseBody": "## Cómo usar el generador de paletas de colores\n\nEste generador de paletas de colores gratuito convierte un único color de partida en un esquema completo y armónico usando las matemáticas clásicas de la teoría del color. Elige un color base con la rueda, el deslizador de tono o escribiendo un código hex y, después, selecciona una regla de armonía para ver al instante un conjunto de colores que combina. Cada muestra puede copiarse al portapapeles con un solo clic, lista para pegarla directamente en CSS, Tailwind, Figma o cualquier herramienta de diseño.\n\n- **Elige un color base** — arrastra el punto en la rueda de color, mueve el deslizador de tono, escribe un valor hex de seis dígitos o usa el selector de color nativo de la barra superior.\n- **Selecciona una regla de armonía** — abre el desplegable «Armonía de color» y elige la relación que quieras (complementaria, análoga, triádica y más).\n- **Copia tus colores** — pasa el cursor sobre una muestra de la tira de la paleta para ver su código hex y haz clic para copiarlo.\n- **Comprueba la accesibilidad** — usa el verificador de contraste WCAG integrado más arriba para confirmar que los colores de tu texto y de tu fondo son legibles.\n- **Explora variaciones** — revisa la cuadrícula «Todas las paletas de armonía» para comparar todas las reglas de tu color base, o parte de una de las paletas seleccionadas.\n\n## Las siete reglas de armonía del color\n\nLas armonías del color describen cómo se relacionan los tonos entre sí en la rueda de color. Cada regla genera un ambiente y un nivel de contraste distintos:\n\n- **Complementaria** — dos tonos directamente opuestos entre sí (a 180°). Máximo contraste y energía; ideal para llamadas a la acción.\n- **Análoga** — tonos vecinos (a unos 30°). Tranquila, cohesionada y de aspecto natural.\n- **Triádica** — tres tonos repartidos de forma uniforme a 120°. Vibrante pero equilibrada.\n- **Complementaria dividida** — un color base más los dos tonos que flanquean su complemento. Fuerte contraste con menos tensión que la complementaria pura.\n- **Tetrádica** — cuatro tonos que forman un rectángulo en la rueda. Rica y variada; funciona mejor con un color dominante.\n- **Cuadrada** — cuatro tonos repartidos de forma uniforme a 90°. Atrevida y equilibrada, con igual peso visual.\n- **Monocromática** — un único tono con distintos niveles de luminosidad y saturación. Elegante, limpia y fácil de aplicar.\n\n## Comprobar el contraste del color para la accesibilidad\n\nUna paleta bonita sigue necesitando ser legible. Las Pautas de Accesibilidad para el Contenido Web (WCAG) definen los ratios mínimos de contraste entre el texto y su fondo: **4.5:1** para el texto de cuerpo normal y **3:1** para el texto grande para cumplir el nivel AA, y **7:1** para el nivel AAA, más estricto. El verificador de contraste de esta página calcula el ratio exacto entre dos colores cualesquiera y muestra si superan el nivel AA o AAA, para que puedas ajustar tu paleta antes de publicarla.\n\n## Preguntas frecuentes\n\n### ¿El generador de paletas de colores es gratis?\n\nSí. La herramienta es completamente gratuita tanto para proyectos personales como comerciales, y no requiere registro.\n\n### ¿Qué formatos de color admite?\n\nPuedes introducir y copiar colores como códigos hex, y cada color generado se calcula a partir de sus valores HSL y RGB subyacentes.\n\n### ¿Qué regla de armonía debería usar?\n\nUsa la complementaria o la complementaria dividida para acentos de gran impacto, la análoga o la monocromática para interfaces tranquilas y cohesionadas, y la triádica o la cuadrada cuando necesites un esquema más rico y multicolor."
+  },
+  "howItWorks": {
+    "metaTitle": "Cómo usar un generador de paletas y rueda de color",
+    "metaDescription": "Aprende a usar un generador de paletas de colores: elige colores en la rueda de color, aplica reglas de armonía y comprueba el contraste WCAG. Guía paso a paso con consejos hex.",
+    "ogTitle": "Cómo usar un generador de paletas y rueda de color",
+    "ogDescription": "Guía paso a paso para crear paletas de colores armónicas y accesibles: con la rueda de color, 7 reglas de armonía y un verificador de contraste WCAG.",
+    "backHome": "Volver al inicio",
+    "title": "Cómo",
+    "titleAccent": "colorPaletteFinder",
+    "titleEnd": "funciona",
+    "sub": "Una guía completa para usar nuestras herramientas de color profesionales. Genera armonías de color perfectas, accesibles y matemáticamente sólidas en segundos.",
+    "body": "colorPaletteFinder se basa en los principios clásicos de la teoría del color combinados con los requisitos del diseño digital moderno. Hemos diseñado una interfaz fluida en la que no necesitas calcular tonos manualmente ni verificar los ratios de contraste: la herramienta hace el trabajo pesado por ti.\n\n## 1. La rueda de color interactiva\n\nEn el corazón de colorPaletteFinder está la **rueda de color HSL** interactiva. A diferencia de los selectores de color rectangulares habituales, nuestra rueda de color circular se corresponde directamente con la dinámica de la teoría del color.\n\n- **Tono (el ángulo)**: arrastra el punto por el borde exterior para cambiar la familia de color fundamental (rojo, azul, verde, etc.).\n- **Saturación (distancia desde el centro)**: arrastra el punto hacia el centro para hacer el color grisáceo y apagado, o hacia el borde para lograr la máxima viveza.\n- **Luminosidad**: se ajusta de forma dinámica para garantizar que los colores de armonía generados conserven un peso visual equilibrado.\n\nMueve el punto del color principal y observa cómo todos los colores de armonía dependientes se adaptan al instante en tiempo real, manteniendo sus estrictas relaciones matemáticas.\n\n## 2. Elegir una regla de armonía\n\nSegún la estética que quieras conseguir, puedes elegir entre siete reglas de armonía del color distintas y matemáticamente probadas:\n\n### Complementaria\n\nColores situados directamente opuestos entre sí en la rueda de color (a 180°). Crea el máximo contraste y una energía de gran impacto.\n\n### Análoga\n\nColores que están uno junto al otro en la rueda (separados 30°). Crea un diseño sereno, cómodo y de aspecto natural.\n\n### Triádica\n\nTres colores repartidos por igual alrededor de la rueda (a 120°). Ofrece un alto contraste a la vez que conserva un mejor equilibrio de color que los esquemas complementarios.\n\n### Complementaria dividida\n\nUn color base más los dos colores adyacentes a su complemento. Ofrece el fuerte contraste visual del esquema complementario, pero con menos tensión.\n\n### Monocromática\n\nVariaciones de luminosidad y saturación de un único tono. Produce un aspecto cohesionado, limpio y elegante.\n\n## 3. Verificación del contraste WCAG\n\nCrear una paleta bonita es solo la mitad del trabajo; los colores también deben ser accesibles para todos los usuarios. En concreto, el texto debe ser legible sobre los colores de fondo.\n\ncolorPaletteFinder incluye un verificador de contraste integrado al final de la herramienta. Selecciona dos colores generados cualesquiera (por ejemplo, un fondo y un color de texto) y calcula el ratio de contraste.\n\n- **Nivel AA**: requiere un ratio de contraste de al menos **4.5:1** para el texto normal y 3:1 para el texto grande.\n- **Nivel AAA**: el estándar de oro de la accesibilidad, que requiere un ratio de al menos **7:1** para el texto normal.\n\n## 4. Copiar y exportar\n\nUna vez generada tu paleta perfecta, integrarla en tu proyecto es muy sencillo.\n\nPasa el cursor sobre cualquier muestra de color de la tira de la paleta para ver su código HEX exacto. Al hacer clic en la muestra, se copia al instante el código HEX de seis dígitos a tu portapapeles (por ejemplo, `#1A2B3C`), listo para pegarlo directamente en CSS, configuraciones de Tailwind, Figma o Adobe Creative Cloud.",
+    "ctaTitle": "¿Listo para empezar a diseñar?",
+    "ctaText": "Entra en la herramienta y genera tu primer esquema de color armónico y accesible.",
+    "ctaButton": "Abrir la herramienta de colorPaletteFinder"
+  },
+  "about": {
+    "metaTitle": "Acerca de colorPaletteFinder — Paletas de color gratis",
+    "metaDescription": "Descubre qué es colorPaletteFinder: un generador de paletas de colores matemático y gratuito para diseñadores, desarrolladores y creativos. Conoce nuestra misión y para quién es.",
+    "ogTitle": "Acerca de colorPaletteFinder",
+    "ogDescription": "Conoce la misión que hay detrás de colorPaletteFinder: el generador de paletas de colores gratuito definitivo para profesionales.",
+    "backHome": "Volver al inicio",
+    "title": "Acerca de",
+    "titleAccent": "colorPaletteFinder",
+    "sub": "Nuestra misión es hacer que la teoría del color profesional sea accesible para todos. Creamos herramientas sencillas y matemáticamente precisas para diseñadores y desarrolladores.",
+    "body": "## ¿Qué es colorPaletteFinder?\n\n**colorPaletteFinder** es una aplicación web gratuita e interactiva diseñada para ayudar a los creadores a generar al instante paletas de colores armónicas y estéticamente agradables. Tanto si estás creando una nueva identidad de marca, diseñando una interfaz de usuario o creando arte digital, nuestra herramienta te ofrece el punto de partida perfecto al utilizar las reglas clásicas y matemáticamente probadas de la teoría del color.\n\nEn lugar de adivinar qué colores quedan bien juntos, colorPaletteFinder usa una rueda de color HSL (tono, saturación y luminosidad) interactiva para calcular al instante las combinaciones exactas basadas en las fórmulas de armonía profesionales: complementaria, análoga, triádica y otras.\n\n## Nuestro objetivo principal\n\nNuestro objetivo principal es **tender un puente entre la compleja teoría del color y el diseño digital práctico**. Creemos que elegir los colores adecuados no debería requerir un título avanzado en historia del arte ni un software propietario caro.\n\nNuestro propósito es ofrecer una herramienta fluida, educativa y de alta calidad que garantice:\n\n- **La accesibilidad primero:** los verificadores de contraste WCAG integrados garantizan que las paletas que creas sean inclusivas y legibles para todos los usuarios.\n- **Eficiencia:** la copia de códigos HEX con un solo clic agiliza el flujo de trabajo de los desarrolladores que usan Tailwind CSS, CSS puro u otros frameworks de estilos modernos.\n- **Educación:** al visualizar exactamente cómo funcionan las reglas de armonía en una rueda, los usuarios aprenden de forma natural la mecánica de las relaciones de color con el tiempo.\n\n## ¿Para quién es?\n\ncolorPaletteFinder se creó pensando en la web moderna. Está dirigido a:\n\n- **Diseñadores de UI/UX** que esbozan wireframes y establecen sistemas de diseño universales.\n- **Desarrolladores frontend** que necesitan variables de color rápidas y accesibles para sus hojas de estilo.\n- **Marketers y creadores digitales** que garantizan la coherencia de marca en sus campañas.",
+    "ctaTitle": "Empieza a generar hoy mismo",
+    "ctaText": "Vive la forma más fácil de crear paletas de colores profesionales. No requiere registro.",
+    "ctaButton": "Abrir la herramienta ColorFinder"
+  },
+  "contact": {
+    "metaTitle": "Contacto colorPaletteFinder — Dudas y sugerencias",
+    "metaDescription": "Contacta con el equipo de colorPaletteFinder con dudas, sugerencias, informes de errores o solicitudes de soporte. Respondemos en 24-48 horas: escríbenos un correo hoy.",
+    "ogTitle": "Contacto colorPaletteFinder — Dudas y sugerencias",
+    "ogDescription": "Ponte en contacto con nosotros si tienes cualquier duda o sugerencia.",
+    "backHome": "Volver al inicio",
+    "title": "Contacta",
+    "titleAccent": "con nosotros",
+    "sub": "Nos encantaría saber de ti. Escríbenos con tus dudas o sugerencias.",
+    "heading": "Ponte en contacto",
+    "body": "Si necesitas ayuda para usar la herramienta, quieres informar de un error o simplemente saludar, ¡escríbenos un correo! Intentamos responder en un plazo de 24-48 horas.",
+    "contactLabel": "Contacto principal",
+    "email": "hello@colorpalettefinder.com"
+  },
+  "privacy": {
+    "metaTitle": "Política de privacidad — colorPaletteFinder",
+    "metaDescription": "Lee la política de privacidad de colorPaletteFinder: cómo recopilamos, usamos y protegemos tus datos, además de cookies, publicidad, analítica y tus opciones de consentimiento.",
+    "backHome": "Volver al inicio",
+    "title": "Política de",
+    "titleAccent": "privacidad",
+    "lastUpdatedLabel": "Última actualización:",
+    "intro": "En colorPaletteFinder, tu privacidad es una prioridad absoluta. Esta Política de privacidad explica cómo recopilamos, usamos y protegemos tu información cuando utilizas nuestro sitio web y nuestras herramientas de generación de color.",
+    "body": "## 1. Información que recopilamos\n\nCreemos en minimizar la recopilación de datos. Solo recopilamos la información necesaria para prestarte y mejorar nuestros servicios:\n\n- **Datos de registro y de uso:** como la mayoría de los sitios web, nuestros servidores registran automáticamente la información que tu navegador envía cuando visitas nuestro sitio. Esto puede incluir tu dirección IP, el tipo y la versión del navegador, las páginas de nuestro sitio que visitas, la hora y la fecha de tu visita y el tiempo que pasas en esas páginas.\n- **Datos del dispositivo:** información relativa al dispositivo o equipo que usas para acceder al sitio web, incluidos los modelos de hardware, los sistemas operativos y los identificadores del dispositivo.\n- **Información que nos facilitas:** si decides ponerte en contacto con nosotros por correo electrónico, recopilaremos tu dirección de correo y cualquier contenido incluido en tu mensaje para responderte de forma eficaz.\n\n## 2. Cómo usamos tu información\n\nLa información que recopilamos se utiliza de las siguientes formas:\n\n- Para prestar, operar y mantener nuestro sitio web.\n- Para mejorar, personalizar y ampliar la funcionalidad de nuestro sitio web en función de las interacciones de los usuarios.\n- Para entender y analizar cómo interactúan los usuarios con nuestras herramientas de paletas de colores.\n- Para comunicarnos contigo, lo que incluye responder consultas o prestar atención al cliente.\n- Para detectar, prevenir y abordar problemas técnicos o brechas de seguridad.\n\n## 3. Cookies y tecnologías de seguimiento\n\nUsamos cookies y tecnologías de seguimiento similares para operar nuestro sitio web, recordar tus preferencias, analizar el tráfico y, junto con nuestros socios publicitarios, ofrecer y medir la publicidad. Las cookies son pequeños archivos de datos que pueden incluir un identificador único anónimo.\n\nLas cookies que usamos se dividen en tres grandes categorías: **cookies esenciales**, necesarias para que el sitio funcione; **cookies de analítica**, que nos ayudan a entender cómo se usa el sitio; y **cookies publicitarias**, establecidas por Google y otros proveedores externos (descritas en la Sección 4 más abajo).\n\nPuedes indicar a tu navegador que rechace todas las cookies o que te avise cuando se esté enviando una cookie. Si te encuentras en el Espacio Económico Europeo (EEE), el Reino Unido o Suiza, te pedimos tu consentimiento antes de establecer cookies no esenciales, y puedes cambiar o retirar ese consentimiento en cualquier momento mediante la configuración de privacidad de nuestro sitio. No obstante, si no aceptas las cookies, es posible que algunas partes funcionales de nuestro sitio web no funcionen de forma eficiente.\n\n## 4. Publicidad, analítica y servicios de terceros\n\ncolorPaletteFinder es de uso gratuito. Para cubrir nuestros costes de alojamiento y desarrollo, mostramos publicidad servida por Google y otros proveedores externos. Esta sección explica cómo funcionan la publicidad y otros servicios de terceros en nuestro sitio y cómo puedes controlarlos.\n\n- **Google AdSense:** usamos Google AdSense para mostrar anuncios. Google, como proveedor externo, usa cookies para servir anuncios en nuestro sitio.\n- **Cookies publicitarias de Google:** el uso por parte de Google de cookies publicitarias (incluidas las cookies servidas desde los dominios `google.com` y `doubleclick.net`) permite a Google y a sus socios mostrarte anuncios en función de tu visita a colorPaletteFinder o a otros sitios de Internet.\n- **Proveedores externos y redes publicitarias:** los proveedores externos y las redes publicitarias también pueden usar cookies, balizas web y tecnologías similares para recopilar información y mostrar anuncios que consideran relevantes para tus intereses.\n- **Analítica:** usamos servicios como Google Analytics y Google Tag Manager para entender cómo usan nuestro sitio los visitantes. Estos proveedores pueden establecer sus propias cookies y procesar datos de uso en nuestro nombre.\n\n**Cómo excluirte de la publicidad personalizada:** puedes excluirte de la publicidad personalizada visitando [Google Ads Settings](https://adssettings.google.com). Puedes excluirte del uso de cookies por parte de algunos proveedores externos para la publicidad personalizada visitando [www.aboutads.info/choices](https://www.aboutads.info/choices/) o, si estás en el EEE o el Reino Unido, [www.youronlinechoices.eu](https://www.youronlinechoices.eu).\n\nPara obtener más información sobre cómo usa Google los datos cuando utilizas nuestro sitio, consulta [Cómo usa Google la información de sitios o aplicaciones que utilizan nuestros servicios](https://policies.google.com/technologies/partner-sites).\n\n**Consentimiento (EEE, Reino Unido y Suiza):** para los visitantes del Espacio Económico Europeo, el Reino Unido y Suiza, usamos una Plataforma de Gestión del Consentimiento certificada por Google para solicitar tu consentimiento antes de establecer cualquier cookie no esencial o publicitaria. De forma predeterminada, la personalización de anuncios y el almacenamiento de analítica están desactivados hasta que des tu consentimiento. Puedes cambiar o retirar tu consentimiento en cualquier momento mediante la configuración de privacidad de nuestro sitio.\n\nCualquier otro tercero que empleemos tiene acceso a tus datos únicamente para realizar tareas en nuestro nombre y está obligado a no divulgarlos ni usarlos para ningún otro fin. No nos hacemos responsables de las prácticas de privacidad de estos terceros; te recomendamos que revises sus respectivas políticas de privacidad.\n\n## 5. Seguridad de los datos\n\nNos tomamos en serio la seguridad de tus datos y nos esforzamos por usar medios comercialmente aceptables para protegerlos. No obstante, ten en cuenta que ningún método de transmisión por Internet ni método de almacenamiento electrónico es 100 % seguro. Aunque nos esforzamos por proteger tus datos personales, no podemos garantizar su seguridad absoluta.\n\n## 6. Privacidad de los menores\n\nNuestro Servicio no está dirigido a menores de 13 años. No recopilamos a sabiendas información de identificación personal de menores de 13 años. Si eres madre, padre o tutor y sabes que tu hijo nos ha facilitado datos personales, ponte en contacto con nosotros.\n\n## 7. Cambios en esta Política de privacidad\n\nPodemos actualizar nuestra Política de privacidad cada cierto tiempo. Te notificaremos cualquier cambio publicando la nueva Política de privacidad en esta página y actualizando la fecha de «Última actualización» en la parte superior de este documento. Te aconsejamos que revises esta Política de privacidad periódicamente para detectar cualquier cambio.\n\n## 8. Contáctanos\n\nSi tienes alguna pregunta sobre esta Política de privacidad, ponte en contacto con nuestro equipo de protección de datos:\n\nhello@colorpalettefinder.com"
+  },
+  "terms": {
+    "metaTitle": "Términos del servicio — colorPaletteFinder",
+    "metaDescription": "Lee los términos del servicio de colorPaletteFinder: reglas de uso, uso comercial gratuito, publicidad, advertencias de riesgo y descargos sobre accesibilidad antes de empezar.",
+    "backHome": "Volver al inicio",
+    "title": "Términos del",
+    "titleAccent": "servicio",
+    "lastUpdatedLabel": "Última actualización:",
+    "intro": "Te damos la bienvenida a colorPaletteFinder. Al acceder o utilizar nuestro sitio web, herramientas y servicios, aceptas cumplir y quedar vinculado por los siguientes Términos del servicio. Léelos con atención.",
+    "body": "## 1. Aceptación de los términos\n\nEstos términos rigen tu uso de colorPaletteFinder. Si no estás de acuerdo con alguna parte de estos términos, no debes usar nuestro sitio web. El uso continuado del sitio constituye tu aceptación de estos Términos.\n\n## 2. Reglas de uso del sitio web\n\nPara garantizar un entorno seguro y fiable para todos los usuarios, aceptas cumplir las siguientes reglas básicas al usar colorPaletteFinder:\n\n- **Uso lícito:** aceptas no usar el sitio con ningún fin ilícito ni de ninguna forma que infrinja la legislación local, nacional o internacional aplicable.\n- **Sin scraping ni acceso automatizado:** no puedes usar sistemas automatizados, bots, scrapers o herramientas de recopilación de datos similares para extraer de forma masiva información, colores o paletas de nuestro sitio sin nuestro permiso expreso por escrito.\n- **Sin interferencias:** aceptas no interferir, interrumpir ni intentar obtener acceso no autorizado a los servidores o redes conectados a nuestro sitio web.\n- **Uso personal y profesional:** las paletas y herramientas generadas son completamente gratuitas tanto para tu uso personal como profesional o comercial.\n\n## 3. Monetización y promociones de socios\n\n**Uso gratuito:** nuestras herramientas de generación de color y nuestro contenido se ofrecen de forma totalmente gratuita. Para mantener el sitio web en funcionamiento, pagar los costes del servidor y continuar con el desarrollo, el sitio web se monetiza mediante publicidad y promociones de socios.\n\n- Es posible que veas anuncios gráficos o banners de terceros mientras navegas por el sitio.\n- Podemos incluir enlaces de afiliados o promociones de socios en el contenido de nuestro blog o en la interfaz. Hacer clic en estos enlaces o comprar a través de ellos puede generarnos una pequeña comisión sin coste adicional para ti.\n- No nos hacemos responsables del contenido, las políticas de privacidad ni las prácticas de ningún sitio web o servicio de terceros enlazado desde nuestros anuncios o promociones.\n\n## 4. Advertencia de riesgo y exención de responsabilidad\n\n**ADVERTENCIA DE RIESGO IMPORTANTE:** colorPaletteFinder ofrece herramientas educativas de teoría del color y generadores de paletas para diseñadores y desarrolladores. No obstante, todos los cálculos, armonías de color y ratios de contraste son **solo orientativos**.\n\n- **Sin garantía de precisión:** aunque nos esforzamos por usar fórmulas matemáticas precisas para generar armonías de color y verificar los ratios de contraste WCAG, no ofrecemos ninguna garantía sobre la precisión, fiabilidad o integridad absolutas de las herramientas.\n- **Cumplimiento de la accesibilidad:** eres el único responsable de garantizar que los colores que elijas cumplan las normas legales de accesibilidad (como las pautas WCAG y el cumplimiento de la ADA) en tus productos finales. **No te bases únicamente en nuestra herramienta para pruebas de cumplimiento legales o críticas.**\n- **Base «tal cual»:** el sitio web y sus herramientas se proporcionan «TAL CUAL» y «SEGÚN DISPONIBILIDAD», sin ninguna garantía de ningún tipo, ya sea expresa o implícita.\n- **Limitación de responsabilidad:** en ningún caso colorPaletteFinder, sus creadores o su equipo serán responsables de daños directos, indirectos, incidentales, consecuentes o especiales que surjan de o estén relacionados con tu uso del sitio web, incluidos, entre otros, defectos de diseño, demandas por accesibilidad o pérdida de beneficios.\n\n## 5. Propiedad intelectual\n\nEl contenido original, las funciones, el diseño y la funcionalidad del sitio web (excluidos los códigos hex generados, que son tuyos para usarlos libremente) son propiedad de colorPaletteFinder y están protegidos por las leyes internacionales de derechos de autor, marcas registradas y propiedad intelectual. No puedes reproducir nuestra marca, logotipo ni código propietario sin permiso.\n\n## 6. Modificaciones de los términos\n\nNos reservamos el derecho de modificar o sustituir estos Términos del servicio en cualquier momento. Si una revisión es importante, intentaremos avisar con al menos 30 días de antelación antes de que entren en vigor los nuevos términos. Al continuar accediendo o usando nuestro Servicio después de que esas revisiones entren en vigor, aceptas quedar vinculado por los términos revisados.\n\n## 7. Contáctanos\n\nSi tienes alguna pregunta sobre estos Términos del servicio, ponte en contacto con nosotros:\n\n**Consulta legal**\n\n[hello@colorpalettefinder.com](mailto:hello@colorpalettefinder.com)"
+  },
+  "blog": {
+    "metaTitle": "Blog de teoría del color — Diseño, armonía y accesibilidad",
+    "metaDescription": "Blog de teoría del color con artículos sobre armonía cromática, paletas, accesibilidad y diseño de interfaces. Consejos prácticos de color y diseño para programadores y diseñadores.",
+    "heroTitle": "Teoría del color",
+    "heroAccent": "Blog",
+    "heroSub": "Artículos y guías sobre teoría del color, diseño de interfaces, reglas de armonía cromática y accesibilidad web.",
+    "minRead": "{count} min de lectura",
+    "homeLabel": "Inicio",
+    "blogLabel": "Blog",
+    "faqHeading": "Preguntas frecuentes",
+    "byline": "Por el equipo de colorPaletteFinder",
+    "authorBio": "Somos diseñadores y desarrolladores que creamos colorPaletteFinder y escribimos sobre teoría del color, diseño de interfaces y accesibilidad web desde la experiencia práctica. ¿Tienes comentarios sobre este artículo?",
+    "authorBioLink": "Ponte en contacto",
+    "ctaTitle": "¿Quieres experimentar con los colores?",
+    "ctaText": "Prueba nuestro generador gratuito de paletas de color para encontrar tu armonía perfecta, con un comprobador de contraste WCAG integrado.",
+    "ctaButton": "Abrir el generador"
+  },
+  "interior": {
+    "homeLabel": "Inicio",
+    "pillarLabel": "Paletas de color para interiores",
+    "ctaBuild": "Crea la tuya en el generador",
+    "curatedTitle": "Paletas seleccionadas, estancia por estancia",
+    "curatedSub": "Esquemas armoniosos y habitables para empezar. Haz clic en cualquier muestra para copiar su código hex.",
+    "moreRoom": "Más esquemas de color para {room}",
+    "faqHeading": "Preguntas frecuentes",
+    "pillarCtaTitle": "¿Listo para crear la paleta de tu estancia?",
+    "pillarCtaText": "Toma un color de tu suelo, tu alfombra o una pieza que te encante y genera un esquema armonioso a su alrededor, con una comprobación de contraste integrada.",
+    "ctaButton": "Abrir el generador",
+    "schemesSuffix": "Esquemas de color",
+    "roomPalettesTitle": "Paletas para {room} con las que empezar",
+    "roomPalettesSub": "Esquemas armoniosos y habitables para el {room}. Haz clic en cualquier muestra para copiar su código hex.",
+    "otherRooms": "Esquemas de color para otras estancias",
+    "allPalettes": "Todas las paletas de interiores",
+    "roomCtaTitle": "Hazla tuya",
+    "roomCtaText": "Lleva al generador un color que te encante, elige una regla de armonía y comprueba el contraste antes de gastar ni una sola lata de pintura.",
+    "pillarTitle": "Paletas de color para interiores y",
+    "pillarTitleAccent": "esquemas de color por estancia"
+  }
+}
