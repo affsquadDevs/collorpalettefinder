@@ -1,3 +1,5 @@
+import { INTERIOR_PALETTES } from "./interiorPalettes";
+
 // ─── Color Conversion Utilities ──────────────────────────────────────────────
 
 export interface ColorInfo {
@@ -367,5 +369,7 @@ export const CURATED_PALETTES = [
     {
         title: "Warm Ombre",
         colors: ["#FF7B54", "#FFB26B", "#FFD56F", "#F9F871", "#939B62", "#00887A"],
-    }
+    },
+    // Interior / room palettes (also featured on /interior-color-palettes)
+    ...INTERIOR_PALETTES.map((p) => ({ title: p.title, colors: p.colors })),
 ];
