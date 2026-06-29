@@ -1,47 +1,57 @@
 import type { Metadata } from "next";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { altLanguages, canonicalFor } from "@/app/lib/hreflang";
 
-export const metadata: Metadata = {
-    title: "Color Palette Generator with Color Wheel & Contrast",
-    description:
-        "Interactive color palette generator with a color wheel, 7 harmony rules, HSL/RGB values & a WCAG contrast checker. Generate hex schemes free — try it now.",
-    alternates: {
-        canonical: "https://colorpalettefinder.com/color-palette-generator",
-    },
-    openGraph: {
+const PATH = "/color-palette-generator";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: "tool" });
+    return {
+        title: t("metaTitle"),
+        description: t("metaDescription"),
+        alternates: { canonical: canonicalFor(locale, PATH), languages: altLanguages(PATH) },
+        openGraph: {
             images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
-        title: "Color Palette Generator with Color Wheel & Contrast Checker",
-        description:
-            "Interactive color palette generator with a color wheel, 7 harmony rules, HSL/RGB values and a WCAG contrast checker. Generate hex schemes free.",
-        url: "https://colorpalettefinder.com/color-palette-generator",
-        siteName: "colorPaletteFinder",
-        type: "website",
-        locale: "en_US",
-    },
-    twitter: {
+            title: t("metaTitle"),
+            description: t("ogDescription"),
+            url: canonicalFor(locale, PATH),
+            siteName: "colorPaletteFinder",
+            type: "website",
+            locale,
+        },
+        twitter: {
             images: ["/opengraph-image"],
-        card: "summary_large_image",
-        title: "Color Palette Generator with Color Wheel & Contrast",
-        description:
-            "Interactive color palette generator: color wheel, 7 harmony rules, HSL/RGB and a WCAG contrast checker. Free, no signup.",
-    },
-};
+            card: "summary_large_image",
+            title: t("metaTitle"),
+            description: t("twitterDescription"),
+        },
+    };
+}
 
-export default function ToolLayout({ children }: { children: React.ReactNode }) {
+export default async function ToolLayout({
+    children,
+    params,
+}: {
+    children: React.ReactNode;
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
+    setRequestLocale(locale);
+    const t = await getTranslations("tool");
+    const url = canonicalFor(locale, PATH);
+
     const webAppSchema = {
         "@context": "https://schema.org",
         "@type": "WebApplication",
         name: "colorPaletteFinder — Color Palette Generator",
-        description:
-            "Generate harmonious color palettes using an interactive color wheel. Choose from 7 harmony rules: complementary, analogous, triadic, split-complementary, tetradic, square, and monochromatic.",
-        url: "https://colorpalettefinder.com/color-palette-generator",
+        description: t("metaDescription"),
+        url,
         applicationCategory: "DesignApplication",
         operatingSystem: "All",
         browserRequirements: "Requires JavaScript. Requires HTML5.",
-        offers: {
-            "@type": "Offer",
-            price: "0",
-            priceCurrency: "USD",
-        },
+        inLanguage: locale,
+        offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
         featureList:
             "Interactive Color Wheel, 7 Harmony Rules, Contrast Checker (WCAG AA/AAA), Instant Hex Copy, HSL & RGB Values, All Palettes View",
     };
@@ -50,21 +60,15 @@ export default function ToolLayout({ children }: { children: React.ReactNode }) 
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://colorpalettefinder.com" },
-            { "@type": "ListItem", position: 2, name: "Color Palette Generator" },
+            { "@type": "ListItem", position: 1, name: "Home", item: canonicalFor(locale, "") },
+            { "@type": "ListItem", position: 2, name: t("metaTitle"), item: url },
         ],
     };
 
     return (
         <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-            />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             {children}
         </>
     );

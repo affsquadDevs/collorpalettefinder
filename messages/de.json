@@ -1,7 +1,7 @@
 {
   "meta": {
     "siteTitle": "colorPaletteFinder — Kostenloser Farbpaletten-Generator",
-    "siteDescription": "Erstelle harmonische Farbpaletten mit Farbtheorie — Komplementär, Analog, Triade und mehr. Kostenloses Tool für Designer und Entwickler."
+    "siteDescription": "Erstelle harmonische Farbpaletten auf Basis der Farblehre — komplementär, analog, triadisch und mehr. Kostenloses Tool für Designer und Entwickler."
   },
   "nav": {
     "home": "Start",
@@ -14,7 +14,7 @@
     "menu": "Menü umschalten"
   },
   "footer": {
-    "tagline": "colorPaletteFinder bietet lehrreiche Farbtheorie-Tools und Paletten-Generatoren für Designer und Entwickler. Alle Berechnungen dienen ausschließlich zur Orientierung.",
+    "tagline": "colorPaletteFinder bietet lehrreiche Werkzeuge zur Farblehre und Paletten-Generatoren für Designer und Entwickler. Alle Berechnungen dienen ausschließlich zur Orientierung.",
     "company": "Unternehmen",
     "legal": "Rechtliches",
     "getStarted": "Loslegen",
@@ -33,17 +33,17 @@
   },
   "home": {
     "metaTitle": "Kostenloser Farbpaletten-Generator — Hex-Farbschemata online",
-    "metaDescription": "Kostenloser Farbpaletten-Generator auf Basis der Farbtheorie. Erstelle komplementäre, analoge & Triaden-Farbschemata mit Hex-Codes — sofort, ohne Anmeldung. Jetzt starten.",
-    "ogDescription": "Kostenloser Farbpaletten-Generator auf Basis der Farbtheorie. Erstelle komplementäre, analoge & Triaden-Farbschemata mit Hex-Codes — sofort und ohne Anmeldung.",
-    "twitterDescription": "Kostenloser Farbpaletten-Generator auf Basis der Farbtheorie. Komplementäre, analoge & Triaden-Hex-Schemata, sofort. Ohne Anmeldung.",
+    "metaDescription": "Kostenloser Farbpaletten-Generator auf Basis der Farblehre. Erstelle komplementäre, analoge & triadische Schemata mit Hex-Codes in Sekunden — ohne Anmeldung. Jetzt starten.",
+    "ogDescription": "Kostenloser Farbpaletten-Generator auf Basis der Farblehre. Erstelle komplementäre, analoge & triadische Farbschemata mit Hex-Codes sofort — ohne Anmeldung.",
+    "twitterDescription": "Kostenloser Farbpaletten-Generator auf Basis der Farblehre. Komplementäre, analoge & triadische Hex-Schemata, sofort. Ohne Anmeldung.",
     "heroLine1": "Finde deine perfekte",
     "heroLine2": "Farbpalette",
-    "heroSub": "Erstelle in Sekunden harmonische Paletten nach bewährten Regeln der Farbtheorie. Gemacht für Designer, Entwickler und Kreative.",
+    "heroSub": "Erstelle sofort harmonische Paletten anhand bewährter Regeln der Farblehre. Gemacht für Designer, Entwickler und Kreative.",
     "ctaOpen": "Generator öffnen",
     "ctaHow": "So funktioniert's",
     "openWheelAria": "Den Farbpaletten-Generator öffnen",
     "featuresTitle": "Alles, was du brauchst",
-    "featuresSub": "Leistungsstarke Farbwerkzeuge, vereint in einer übersichtlichen, interaktiven Oberfläche.",
+    "featuresSub": "Leistungsstarke Farbwerkzeuge in einer übersichtlichen, interaktiven Oberfläche.",
     "features": [
       {
         "title": "Interaktiver Farbkreis",
@@ -51,52 +51,141 @@
       },
       {
         "title": "7 Harmonieregeln",
-        "desc": "Komplementär, Analog, Triade, Split-Komplementär, Tetradisch, Quadratisch, Monochromatisch."
+        "desc": "Komplementär, Analog, Triadisch, Geteilt-komplementär, Tetradisch, Quadratisch, Monochromatisch."
       },
       {
         "title": "Sofort kopieren",
-        "desc": "Klicke auf ein beliebiges Farbfeld, um den Hex-Code zu kopieren. Teile Paletten und verwende sie direkt in deinem Code."
+        "desc": "Klicke auf eine Farbfläche, um den Hex-Code zu kopieren. Teile Paletten und nutze sie direkt in deinem Code."
       },
       {
         "title": "Kontrastprüfer",
-        "desc": "Prüfe das WCAG-AA-/AAA-Barrierefreiheitsverhältnis zwischen zwei beliebigen Farben deiner Palette."
+        "desc": "Prüfe die WCAG-AA-/AAA-Barrierefreiheitsverhältnisse zwischen zwei beliebigen Farben deiner Palette."
       },
       {
         "title": "HSL- & RGB-Werte",
-        "desc": "Jede Farbe zeigt ihre vollständigen HSL- und RGB-Werte — kein manuelles Umrechnen nötig."
+        "desc": "Jede Farbe zeigt ihre vollständige HSL- und RGB-Aufschlüsselung — ganz ohne manuelle Umrechnung."
       },
       {
         "title": "Alle Paletten auf einen Blick",
-        "desc": "Vergleiche alle 7 Harmonieschemata für deine Basisfarbe in einem übersichtlichen Raster am unteren Rand des Tools."
+        "desc": "Vergleiche alle 7 Harmonieschemata für deine Basisfarbe in einem übersichtlichen Raster am Ende des Tools."
       }
     ],
     "faqTitle": "Häufig gestellte Fragen",
-    "faqSub": "Alles Wissenswerte über colorPaletteFinder",
+    "faqSub": "Alles, was du über colorPaletteFinder wissen musst",
     "faq": [
       {
         "q": "Was ist eine Farbpalette?",
-        "a": "Eine Farbpalette ist eine zusammengestellte Auswahl von Farben, die harmonisch zusammenwirken sollen. Designer nutzen Paletten, um visuelle Konsistenz in Oberflächen, im Branding und in Grafiken zu schaffen."
+        "a": "Eine Farbpalette ist eine sorgfältig zusammengestellte Auswahl an Farben, die harmonisch zusammenwirken sollen. Designer nutzen Paletten, um in Oberflächen, im Branding und in Grafiken visuelle Einheitlichkeit zu schaffen."
       },
       {
         "q": "Wie funktioniert Farbharmonie?",
-        "a": "Farbharmonie beruht auf den Beziehungen zwischen Farbtönen auf dem Farbkreis. Regeln wie Komplementär, Analog und Triade sorgen dafür, dass Kombinationen optisch ansprechend wirken."
+        "a": "Farbharmonie beruht auf den Beziehungen zwischen den Farbtönen im Farbkreis. Regeln wie komplementär, analog und triadisch sorgen dafür, dass Kombinationen optisch ansprechend sind."
       },
       {
-        "q": "Was ist der Unterschied zwischen komplementär und split-komplementär?",
-        "a": "Komplementär nutzt zwei gegenüberliegende Farbtöne für maximalen Kontrast. Split-Komplementär nutzt die Basisfarbe plus zwei Farben ±30° von der direkten Komplementärfarbe — weicher und weniger hart."
+        "q": "Was ist der Unterschied zwischen komplementär und geteilt-komplementär?",
+        "a": "Komplementär nutzt zwei gegenüberliegende Farbtöne für maximalen Kontrast. Geteilt-komplementär nutzt die Basisfarbe plus zwei Farben ±30° vom direkten Komplement — weicher und weniger hart."
       },
       {
-        "q": "Wie verwende ich colorPaletteFinder?",
+        "q": "Wie nutze ich colorPaletteFinder?",
         "a": "Öffne das Tool, wähle deine Primärfarbe über den Farbkreis oder die Hex-Eingabe und entscheide dich dann für eine Harmonieregel. Das Tool erstellt sofort eine passende Palette, die du mit einem Klick kopieren kannst."
       },
       {
         "q": "Was ist WCAG-Kontrast und warum ist er wichtig?",
-        "a": "WCAG legt Kontrastverhältnisse fest, damit Text für alle Nutzer lesbar ist — auch für Menschen mit Sehbeeinträchtigungen. Ein Verhältnis von 4.5:1 erfüllt den AA-Standard, 7:1 erfüllt AAA."
+        "a": "Die WCAG definieren Kontrastverhältnisse, damit Text für alle Nutzer lesbar ist, auch für Menschen mit Sehbeeinträchtigungen. Ein Verhältnis von 4.5:1 erfüllt den AA-Standard; 7:1 erfüllt AAA."
       },
       {
-        "q": "Kann ich die Hex-Codes aus der erzeugten Palette kopieren?",
-        "a": "Ja — fahre mit der Maus über ein beliebiges Farbfeld im Palettenstreifen und klicke darauf, um den Hex-Code sofort in die Zwischenablage zu kopieren."
+        "q": "Kann ich die Hex-Codes aus der erstellten Palette kopieren?",
+        "a": "Ja — fahre mit der Maus über eine beliebige Farbfläche im Palettenstreifen und klicke, um ihren Hex-Code sofort in die Zwischenablage zu kopieren."
       }
     ]
+  },
+  "tool": {
+    "metaTitle": "Farbpaletten-Generator mit Farbkreis & Kontrastprüfer",
+    "metaDescription": "Interaktiver Farbpaletten-Generator mit Farbkreis, 7 Harmonieregeln, HSL-/RGB-Werten & WCAG-Kontrastprüfer. Erstelle Hex-Schemata kostenlos — jetzt ausprobieren.",
+    "ogDescription": "Interaktiver Farbpaletten-Generator mit Farbkreis, 7 Harmonieregeln, HSL-/RGB-Werten und WCAG-Kontrastprüfer. Erstelle Hex-Schemata kostenlos.",
+    "twitterDescription": "Interaktiver Farbpaletten-Generator: Farbkreis, 7 Harmonieregeln, HSL/RGB und ein WCAG-Kontrastprüfer. Kostenlos, ohne Anmeldung.",
+    "ruleAnalogous": "Analog",
+    "ruleMonochromatic": "Monochromatisch",
+    "ruleTriadic": "Triadisch",
+    "ruleComplementary": "Komplementär",
+    "ruleSplitComplementary": "Geteilt-komplementär",
+    "ruleSquare": "Quadratisch",
+    "ruleCompound": "Kombiniert",
+    "harmonyLabel": "Farbharmonie",
+    "allHarmonyTitle": "Alle Harmoniepaletten",
+    "curatedTitle": "Kuratierte Paletten",
+    "colorsSuffix": "Farben",
+    "contrastTitle": "WCAG-Kontrastprüfer",
+    "contrastTextColor": "Textfarbe",
+    "contrastBgColor": "Hintergrundfarbe",
+    "contrastNormal": "Normaler Text (AA 4.5:1)",
+    "contrastLarge": "Großer Text (AA 3:1)",
+    "contrastUiGraphics": "UI & Grafiken (3:1)",
+    "contrastSample": "Franz jagt im Taxi quer durch Bayern",
+    "footerNote": "Werkzeug zur Farblehre · 7 Harmonieregeln",
+    "proseBody": "## So nutzt du den Farbpaletten-Generator\n\nDieser kostenlose Farbpaletten-Generator verwandelt eine einzelne Startfarbe mithilfe klassischer Berechnungen der Farblehre in ein vollständiges, harmonisches Schema. Wähle eine Basisfarbe über den Farbkreis, den Farbton-Regler oder durch Eingabe eines Hex-Codes und entscheide dich dann für eine Harmonieregel, um sofort eine passende Farbauswahl zu sehen. Jede Farbfläche lässt sich mit einem Klick in die Zwischenablage kopieren und direkt in CSS, Tailwind, Figma oder ein beliebiges Design-Tool einfügen.\n\n- **Wähle eine Basisfarbe** — ziehe den Punkt auf dem Farbkreis, bewege den Farbton-Regler, tippe einen sechsstelligen Hex-Wert ein oder nutze die native Farbauswahl in der oberen Leiste.\n- **Wähle eine Harmonieregel** — öffne das Dropdown „Farbharmonie“ und wähle die gewünschte Beziehung (komplementär, analog, triadisch und mehr).\n- **Kopiere deine Farben** — fahre mit der Maus über eine Farbfläche im Palettenstreifen, um ihren Hex-Code einzublenden, und klicke dann zum Kopieren.\n- **Prüfe die Barrierefreiheit** — nutze den integrierten WCAG-Kontrastprüfer oben, um sicherzustellen, dass deine Text- und Hintergrundfarben lesbar sind.\n- **Entdecke Variationen** — durchstöbere das Raster „Alle Harmoniepaletten“, um jede Regel für deine Basisfarbe zu vergleichen, oder starte mit einer der kuratierten Paletten.\n\n## Die sieben Farbharmonieregeln\n\nFarbharmonien beschreiben, wie Farbtöne im Farbkreis zueinander stehen. Jede Regel erzeugt eine andere Stimmung und einen anderen Kontrastgrad:\n\n- **Komplementär** — zwei direkt gegenüberliegende Farbtöne (180° auseinander). Maximaler Kontrast und Energie; ideal für Handlungsaufforderungen.\n- **Analog** — benachbarte Farbtöne (etwa 30° auseinander). Ruhig, stimmig und natürlich wirkend.\n- **Triadisch** — drei gleichmäßig im Abstand von 120° verteilte Farbtöne. Lebendig und dennoch ausgewogen.\n- **Geteilt-komplementär** — eine Basisfarbe plus die beiden Farbtöne, die ihr Komplement flankieren. Starker Kontrast mit weniger Spannung als reines Komplementär.\n- **Tetradisch** — vier Farbtöne, die ein Rechteck im Farbkreis bilden. Reichhaltig und vielfältig; funktioniert am besten mit einer dominanten Farbe.\n- **Quadratisch** — vier gleichmäßig im Abstand von 90° verteilte Farbtöne. Kräftig und ausgewogen mit gleichem visuellem Gewicht.\n- **Monochromatisch** — ein einzelner Farbton in unterschiedlicher Helligkeit und Sättigung. Elegant, klar und einfach anzuwenden.\n\n## Farbkontrast für Barrierefreiheit prüfen\n\nEine schöne Palette muss auch lesbar sein. Die Web Content Accessibility Guidelines (WCAG) definieren Mindestkontrastverhältnisse zwischen Text und Hintergrund: **4.5:1** für normalen Fließtext und **3:1** für großen Text, um den AA-Standard zu erfüllen, sowie **7:1** für den strengeren AAA-Standard. Der Kontrastprüfer auf dieser Seite berechnet das exakte Verhältnis zwischen zwei beliebigen Farben und zeigt an, ob sie AA oder AAA bestehen, sodass du deine Palette anpassen kannst, bevor sie live geht.\n\n## Häufig gestellte Fragen\n\n### Ist der Farbpaletten-Generator kostenlos?\n\nJa. Das Tool ist für private und kommerzielle Projekte vollständig kostenlos und erfordert keine Anmeldung.\n\n### Welche Farbformate werden unterstützt?\n\nDu kannst Farben als Hex-Codes eingeben und kopieren, und jede erzeugte Farbe wird aus ihren zugrunde liegenden HSL- und RGB-Werten berechnet.\n\n### Welche Harmonieregel sollte ich verwenden?\n\nNutze komplementär oder geteilt-komplementär für auffällige Akzente, analog oder monochromatisch für ruhige und stimmige Oberflächen sowie triadisch oder quadratisch, wenn du ein reichhaltigeres, mehrfarbiges Schema brauchst."
+  },
+  "howItWorks": {
+    "metaTitle": "Farbpaletten-Generator & Farbkreis richtig nutzen",
+    "metaDescription": "Lerne, wie du einen Farbpaletten-Generator nutzt: Farben im Farbkreis wählen, Harmonieregeln anwenden und WCAG-Kontrast prüfen. Schritt-für-Schritt-Anleitung mit Hex-Tipps.",
+    "ogTitle": "Farbpaletten-Generator & Farbkreis richtig nutzen",
+    "ogDescription": "Schritt-für-Schritt-Anleitung zum Erstellen harmonischer, barrierefreier Farbpaletten — mit Farbkreis, 7 Harmonieregeln und WCAG-Kontrastprüfer.",
+    "backHome": "Zurück zur Startseite",
+    "title": "So funktioniert",
+    "titleAccent": "colorPaletteFinder",
+    "titleEnd": "",
+    "sub": "Eine vollständige Anleitung zur Nutzung unserer professionellen Farbwerkzeuge. Erstelle in Sekunden perfekte, barrierefreie und mathematisch fundierte Farbharmonien.",
+    "body": "colorPaletteFinder basiert auf klassischen Prinzipien der Farblehre, kombiniert mit den Anforderungen modernen digitalen Designs. Wir haben eine nahtlose Oberfläche gestaltet, bei der du Farbtöne nicht manuell berechnen oder Kontrastverhältnisse selbst prüfen musst — das Tool übernimmt die Schwerstarbeit für dich.\n\n## 1. Der interaktive Farbkreis\n\nIm Zentrum von colorPaletteFinder steht der interaktive **HSL-Farbkreis**. Anders als herkömmliche rechteckige Farbauswahlfelder bildet unser kreisförmiger Farbkreis die Dynamik der Farblehre direkt ab.\n\n- **Farbton (der Winkel)**: Ziehe den Punkt um den äußeren Rand, um die grundlegende Farbfamilie zu ändern (Rot, Blau, Grün usw.).\n- **Sättigung (Abstand zum Mittelpunkt)**: Ziehe den Punkt zur Mitte, um die Farbe gräulich und gedämpft zu machen, oder zum Rand für maximale Leuchtkraft.\n- **Helligkeit**: Wird dynamisch angepasst, damit die erzeugten Harmoniefarben ein ausgewogenes visuelles Gewicht behalten.\n\nBewege den Punkt der Primärfarbe und beobachte, wie sich alle abhängigen Harmoniefarben sofort in Echtzeit anpassen und dabei ihre strengen mathematischen Beziehungen beibehalten.\n\n## 2. Eine Harmonieregel wählen\n\nJe nach Ästhetik, die du erreichen möchtest, kannst du aus sieben verschiedenen, mathematisch erprobten Farbharmonieregeln wählen:\n\n### Komplementär\n\nFarben, die im Farbkreis direkt gegenüberliegen (180° auseinander). Erzeugt maximalen Kontrast und auffällige Energie.\n\n### Analog\n\nFarben, die im Farbkreis nebeneinander liegen (durch 30° getrennt). Das erzeugt ein ruhiges, angenehmes und natürlich wirkendes Design.\n\n### Triadisch\n\nDrei Farben, die gleichmäßig um den Farbkreis verteilt sind (120° auseinander). Bietet hohen Kontrast bei besserer Farbbalance als komplementäre Schemata.\n\n### Geteilt-komplementär\n\nEine Basisfarbe plus die beiden Farben neben ihrem Komplement. Bietet den starken visuellen Kontrast des komplementären Schemas, jedoch mit weniger Spannung.\n\n### Monochromatisch\n\nVariationen in Helligkeit und Sättigung eines einzelnen Farbtons. Erzeugt einen stimmigen, klaren und eleganten Look.\n\n## 3. WCAG-Kontrastprüfung\n\nEine schöne Palette zu erstellen ist nur die halbe Arbeit; die Farben müssen auch für alle Nutzer zugänglich sein. Insbesondere muss Text vor Hintergrundfarben lesbar sein.\n\ncolorPaletteFinder verfügt über einen integrierten Kontrastprüfer am Ende des Tools. Wähle zwei beliebige erzeugte Farben (z. B. einen Hintergrund und eine Textfarbe), und das Verhältnis wird berechnet.\n\n- **AA-Standard**: Erfordert ein Kontrastverhältnis von mindestens **4.5:1** für normalen Text und 3:1 für großen Text.\n- **AAA-Standard**: Der Goldstandard der Barrierefreiheit, der ein Verhältnis von mindestens **7:1** für normalen Text erfordert.\n\n## 4. Kopieren und Exportieren\n\nSobald deine perfekte Palette erstellt ist, lässt sie sich mühelos in dein Projekt einbinden.\n\nFahre mit der Maus über eine beliebige Farbfläche im Palettenstreifen, um ihren genauen HEX-Code einzublenden. Ein Klick auf die Farbfläche kopiert den sechsstelligen HEX-Code sofort in deine Zwischenablage (z. B. `#1A2B3C`), bereit zum direkten Einfügen in CSS, Tailwind-Konfigurationen, Figma oder Adobe Creative Cloud.",
+    "ctaTitle": "Bereit, mit dem Designen zu starten?",
+    "ctaText": "Spring direkt ins Tool und erstelle dein erstes barrierefreies, harmonisches Farbschema.",
+    "ctaButton": "colorPaletteFinder-Toolbar starten"
+  },
+  "about": {
+    "metaTitle": "Über colorPaletteFinder — Kostenloses Farbpaletten-Tool",
+    "metaDescription": "Erfahre, was colorPaletteFinder ist: ein kostenloser mathematischer Farbpaletten-Generator für Designer, Entwickler und Kreative. Unsere Mission und für wen es gedacht ist.",
+    "ogTitle": "Über colorPaletteFinder",
+    "ogDescription": "Erfahre mehr über die Mission hinter colorPaletteFinder — dem ultimativen kostenlosen Farbpaletten-Generator für Profis.",
+    "backHome": "Zurück zur Startseite",
+    "title": "Über",
+    "titleAccent": "colorPaletteFinder",
+    "sub": "Unsere Mission ist es, professionelle Farblehre für alle zugänglich zu machen. Wir entwickeln einfache, mathematisch präzise Werkzeuge für Designer und Entwickler.",
+    "body": "## Was ist colorPaletteFinder?\n\n**colorPaletteFinder** ist eine kostenlose, interaktive Webanwendung, die Kreativen hilft, sofort harmonische und ästhetisch ansprechende Farbpaletten zu erstellen. Egal, ob du eine neue Markenidentität aufbaust, eine Benutzeroberfläche gestaltest oder digitale Kunst erschaffst — unser Tool liefert den perfekten Ausgangspunkt, indem es klassische, mathematisch erprobte Regeln der Farblehre nutzt.\n\nStatt zu raten, welche Farben gut zusammenpassen, nutzt colorPaletteFinder einen interaktiven HSL-Farbkreis (Farbton, Sättigung, Helligkeit), um anhand komplementärer, analoger, triadischer und weiterer professioneller Harmonieformeln sofort exakte Übereinstimmungen zu berechnen.\n\n## Unser Hauptziel\n\nUnser vorrangiges Ziel ist es, **die Lücke zwischen komplexer Farblehre und praktischem digitalem Design zu schließen**. Wir glauben, dass die Wahl der richtigen Farben weder einen Abschluss in Kunstgeschichte noch teure proprietäre Software erfordern sollte.\n\nWir möchten ein reibungsloses, lehrreiches und hochwertiges Tool bereitstellen, das Folgendes sicherstellt:\n\n- **Barrierefreiheit zuerst:** Integrierte WCAG-Kontrastprüfer garantieren, dass die von dir erstellten Paletten inklusiv und für alle Nutzer gut lesbar sind.\n- **Effizienz:** Das Kopieren von HEX-Codes per Klick beschleunigt den Workflow für Entwickler, die Tailwind CSS, reines CSS oder andere moderne Styling-Frameworks einsetzen.\n- **Wissen:** Indem visualisiert wird, wie Harmonieregeln genau im Farbkreis funktionieren, lernen Nutzer mit der Zeit ganz natürlich die Mechanik von Farbbeziehungen.\n\n## Für wen ist es gedacht?\n\ncolorPaletteFinder wurde mit Blick auf das moderne Web entwickelt. Es richtet sich an:\n\n- **UI/UX-Designer**, die Wireframes skizzieren und universelle Designsysteme aufbauen.\n- **Frontend-Entwickler**, die schnelle, barrierefreie Farbvariablen für ihre Stylesheets benötigen.\n- **Digital-Marketer & Kreative**, die markenübergreifende Konsistenz über Kampagnen hinweg sicherstellen.",
+    "ctaTitle": "Starte noch heute mit dem Erstellen",
+    "ctaText": "Erlebe den einfachsten Weg, professionelle Farbpaletten zu erstellen. Keine Anmeldung erforderlich.",
+    "ctaButton": "Das ColorFinder-Tool öffnen"
+  },
+  "contact": {
+    "metaTitle": "Kontakt colorPaletteFinder — Fragen & Feedback",
+    "metaDescription": "Kontaktiere das colorPaletteFinder-Team bei Fragen, Feedback, Fehlermeldungen oder Supportanfragen. Wir antworten innerhalb von 24–48 Stunden — schreib uns einfach heute eine E-Mail.",
+    "ogTitle": "Kontakt colorPaletteFinder — Fragen & Feedback",
+    "ogDescription": "Melde dich bei uns, wenn du Fragen oder Feedback hast.",
+    "backHome": "Zurück zur Startseite",
+    "title": "Kontaktiere",
+    "titleAccent": "uns",
+    "sub": "Wir freuen uns, von dir zu hören. Melde dich mit deinen Fragen oder deinem Feedback.",
+    "heading": "Nimm Kontakt auf",
+    "body": "Wenn du Hilfe bei der Nutzung des Tools brauchst, einen Fehler melden oder einfach Hallo sagen möchtest, schreib uns eine E-Mail! Wir bemühen uns, innerhalb von 24–48 Stunden zu antworten.",
+    "contactLabel": "Primärer Kontakt",
+    "email": "hello@colorpalettefinder.com"
+  },
+  "privacy": {
+    "metaTitle": "Datenschutzerklärung — colorPaletteFinder",
+    "metaDescription": "Lies die Datenschutzerklärung von colorPaletteFinder: wie wir deine Daten erheben, nutzen und schützen, dazu Cookies, Werbung, Analyse und deine Einwilligungsoptionen.",
+    "backHome": "Zurück zur Startseite",
+    "title": "Datenschutz",
+    "titleAccent": "erklärung",
+    "lastUpdatedLabel": "Zuletzt aktualisiert:",
+    "intro": "Bei colorPaletteFinder hat dein Datenschutz höchste Priorität. Diese Datenschutzerklärung erläutert, wie wir deine Informationen erheben, nutzen und schützen, wenn du unsere Website und unsere Werkzeuge zur Farberzeugung verwendest.",
+    "body": "## 1. Informationen, die wir erheben\n\nWir setzen auf eine möglichst geringe Datenerhebung. Wir erheben nur die Informationen, die zur Bereitstellung und Verbesserung unserer Dienste für dich erforderlich sind:\n\n- **Protokoll- und Nutzungsdaten:** Wie die meisten Websites zeichnen unsere Server automatisch Informationen auf, die dein Browser beim Besuch unserer Seite übermittelt. Dazu können deine IP-Adresse, Browsertyp und -version, die von dir besuchten Seiten unserer Website, Uhrzeit und Datum deines Besuchs sowie die auf diesen Seiten verbrachte Zeit gehören.\n- **Gerätedaten:** Informationen über das Gerät oder den Computer, mit dem du auf die Website zugreifst, einschließlich Hardwaremodelle, Betriebssysteme und Gerätekennungen.\n- **Von dir bereitgestellte Informationen:** Wenn du dich entscheidest, uns per E-Mail zu kontaktieren, erheben wir deine E-Mail-Adresse und alle in deiner Nachricht enthaltenen Inhalte, um angemessen antworten zu können.\n\n## 2. Wie wir deine Informationen nutzen\n\nDie von uns erhobenen Informationen werden auf folgende Weise genutzt:\n\n- Zur Bereitstellung, zum Betrieb und zur Wartung unserer Website.\n- Zur Verbesserung, Personalisierung und Erweiterung der Funktionalität unserer Website auf Grundlage der Nutzerinteraktionen.\n- Um zu verstehen und zu analysieren, wie Nutzer mit unseren Farbpaletten-Werkzeugen interagieren.\n- Um mit dir zu kommunizieren, einschließlich der Beantwortung von Anfragen oder der Bereitstellung von Kundensupport.\n- Um technische Probleme oder Sicherheitsverletzungen zu erkennen, zu verhindern und zu beheben.\n\n## 3. Cookies und Tracking-Technologien\n\nWir verwenden Cookies und ähnliche Tracking-Technologien, um unsere Website zu betreiben, deine Einstellungen zu speichern, den Datenverkehr zu analysieren und — gemeinsam mit unseren Werbepartnern — Werbung auszuliefern und zu messen. Cookies sind kleine Datendateien, die eine anonyme eindeutige Kennung enthalten können.\n\nDie von uns verwendeten Cookies lassen sich in drei große Kategorien einteilen: **essenzielle Cookies**, die für das Funktionieren der Website erforderlich sind, **Analyse-Cookies**, die uns helfen zu verstehen, wie die Website genutzt wird, und **Werbe-Cookies**, die von Google und anderen Drittanbietern gesetzt werden (beschrieben in Abschnitt 4 unten).\n\nDu kannst deinen Browser anweisen, alle Cookies abzulehnen oder anzuzeigen, wenn ein Cookie gesendet wird. Wenn du dich im Europäischen Wirtschaftsraum (EWR), im Vereinigten Königreich oder in der Schweiz befindest, bitten wir dich um deine Einwilligung, bevor wir nicht-essenzielle Cookies setzen, und du kannst diese Einwilligung jederzeit über die Datenschutzeinstellungen auf unserer Website ändern oder widerrufen. Wenn du Cookies jedoch nicht akzeptierst, funktionieren einige funktionale Teile unserer Website möglicherweise nicht reibungslos.\n\n## 4. Werbung, Analyse & Drittanbieterdienste\n\ncolorPaletteFinder ist kostenlos nutzbar. Um unsere Hosting- und Entwicklungskosten zu decken, zeigen wir Werbung an, die von Google und anderen Drittanbietern ausgeliefert wird. Dieser Abschnitt erläutert, wie Werbung und andere Drittanbieterdienste auf unserer Website funktionieren und wie du sie steuern kannst.\n\n- **Google AdSense:** Wir nutzen Google AdSense, um Anzeigen einzublenden. Google verwendet als Drittanbieter Cookies, um Anzeigen auf unserer Website auszuliefern.\n- **Google-Werbe-Cookies:** Die Verwendung von Werbe-Cookies durch Google (einschließlich Cookies, die von den Domains `google.com` und `doubleclick.net` ausgeliefert werden) ermöglicht es Google und seinen Partnern, dir Anzeigen auf Grundlage deines Besuchs bei colorPaletteFinder und/oder anderer Websites im Internet auszuliefern.\n- **Drittanbieter & Werbenetzwerke:** Drittanbieter und Werbenetzwerke können ebenfalls Cookies, Web-Beacons und ähnliche Technologien verwenden, um Informationen zu erheben und Anzeigen auszuliefern, die sie für deine Interessen als relevant erachten.\n- **Analyse:** Wir nutzen Dienste wie Google Analytics und Google Tag Manager, um zu verstehen, wie Besucher unsere Website nutzen. Diese Anbieter können eigene Cookies setzen und Nutzungsdaten in unserem Auftrag verarbeiten.\n\n**So deaktivierst du personalisierte Werbung:** Du kannst personalisierte Werbung deaktivieren, indem du die [Google-Anzeigeneinstellungen](https://adssettings.google.com) besuchst. Die Verwendung von Cookies für personalisierte Werbung durch einige Drittanbieter kannst du deaktivieren, indem du [www.aboutads.info/choices](https://www.aboutads.info/choices/) besuchst, oder, falls du dich im EWR oder im Vereinigten Königreich befindest, [www.youronlinechoices.eu](https://www.youronlinechoices.eu).\n\nWeitere Informationen darüber, wie Google Daten nutzt, wenn du unsere Website verwendest, findest du unter [Wie Google Daten verwendet, wenn du Websites oder Apps nutzt, die unsere Dienste verwenden](https://policies.google.com/technologies/partner-sites).\n\n**Einwilligung (EWR, UK & Schweiz):** Für Besucher im Europäischen Wirtschaftsraum, im Vereinigten Königreich und in der Schweiz nutzen wir eine von Google zertifizierte Consent-Management-Plattform, um deine Einwilligung einzuholen, bevor nicht-essenzielle oder Werbe-Cookies gesetzt werden. Standardmäßig sind Anzeigenpersonalisierung und Analysespeicherung deaktiviert, bis du deine Einwilligung erteilst. Du kannst deine Einwilligung jederzeit über die Datenschutzeinstellungen auf unserer Website ändern oder widerrufen.\n\nAlle anderen von uns eingesetzten Dritten haben nur insoweit Zugriff auf deine Daten, als dies zur Ausführung von Aufgaben in unserem Auftrag erforderlich ist, und sind verpflichtet, diese nicht offenzulegen oder zu anderen Zwecken zu verwenden. Wir sind nicht für die Datenschutzpraktiken dieser Dritten verantwortlich; wir empfehlen dir, deren jeweilige Datenschutzerklärungen zu prüfen.\n\n## 5. Datensicherheit\n\nWir nehmen die Sicherheit deiner Daten ernst und bemühen uns, kommerziell vertretbare Mittel zu deren Schutz einzusetzen. Bitte beachte jedoch, dass keine Methode der Übertragung über das Internet oder der elektronischen Speicherung zu 100 % sicher ist. Obwohl wir uns bemühen, deine personenbezogenen Daten zu schützen, können wir ihre absolute Sicherheit nicht garantieren.\n\n## 6. Datenschutz von Kindern\n\nUnser Dienst richtet sich nicht an Personen unter 13 Jahren. Wir erheben wissentlich keine personenbezogenen Daten von Personen unter 13 Jahren. Wenn du ein Elternteil oder Erziehungsberechtigter bist und davon Kenntnis erlangst, dass dein Kind uns personenbezogene Daten übermittelt hat, kontaktiere uns bitte.\n\n## 7. Änderungen dieser Datenschutzerklärung\n\nWir können unsere Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir werden dich über Änderungen informieren, indem wir die neue Datenschutzerklärung auf dieser Seite veröffentlichen und das Datum „Zuletzt aktualisiert“ am Anfang dieses Dokuments anpassen. Wir empfehlen dir, diese Datenschutzerklärung regelmäßig auf Änderungen zu prüfen.\n\n## 8. Kontaktiere uns\n\nWenn du Fragen zu dieser Datenschutzerklärung hast, kontaktiere bitte unser Datenschutzteam:\n\nhello@colorpalettefinder.com"
+  },
+  "terms": {
+    "metaTitle": "Nutzungsbedingungen — colorPaletteFinder",
+    "metaDescription": "Lies die Nutzungsbedingungen von colorPaletteFinder: Nutzungsregeln, kostenlose kommerzielle Nutzung, Werbung, Risikohinweise und Haftungsausschlüsse zur Barrierefreiheit, bevor du startest.",
+    "backHome": "Zurück zur Startseite",
+    "title": "Nutzungs",
+    "titleAccent": "bedingungen",
+    "lastUpdatedLabel": "Zuletzt aktualisiert:",
+    "intro": "Willkommen bei colorPaletteFinder. Durch den Zugriff auf oder die Nutzung unserer Website, Werkzeuge und Dienste erklärst du dich damit einverstanden, die folgenden Nutzungsbedingungen einzuhalten und an sie gebunden zu sein. Bitte lies sie sorgfältig.",
+    "body": "## 1. Annahme der Bedingungen\n\nDiese Bedingungen regeln deine Nutzung von colorPaletteFinder. Wenn du mit einem Teil dieser Bedingungen nicht einverstanden bist, darfst du unsere Website nicht nutzen. Deine fortgesetzte Nutzung der Website stellt deine Annahme dieser Bedingungen dar.\n\n## 2. Regeln für die Website-Nutzung\n\nUm eine sichere und zuverlässige Umgebung für alle Nutzer zu gewährleisten, erklärst du dich damit einverstanden, bei der Nutzung von colorPaletteFinder die folgenden Grundregeln einzuhalten:\n\n- **Rechtmäßige Nutzung:** Du erklärst dich damit einverstanden, die Website nicht für rechtswidrige Zwecke oder auf eine Weise zu nutzen, die geltendes lokales, nationales oder internationales Recht verletzt.\n- **Kein Scraping oder automatisierter Zugriff:** Du darfst keine automatisierten Systeme, Bots, Scraper oder ähnliche Werkzeuge zur Datenerfassung verwenden, um Informationen, Farben oder Paletten ohne unsere ausdrückliche schriftliche Genehmigung in großem Umfang von unserer Website zu extrahieren.\n- **Keine Beeinträchtigung:** Du erklärst dich damit einverstanden, die mit unserer Website verbundenen Server oder Netzwerke nicht zu stören, zu beeinträchtigen oder dir unbefugten Zugriff darauf zu verschaffen.\n- **Private und berufliche Nutzung:** Die erzeugten Paletten und Werkzeuge sind sowohl für deine private als auch für deine berufliche/kommerzielle Nutzung vollständig kostenlos.\n\n## 3. Monetarisierung und Partnerwerbung\n\n**Kostenlose Nutzung:** Unsere Werkzeuge zur Farberzeugung und unsere Inhalte werden vollständig kostenlos angeboten. Um die Website am Laufen zu halten, Serverkosten zu decken und die Entwicklung fortzusetzen, wird die Website durch Werbung und Partnerwerbung finanziert.\n\n- Während der Navigation auf der Website können dir Displayanzeigen oder Banner von Drittanbietern angezeigt werden.\n- Wir können in unseren Blog-Inhalten oder unserer Oberfläche Affiliate-Links oder Partnerwerbung einbinden. Durch das Anklicken dieser Links oder einen Kauf darüber können wir eine kleine Provision verdienen, ohne dass dir zusätzliche Kosten entstehen.\n- Wir sind nicht für die Inhalte, Datenschutzerklärungen oder Praktiken von Websites oder Diensten Dritter verantwortlich, die über unsere Anzeigen oder Werbung verlinkt sind.\n\n## 4. Risikohinweis und Haftungsausschluss\n\n**WICHTIGER RISIKOHINWEIS:** colorPaletteFinder bietet lehrreiche Werkzeuge zur Farblehre und Paletten-Generatoren für Designer und Entwickler. Alle Berechnungen, Farbharmonien und Kontrastverhältnisse dienen jedoch **ausschließlich zur Orientierung**.\n\n- **Keine Garantie für Genauigkeit:** Obwohl wir uns bemühen, präzise mathematische Formeln zur Erzeugung von Farbharmonien und zur Überprüfung von WCAG-Kontrastverhältnissen zu verwenden, übernehmen wir keine Gewähr für die absolute Genauigkeit, Zuverlässigkeit oder Vollständigkeit der Werkzeuge.\n- **Einhaltung der Barrierefreiheit:** Du allein bist dafür verantwortlich, sicherzustellen, dass die von dir gewählten Farben in deinen Endprodukten die gesetzlichen Standards für Barrierefreiheit (wie die WCAG-Richtlinien, ADA-Konformität) erfüllen. **Verlasse dich für rechtliche oder kritische Konformitätsprüfungen nicht allein auf unser Tool.**\n- **„Wie besehen“-Grundlage:** Die Website und ihre Werkzeuge werden auf einer „WIE BESEHEN“- und „WIE VERFÜGBAR“-Grundlage bereitgestellt, ohne jegliche ausdrückliche oder stillschweigende Gewährleistung.\n- **Haftungsbeschränkung:** In keinem Fall haften colorPaletteFinder, seine Ersteller oder sein Team für direkte, indirekte, beiläufige, Folge- oder besondere Schäden, die sich aus oder im Zusammenhang mit deiner Nutzung der Website ergeben, einschließlich, aber nicht beschränkt auf Designfehler, Klagen wegen Barrierefreiheit oder Gewinnverluste.\n\n## 5. Geistiges Eigentum\n\nDie ursprünglichen Inhalte, Funktionen, das Layout und die Funktionalität der Website (ausgenommen die erzeugten Hex-Codes, die du frei verwenden darfst) sind Eigentum von colorPaletteFinder und durch internationales Urheberrecht, Markenrecht und Gesetze zum Schutz des geistigen Eigentums geschützt. Du darfst unser Branding, Logo oder proprietären Code nicht ohne Genehmigung reproduzieren.\n\n## 6. Änderungen der Bedingungen\n\nWir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern oder zu ersetzen. Bei wesentlichen Änderungen werden wir versuchen, mindestens 30 Tage im Voraus zu informieren, bevor neue Bedingungen in Kraft treten. Indem du nach Inkrafttreten dieser Änderungen weiterhin auf unseren Dienst zugreifst oder ihn nutzt, erklärst du dich damit einverstanden, an die geänderten Bedingungen gebunden zu sein.\n\n## 7. Kontaktiere uns\n\nWenn du Fragen zu diesen Nutzungsbedingungen hast, kontaktiere uns bitte:\n\n**Rechtliche Anfrage**\n\n[hello@colorpalettefinder.com](mailto:hello@colorpalettefinder.com)"
   }
 }

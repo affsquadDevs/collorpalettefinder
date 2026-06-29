@@ -2,6 +2,8 @@
 
 import { useState, useMemo, useRef } from "react";
 import dynamic from "next/dynamic";
+import { useTranslations } from "next-intl";
+import { Markdown } from "@/app/components/Markdown";
 import styles from "@/app/page.module.css";
 import {
     getTextColor,
@@ -18,14 +20,14 @@ import type { WheelDot } from "@/app/components/ColorWheel";
 
 const ColorWheel = dynamic(() => import("@/app/components/ColorWheel"), { ssr: false });
 
-const RULES: { rule: PaletteRule; label: string }[] = [
-    { rule: "analogous", label: "Analogous" },
-    { rule: "monochromatic", label: "Monochromatic" },
-    { rule: "triadic", label: "Triadic" },
-    { rule: "complementary", label: "Complementary" },
-    { rule: "split-complementary", label: "Split Complementary" },
-    { rule: "square", label: "Square" },
-    { rule: "tetradic", label: "Compound" },
+const RULES: { rule: PaletteRule; key: string }[] = [
+    { rule: "analogous", key: "ruleAnalogous" },
+    { rule: "monochromatic", key: "ruleMonochromatic" },
+    { rule: "triadic", key: "ruleTriadic" },
+    { rule: "complementary", key: "ruleComplementary" },
+    { rule: "split-complementary", key: "ruleSplitComplementary" },
+    { rule: "square", key: "ruleSquare" },
+    { rule: "tetradic", key: "ruleCompound" },
 ];
 
 function CopySwatch({ hex }: { hex: string }) {
@@ -46,6 +48,7 @@ function CopySwatch({ hex }: { hex: string }) {
 }
 
 function ContrastChecker({ initialFg, initialBg }: { initialFg: string; initialBg: string }) {
+    const t = useTranslations("tool");
     const [fg, setFg] = useState(initialFg);
     const [bg, setBg] = useState(initialBg);
     const [fgInput, setFgInput] = useState(initialFg.replace("#", ""));
@@ -74,15 +77,15 @@ function ContrastChecker({ initialFg, initialBg }: { initialFg: string; initialB
                     : { label: "Fail", color: "#b91c1c" };
 
     const checks = [
-        { label: "Normal text (AA 4.5:1)", size: 16, weight: 400, aa: ratio >= 4.5, aaa: ratio >= 7 },
-        { label: "Large text (AA 3:1)", size: 22, weight: 700, aa: ratio >= 3, aaa: ratio >= 4.5 },
-        { label: "UI & graphics (3:1)", size: 14, weight: 600, aa: ratio >= 3, aaa: ratio >= 3 },
+        { label: t("contrastNormal"), size: 16, weight: 400, aa: ratio >= 4.5, aaa: ratio >= 7 },
+        { label: t("contrastLarge"), size: 22, weight: 700, aa: ratio >= 3, aaa: ratio >= 4.5 },
+        { label: t("contrastUiGraphics"), size: 14, weight: 600, aa: ratio >= 3, aaa: ratio >= 3 },
     ];
 
     return (
-        <section className={styles.contrastCard} aria-label="WCAG contrast checker">
+        <section className={styles.contrastCard} aria-label={t("contrastTitle")}>
             <div className={styles.contrastHeader}>
-                <span className={styles.contrastTitle}>WCAG Contrast Checker</span>
+                <span className={styles.contrastTitle}>{t("contrastTitle")}</span>
                 <div className={styles.contrastRatio} style={{ color: overall.color }}>
                     {ratio.toFixed(2)}:1
                     <span className={styles.contrastLevel}>{overall.label}</span>
@@ -91,7 +94,7 @@ function ContrastChecker({ initialFg, initialBg }: { initialFg: string; initialB
 
             <div className={styles.contrastRow}>
                 <label className={styles.contrastLabel}>
-                    Text color
+                    {t("contrastTextColor")}
                     <div className={styles.contrastInputWrap}>
                         <span className={styles.contrastColorBox} style={{ background: fg }} />
                         <span className={styles.hashSign}>#</span>
@@ -114,7 +117,7 @@ function ContrastChecker({ initialFg, initialBg }: { initialFg: string; initialB
                 </label>
 
                 <label className={styles.contrastLabel}>
-                    Background color
+                    {t("contrastBgColor")}
                     <div className={styles.contrastInputWrap}>
                         <span className={styles.contrastColorBox} style={{ background: bg }} />
                         <span className={styles.hashSign}>#</span>
@@ -142,7 +145,7 @@ function ContrastChecker({ initialFg, initialBg }: { initialFg: string; initialB
                     <div key={c.label} className={styles.contrastPreview} style={{ background: bg, color: fg }}>
                         <span className={styles.contrastPreviewLabel}>{c.label}</span>
                         <span className={styles.contrastPreviewText} style={{ fontSize: `${c.size}px`, fontWeight: c.weight }}>
-                            The quick brown fox
+                            {t("contrastSample")}
                         </span>
                         <span style={{ fontSize: 11, fontWeight: 700 }}>
                             {c.aaa ? "AAA ✓" : c.aa ? "AA ✓" : "Fail ✕"}
@@ -155,6 +158,7 @@ function ContrastChecker({ initialFg, initialBg }: { initialFg: string; initialB
 }
 
 export default function ToolPage() {
+    const t = useTranslations("tool");
     const [hex, setHex] = useState("#5B5EA6");
     const [rule, setRule] = useState<PaletteRule>("complementary");
     const [open, setOpen] = useState(false);
@@ -168,7 +172,6 @@ export default function ToolPage() {
     const palettes = useMemo(() => {
         return RULES.map((r) => ({
             rule: r.rule,
-            title: r.label,
             colors: makeDots(hex, r.rule).map((d) => ({ hex: d.hex })),
         }));
     }, [hex]);
@@ -205,15 +208,16 @@ export default function ToolPage() {
     };
 
     const activeRule = RULES.find((r) => r.rule === rule)!;
+    const ruleLabel = (r: PaletteRule) => t(RULES.find((x) => x.rule === r)!.key);
 
     return (
         <div className={styles.root}>
             <header className={styles.topbar}>
                 <div className={styles.dropdownWrap} ref={dropRef}>
                     <div className={styles.dropdownGroup}>
-                        <span className={styles.dropdownMeta}>Color Harmony</span>
+                        <span className={styles.dropdownMeta}>{t("harmonyLabel")}</span>
                         <button className={styles.dropdownTrigger} onClick={() => setOpen((v) => !v)}>
-                            {activeRule.label}
+                            {ruleLabel(rule)}
                             <svg width="12" height="12" viewBox="0 0 12 12">
                                 <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" />
                             </svg>
@@ -223,7 +227,7 @@ export default function ToolPage() {
                         <div className={styles.dropdown}>
                             {RULES.map((r) => (
                                 <button key={r.rule} className={`${styles.dropdownItem} ${rule === r.rule ? styles.dropdownItemActive : ""}`} onClick={() => { setRule(r.rule); setWheelDots(null); setActiveCurated(null); setOpen(false); }}>
-                                    {r.label}{rule === r.rule && <span className={styles.checkmark}>✓</span>}
+                                    {t(r.key)}{rule === r.rule && <span className={styles.checkmark}>✓</span>}
                                 </button>
                             ))}
                         </div>
@@ -252,7 +256,7 @@ export default function ToolPage() {
                 <ContrastChecker initialFg={hex} initialBg="#FFFFFF" />
 
                 <section className={styles.allPalettes}>
-                    <h2 className={styles.sectionTitle}>All Harmony Palettes</h2>
+                    <h2 className={styles.sectionTitle}>{t("allHarmonyTitle")}</h2>
                     <div className={styles.palettesGrid}>
                         {palettes.map((p) => (
                             <div key={p.rule} className={`${styles.paletteCard} ${p.rule === rule && !activeCurated ? styles.paletteCardActive : ""}`} onClick={() => { setRule(p.rule); setWheelDots(null); setActiveCurated(null); }}>
@@ -264,8 +268,8 @@ export default function ToolPage() {
                                     ))}
                                 </div>
                                 <div className={styles.paletteCardMeta}>
-                                    <span className={styles.paletteCardTitle}>{p.title}</span>
-                                    <span className={styles.paletteCardCount}>{p.colors.length} colors</span>
+                                    <span className={styles.paletteCardTitle}>{ruleLabel(p.rule)}</span>
+                                    <span className={styles.paletteCardCount}>{p.colors.length} {t("colorsSuffix")}</span>
                                 </div>
                             </div>
                         ))}
@@ -273,7 +277,7 @@ export default function ToolPage() {
                 </section>
 
                 <section className={styles.allPalettes} style={{ paddingBottom: '32px' }}>
-                    <h2 className={styles.sectionTitle}>Curated Palettes</h2>
+                    <h2 className={styles.sectionTitle}>{t("curatedTitle")}</h2>
                     <div className={styles.palettesGrid}>
                         {CURATED_PALETTES.map((p, idx) => (
                             <div key={idx} className={`${styles.paletteCard} ${activeCurated === p.title ? styles.paletteCardActive : ""}`} onClick={() => handleCuratedClick(p)}>
@@ -286,73 +290,18 @@ export default function ToolPage() {
                                 </div>
                                 <div className={styles.paletteCardMeta}>
                                     <span className={styles.paletteCardTitle}>{p.title}</span>
-                                    <span className={styles.paletteCardCount}>{p.colors.length} colors</span>
+                                    <span className={styles.paletteCardCount}>{p.colors.length} {t("colorsSuffix")}</span>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </section>
 
-                <article className="w-full max-w-[960px] px-6 mt-10 text-gray-700">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Use the Color Palette Generator</h2>
-                    <p className="mb-4 leading-relaxed">
-                        This free color palette generator turns a single starting color into a complete, harmonious
-                        scheme using classic color-theory math. Pick a base color with the wheel, the hue slider, or by
-                        typing a hex code, then choose a harmony rule to instantly see a matching set of colors. Every
-                        swatch can be copied to your clipboard with one click, ready to paste straight into CSS,
-                        Tailwind, Figma, or any design tool.
-                    </p>
-                    <ol className="list-decimal pl-6 space-y-2 mb-8 leading-relaxed">
-                        <li><strong>Choose a base color</strong> — drag the dot on the color wheel, move the hue slider, type a six-digit hex value, or use the native color picker in the top bar.</li>
-                        <li><strong>Select a harmony rule</strong> — open the “Color Harmony” dropdown and pick the relationship you want (complementary, analogous, triadic, and more).</li>
-                        <li><strong>Copy your colors</strong> — hover a swatch in the palette strip to reveal its hex code, then click to copy it.</li>
-                        <li><strong>Check accessibility</strong> — use the built-in WCAG contrast checker above to confirm your text and background colors are readable.</li>
-                        <li><strong>Explore variations</strong> — scan the “All Harmony Palettes” grid to compare every rule for your base color, or start from one of the curated palettes.</li>
-                    </ol>
-
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">The Seven Color Harmony Rules</h2>
-                    <p className="mb-4 leading-relaxed">
-                        Color harmonies describe how hues relate to one another on the color wheel. Each rule produces a
-                        different mood and level of contrast:
-                    </p>
-                    <ul className="space-y-3 mb-8 leading-relaxed">
-                        <li><strong>Complementary</strong> — two hues directly opposite each other (180° apart). Maximum contrast and energy; great for calls to action.</li>
-                        <li><strong>Analogous</strong> — neighboring hues (about 30° apart). Calm, cohesive, and natural-looking.</li>
-                        <li><strong>Triadic</strong> — three hues evenly spaced 120° apart. Vibrant yet balanced.</li>
-                        <li><strong>Split-Complementary</strong> — a base color plus the two hues flanking its complement. Strong contrast with less tension than pure complementary.</li>
-                        <li><strong>Tetradic</strong> — four hues forming a rectangle on the wheel. Rich and varied; works best with one dominant color.</li>
-                        <li><strong>Square</strong> — four hues evenly spaced 90° apart. Bold and balanced with equal visual weight.</li>
-                        <li><strong>Monochromatic</strong> — a single hue at varying lightness and saturation. Elegant, clean, and easy to apply.</li>
-                    </ul>
-
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Checking Color Contrast for Accessibility</h2>
-                    <p className="mb-4 leading-relaxed">
-                        A beautiful palette still needs to be readable. The Web Content Accessibility Guidelines (WCAG)
-                        define minimum contrast ratios between text and its background: <strong>4.5:1</strong> for normal
-                        body text and <strong>3:1</strong> for large text to meet the AA level, and <strong>7:1</strong>
-                        for the stricter AAA level. The contrast checker on this page calculates the exact ratio between
-                        any two colors and shows whether they pass AA or AAA, so you can adjust your palette before it
-                        ships.
-                    </p>
-
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-                    <div className="space-y-5 mb-4 leading-relaxed">
-                        <div>
-                            <h3 className="font-semibold text-gray-900 mb-1">Is the color palette generator free?</h3>
-                            <p>Yes. The tool is completely free for both personal and commercial projects, with no sign-up required.</p>
-                        </div>
-                        <div>
-                            <h3 className="font-semibold text-gray-900 mb-1">What color formats does it support?</h3>
-                            <p>You can enter and copy colors as hex codes, and each generated color is calculated from its underlying HSL and RGB values.</p>
-                        </div>
-                        <div>
-                            <h3 className="font-semibold text-gray-900 mb-1">Which harmony rule should I use?</h3>
-                            <p>Use complementary or split-complementary for high-impact accents, analogous or monochromatic for calm and cohesive interfaces, and triadic or square when you need a richer, multi-color scheme.</p>
-                        </div>
-                    </div>
+                <article className="w-full max-w-[960px] px-6 mt-10">
+                    <Markdown body={t("proseBody")} />
                 </article>
             </main>
-            <footer className={styles.footer}>Color theory tool · 7 harmony rules</footer>
+            <footer className={styles.footer}>{t("footerNote")}</footer>
         </div>
     );
 }
