@@ -1,36 +1,28 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Free Color Palette Generator Tool — colorPaletteFinder",
+    title: "Color Palette Generator with Color Wheel & Contrast",
     description:
-        "Generate harmonious color palettes using an interactive color wheel. Choose from 7 harmony rules: complementary, analogous, triadic, split-complementary, tetradic, square, monochromatic. Free online tool.",
+        "Interactive color palette generator with a color wheel, 7 harmony rules, HSL/RGB values & a WCAG contrast checker. Generate hex schemes free — try it now.",
     alternates: {
         canonical: "https://colorpalettefinder.com/color-palette-generator",
     },
     openGraph: {
-        title: "Free Color Palette Generator Tool — colorPaletteFinder",
+            images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+        title: "Color Palette Generator with Color Wheel & Contrast Checker",
         description:
-            "Generate harmonious color palettes using an interactive color wheel. 7 harmony rules, contrast checker, instant hex copy.",
+            "Interactive color palette generator with a color wheel, 7 harmony rules, HSL/RGB values and a WCAG contrast checker. Generate hex schemes free.",
         url: "https://colorpalettefinder.com/color-palette-generator",
         siteName: "colorPaletteFinder",
         type: "website",
         locale: "en_US",
-        images: [
-            {
-                url: "/og/og-image.png",
-                width: 1200,
-                height: 630,
-                alt: "colorPaletteFinder — Free Color Palette Generator Tool",
-                type: "image/png",
-            },
-        ],
     },
     twitter: {
+            images: ["/opengraph-image"],
         card: "summary_large_image",
-        title: "Free Color Palette Generator Tool — colorPaletteFinder",
+        title: "Color Palette Generator with Color Wheel & Contrast",
         description:
-            "Generate harmonious color palettes with 7 harmony rules. Free online tool for designers and developers.",
-        images: ["/og/og-image.png"],
+            "Interactive color palette generator: color wheel, 7 harmony rules, HSL/RGB and a WCAG contrast checker. Free, no signup.",
     },
 };
 
@@ -54,11 +46,24 @@ export default function ToolLayout({ children }: { children: React.ReactNode }) 
             "Interactive Color Wheel, 7 Harmony Rules, Contrast Checker (WCAG AA/AAA), Instant Hex Copy, HSL & RGB Values, All Palettes View",
     };
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://colorpalettefinder.com" },
+            { "@type": "ListItem", position: 2, name: "Color Palette Generator" },
+        ],
+    };
+
     return (
         <>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
             />
             {children}
         </>

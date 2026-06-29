@@ -2,9 +2,13 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "About colorPaletteFinder | Free Color Palette Generator",
-    description: "Discover what colorPaletteFinder is and our main goal. We provide a professional, free mathematical color palette generator for designers, developers, and creatives.",
+    title: "About colorPaletteFinder — Free Color Palette Tool",
+    description: "Learn what colorPaletteFinder is: a free mathematical color palette generator for designers, developers and creatives. See our mission and who it's for.",
+    alternates: {
+        canonical: "https://colorpalettefinder.com/about",
+    },
     openGraph: {
+            images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
         title: "About colorPaletteFinder",
         description: "Learn about the mission behind colorPaletteFinder — the ultimate free color palette generator for professionals.",
         type: "website",
@@ -47,7 +51,7 @@ export default function AboutPage() {
 
                         <h2 className="text-3xl font-bold text-gray-900 mt-16 mb-6">Our Main Goal</h2>
                         <p>
-                            Our primary goal is to <strong>bridge the gap between complex color theory and practical digital design</strong>. We believe that choosing the right colors shouldn't require an advanced degree in art history or expensive proprietary software.
+                            Our primary goal is to <strong>bridge the gap between complex color theory and practical digital design</strong>. We believe that choosing the right colors shouldn’t require an advanced degree in art history or expensive proprietary software.
                         </p>
                         <p>
                             We aim to provide a frictionless, educational, and high-quality tool that ensures:

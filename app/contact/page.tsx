@@ -2,10 +2,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Contact colorPaletteFinder",
-    description: "Get in touch with the colorPaletteFinder team for questions, feedback, or support.",
+    title: "Contact colorPaletteFinder — Questions & Feedback",
+    description: "Contact the colorPaletteFinder team with questions, feedback, bug reports or support requests. We reply within 24–48 hours — just send us an email today.",
     openGraph: {
-        title: "Contact colorPaletteFinder",
+            images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
+        title: "Contact colorPaletteFinder — Questions & Feedback",
         description: "Reach out to us if you have any questions or feedback.",
         type: "website",
     },
@@ -27,7 +28,7 @@ export default function ContactPage() {
                         Contact <span className="text-blue-600">Us</span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                        We'd love to hear from you. Reach out with your questions or feedback.
+                        We’d love to hear from you. Reach out with your questions or feedback.
                     </p>
                 </div>
             </section>

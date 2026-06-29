@@ -8,9 +8,11 @@ import {
     hexToHsl,
     hslToHex,
     hexToRgb,
+    contrastRatio,
     type PaletteRule,
     CURATED_PALETTES,
 } from "../lib/colorUtils";
+import { copyToClipboard } from "../lib/clipboard";
 import { makeDots, HARMONY_OFFSETS } from "../components/ColorWheel";
 import type { WheelDot } from "../components/ColorWheel";
 
@@ -30,7 +32,8 @@ function CopySwatch({ hex }: { hex: string }) {
     const [copied, setCopied] = useState(false);
     const text = getTextColor(hex);
     const copy = () => {
-        navigator.clipboard.writeText(hex).then(() => {
+        copyToClipboard(hex).then((ok) => {
+            if (!ok) return;
             setCopied(true);
             setTimeout(() => setCopied(false), 1400);
         });
@@ -39,6 +42,115 @@ function CopySwatch({ hex }: { hex: string }) {
         <button className={styles.swatch} style={{ background: hex, color: text } as React.CSSProperties} onClick={copy} title={`Copy ${hex}`}>
             <span className={styles.swatchHex}>{copied ? "✓" : hex.toUpperCase()}</span>
         </button>
+    );
+}
+
+function ContrastChecker({ initialFg, initialBg }: { initialFg: string; initialBg: string }) {
+    const [fg, setFg] = useState(initialFg);
+    const [bg, setBg] = useState(initialBg);
+    const [fgInput, setFgInput] = useState(initialFg.replace("#", ""));
+    const [bgInput, setBgInput] = useState(initialBg.replace("#", ""));
+
+    const ratio = useMemo(() => contrastRatio(fg, bg), [fg, bg]);
+
+    const setColor = (which: "fg" | "bg", raw: string) => {
+        const clean = raw.replace(/[^0-9a-fA-F]/g, "").slice(0, 6);
+        if (which === "fg") setFgInput(clean);
+        else setBgInput(clean);
+        if (/^[0-9a-fA-F]{6}$/.test(clean)) {
+            const full = "#" + clean;
+            if (which === "fg") setFg(full);
+            else setBg(full);
+        }
+    };
+
+    const overall =
+        ratio >= 7
+            ? { label: "AAA", color: "#15803d" }
+            : ratio >= 4.5
+                ? { label: "AA", color: "#15803d" }
+                : ratio >= 3
+                    ? { label: "AA Large", color: "#b45309" }
+                    : { label: "Fail", color: "#b91c1c" };
+
+    const checks = [
+        { label: "Normal text (AA 4.5:1)", size: 16, weight: 400, aa: ratio >= 4.5, aaa: ratio >= 7 },
+        { label: "Large text (AA 3:1)", size: 22, weight: 700, aa: ratio >= 3, aaa: ratio >= 4.5 },
+        { label: "UI & graphics (3:1)", size: 14, weight: 600, aa: ratio >= 3, aaa: ratio >= 3 },
+    ];
+
+    return (
+        <section className={styles.contrastCard} aria-label="WCAG contrast checker">
+            <div className={styles.contrastHeader}>
+                <span className={styles.contrastTitle}>WCAG Contrast Checker</span>
+                <div className={styles.contrastRatio} style={{ color: overall.color }}>
+                    {ratio.toFixed(2)}:1
+                    <span className={styles.contrastLevel}>{overall.label}</span>
+                </div>
+            </div>
+
+            <div className={styles.contrastRow}>
+                <label className={styles.contrastLabel}>
+                    Text color
+                    <div className={styles.contrastInputWrap}>
+                        <span className={styles.contrastColorBox} style={{ background: fg }} />
+                        <span className={styles.hashSign}>#</span>
+                        <input
+                            className={styles.contrastInput}
+                            value={fgInput.toUpperCase()}
+                            onChange={(e) => setColor("fg", e.target.value)}
+                            maxLength={6}
+                            spellCheck={false}
+                            aria-label="Text color hex value"
+                        />
+                        <input
+                            type="color"
+                            className={styles.contrastNative}
+                            value={fg}
+                            onChange={(e) => setColor("fg", e.target.value.replace("#", ""))}
+                            aria-label="Pick text color"
+                        />
+                    </div>
+                </label>
+
+                <label className={styles.contrastLabel}>
+                    Background color
+                    <div className={styles.contrastInputWrap}>
+                        <span className={styles.contrastColorBox} style={{ background: bg }} />
+                        <span className={styles.hashSign}>#</span>
+                        <input
+                            className={styles.contrastInput}
+                            value={bgInput.toUpperCase()}
+                            onChange={(e) => setColor("bg", e.target.value)}
+                            maxLength={6}
+                            spellCheck={false}
+                            aria-label="Background color hex value"
+                        />
+                        <input
+                            type="color"
+                            className={styles.contrastNative}
+                            value={bg}
+                            onChange={(e) => setColor("bg", e.target.value.replace("#", ""))}
+                            aria-label="Pick background color"
+                        />
+                    </div>
+                </label>
+            </div>
+
+            <div className={styles.contrastPreviews}>
+                {checks.map((c) => (
+                    <div key={c.label} className={styles.contrastPreview} style={{ background: bg, color: fg }}>
+                        <span className={styles.contrastPreviewLabel}>{c.label}</span>
+                        <span className={styles.contrastPreviewText} style={{ fontSize: `${c.size}px`, fontWeight: c.weight }}>
+                            The quick brown fox
+                        </span>
+                        <span style={{ fontSize: 11, fontWeight: 700 }}>
+                            {c.aaa ? "AAA ✓" : c.aa ? "AA ✓" : "Fail ✕"}
+                        </span>
+                    </div>
+                ))}
+            </div>
+        </section>
     );
 }
 
@@ -136,6 +248,9 @@ export default function ToolPage() {
                 <div className={styles.paletteStrip}>
                     {dots.map((dot) => <CopySwatch key={dot.hex + dot.label} hex={dot.hex} />)}
                 </div>
+
+                <ContrastChecker initialFg={hex} initialBg="#FFFFFF" />
+
                 <section className={styles.allPalettes}>
                     <h2 className={styles.sectionTitle}>All Harmony Palettes</h2>
                     <div className={styles.palettesGrid}>
@@ -144,7 +259,7 @@ export default function ToolPage() {
                                 <div className={styles.paletteCardStrip}>
                                     {p.colors.map((c) => (
                                         <div key={c.hex} className={styles.paletteCardChip} style={{ background: c.hex }} title={c.hex} onClick={() => {
-                                            navigator.clipboard.writeText(c.hex);
+                                            copyToClipboard(c.hex);
                                         }} />
                                     ))}
                                 </div>
@@ -164,8 +279,8 @@ export default function ToolPage() {
                             <div key={idx} className={`${styles.paletteCard} ${activeCurated === p.title ? styles.paletteCardActive : ""}`} onClick={() => handleCuratedClick(p)}>
                                 <div className={styles.paletteCardStrip}>
                                     {p.colors.map((hexColor) => (
-                                        <div key={hexColor} className={styles.paletteCardChip} style={{ background: hexColor }} title={hexColor} onClick={(e) => {
-                                            navigator.clipboard.writeText(hexColor);
+                                        <div key={hexColor} className={styles.paletteCardChip} style={{ background: hexColor }} title={hexColor} onClick={() => {
+                                            copyToClipboard(hexColor);
                                         }} />
                                     ))}
                                 </div>
@@ -177,6 +292,65 @@ export default function ToolPage() {
                         ))}
                     </div>
                 </section>
+
+                <article className="w-full max-w-[960px] px-6 mt-10 text-gray-700">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Use the Color Palette Generator</h2>
+                    <p className="mb-4 leading-relaxed">
+                        This free color palette generator turns a single starting color into a complete, harmonious
+                        scheme using classic color-theory math. Pick a base color with the wheel, the hue slider, or by
+                        typing a hex code, then choose a harmony rule to instantly see a matching set of colors. Every
+                        swatch can be copied to your clipboard with one click, ready to paste straight into CSS,
+                        Tailwind, Figma, or any design tool.
+                    </p>
+                    <ol className="list-decimal pl-6 space-y-2 mb-8 leading-relaxed">
+                        <li><strong>Choose a base color</strong> — drag the dot on the color wheel, move the hue slider, type a six-digit hex value, or use the native color picker in the top bar.</li>
+                        <li><strong>Select a harmony rule</strong> — open the “Color Harmony” dropdown and pick the relationship you want (complementary, analogous, triadic, and more).</li>
+                        <li><strong>Copy your colors</strong> — hover a swatch in the palette strip to reveal its hex code, then click to copy it.</li>
+                        <li><strong>Check accessibility</strong> — use the built-in WCAG contrast checker above to confirm your text and background colors are readable.</li>
+                        <li><strong>Explore variations</strong> — scan the “All Harmony Palettes” grid to compare every rule for your base color, or start from one of the curated palettes.</li>
+                    </ol>
+
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">The Seven Color Harmony Rules</h2>
+                    <p className="mb-4 leading-relaxed">
+                        Color harmonies describe how hues relate to one another on the color wheel. Each rule produces a
+                        different mood and level of contrast:
+                    </p>
+                    <ul className="space-y-3 mb-8 leading-relaxed">
+                        <li><strong>Complementary</strong> — two hues directly opposite each other (180° apart). Maximum contrast and energy; great for calls to action.</li>
+                        <li><strong>Analogous</strong> — neighboring hues (about 30° apart). Calm, cohesive, and natural-looking.</li>
+                        <li><strong>Triadic</strong> — three hues evenly spaced 120° apart. Vibrant yet balanced.</li>
+                        <li><strong>Split-Complementary</strong> — a base color plus the two hues flanking its complement. Strong contrast with less tension than pure complementary.</li>
+                        <li><strong>Tetradic</strong> — four hues forming a rectangle on the wheel. Rich and varied; works best with one dominant color.</li>
+                        <li><strong>Square</strong> — four hues evenly spaced 90° apart. Bold and balanced with equal visual weight.</li>
+                        <li><strong>Monochromatic</strong> — a single hue at varying lightness and saturation. Elegant, clean, and easy to apply.</li>
+                    </ul>
+
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Checking Color Contrast for Accessibility</h2>
+                    <p className="mb-4 leading-relaxed">
+                        A beautiful palette still needs to be readable. The Web Content Accessibility Guidelines (WCAG)
+                        define minimum contrast ratios between text and its background: <strong>4.5:1</strong> for normal
+                        body text and <strong>3:1</strong> for large text to meet the AA level, and <strong>7:1</strong>
+                        for the stricter AAA level. The contrast checker on this page calculates the exact ratio between
+                        any two colors and shows whether they pass AA or AAA, so you can adjust your palette before it
+                        ships.
+                    </p>
+
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                    <div className="space-y-5 mb-4 leading-relaxed">
+                        <div>
+                            <h3 className="font-semibold text-gray-900 mb-1">Is the color palette generator free?</h3>
+                            <p>Yes. The tool is completely free for both personal and commercial projects, with no sign-up required.</p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-gray-900 mb-1">What color formats does it support?</h3>
+                            <p>You can enter and copy colors as hex codes, and each generated color is calculated from its underlying HSL and RGB values.</p>
+                        </div>
+                        <div>
+                            <h3 className="font-semibold text-gray-900 mb-1">Which harmony rule should I use?</h3>
+                            <p>Use complementary or split-complementary for high-impact accents, analogous or monochromatic for calm and cohesive interfaces, and triadic or square when you need a richer, multi-color scheme.</p>
+                        </div>
+                    </div>
+                </article>
             </main>
             <footer className={styles.footer}>Color theory tool · 7 harmony rules</footer>
         </div>

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Terms of Service | colorPaletteFinder",
-    description: "Read the rules, risk warnings, and terms of service for using colorPaletteFinder.",
+    title: "Terms of Service — colorPaletteFinder",
+    description: "Read the colorPaletteFinder terms of service: usage rules, free commercial use, advertising, risk warnings and accessibility disclaimers before you start.",
 };
 
 export default function TermsOfServicePage() {
@@ -72,19 +72,19 @@ export default function TermsOfServicePage() {
                             <ul className="list-disc pl-6 space-y-2 mt-4 mb-0 text-base text-red-900/80">
                                 <li><strong>No Guarantee of Accuracy:</strong> While we strive to use precise mathematical formulas for generating color harmonies and verifying WCAG contrast ratios, we make no warranties regarding the absolute accuracy, reliability, or completeness of the tools.</li>
                                 <li><strong>Accessibility Compliance:</strong> You are solely responsible for ensuring that the colors you choose comply with legal accessibility standards (such as WCAG guidelines, ADA compliance) in your final products. <strong>Do not rely solely on our tool for legal or critical compliance testing.</strong></li>
-                                <li><strong>"As Is" Basis:</strong> The website and its tools are provided on an "AS IS" and "AS AVAILABLE" basis, without any warranties of any kind, either express or implied.</li>
+                                <li><strong>“As Is” Basis:</strong> The website and its tools are provided on an “AS IS” and “AS AVAILABLE” basis, without any warranties of any kind, either express or implied.</li>
                                 <li><strong>Limitation of Liability:</strong> In no event shall colorPaletteFinder, its creators, or its team be liable for any direct, indirect, incidental, consequential, or special damages arising out of or in connection with your use of the website, including, but not limited to, design flaws, accessibility lawsuits, or loss of profits.</li>
                             </ul>
                         </div>
 
                         <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">5. Intellectual Property</h2>
                         <p>
-                            The website's original content, features, layout, and functionality (excluding the generated hex codes, which are yours to use freely) are owned by colorPaletteFinder and are protected by international copyright, trademark, and intellectual property laws. You may not reproduce our branding, logo, or proprietary code without permission.
+                            The website’s original content, features, layout, and functionality (excluding the generated hex codes, which are yours to use freely) are owned by colorPaletteFinder and are protected by international copyright, trademark, and intellectual property laws. You may not reproduce our branding, logo, or proprietary code without permission.
                         </p>
 
                         <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">6. Modifications to Terms</h2>
                         <p>
-                            We reserve the right to modify or replace these Terms of Service at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.
+                            We reserve the right to modify or replace these Terms of Service at any time. If a revision is material, we will try to provide at least 30 days’ notice prior to any new terms taking effect. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.
                         </p>
 
                         <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-4">7. Contact Us</h2>
