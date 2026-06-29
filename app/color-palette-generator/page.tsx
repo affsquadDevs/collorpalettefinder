@@ -12,6 +12,7 @@ import {
     type PaletteRule,
     CURATED_PALETTES,
 } from "../lib/colorUtils";
+import { copyToClipboard } from "../lib/clipboard";
 import { makeDots, HARMONY_OFFSETS } from "../components/ColorWheel";
 import type { WheelDot } from "../components/ColorWheel";
 
@@ -31,7 +32,8 @@ function CopySwatch({ hex }: { hex: string }) {
     const [copied, setCopied] = useState(false);
     const text = getTextColor(hex);
     const copy = () => {
-        navigator.clipboard.writeText(hex).then(() => {
+        copyToClipboard(hex).then((ok) => {
+            if (!ok) return;
             setCopied(true);
             setTimeout(() => setCopied(false), 1400);
         });
@@ -257,7 +259,7 @@ export default function ToolPage() {
                                 <div className={styles.paletteCardStrip}>
                                     {p.colors.map((c) => (
                                         <div key={c.hex} className={styles.paletteCardChip} style={{ background: c.hex }} title={c.hex} onClick={() => {
-                                            navigator.clipboard.writeText(c.hex);
+                                            copyToClipboard(c.hex);
                                         }} />
                                     ))}
                                 </div>
@@ -277,8 +279,8 @@ export default function ToolPage() {
                             <div key={idx} className={`${styles.paletteCard} ${activeCurated === p.title ? styles.paletteCardActive : ""}`} onClick={() => handleCuratedClick(p)}>
                                 <div className={styles.paletteCardStrip}>
                                     {p.colors.map((hexColor) => (
-                                        <div key={hexColor} className={styles.paletteCardChip} style={{ background: hexColor }} title={hexColor} onClick={(e) => {
-                                            navigator.clipboard.writeText(hexColor);
+                                        <div key={hexColor} className={styles.paletteCardChip} style={{ background: hexColor }} title={hexColor} onClick={() => {
+                                            copyToClipboard(hexColor);
                                         }} />
                                     ))}
                                 </div>

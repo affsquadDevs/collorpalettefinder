@@ -2,13 +2,15 @@
 
 import { useState } from "react";
 import { getTextColor } from "../lib/colorUtils";
+import { copyToClipboard } from "../lib/clipboard";
 
 function Swatch({ hex }: { hex: string }) {
     const [copied, setCopied] = useState(false);
     const code = hex.toUpperCase();
     const text = getTextColor(hex);
     const copy = () => {
-        navigator.clipboard.writeText(code).then(() => {
+        copyToClipboard(code).then((ok) => {
+            if (!ok) return;
             setCopied(true);
             setTimeout(() => setCopied(false), 1200);
         });
