@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "siteTitle": "colorPaletteFinder — Generatore Gratuito di Palette di Colori",
+    "siteDescription": "Crea palette di colori armoniose basate sulla teoria del colore — complementari, analoghe, triadiche e altro ancora. Strumento gratuito per designer e sviluppatori."
+  },
+  "nav": {
+    "home": "Home",
+    "howItWorks": "Come Funziona",
+    "about": "Chi Siamo",
+    "contact": "Contatti",
+    "blog": "Blog",
+    "interiorColors": "Colori per Interni",
+    "openTool": "Apri lo Strumento",
+    "menu": "Apri/chiudi menu"
+  },
+  "footer": {
+    "tagline": "colorPaletteFinder offre strumenti didattici sulla teoria del colore e generatori di palette per designer e sviluppatori. Tutti i calcoli hanno solo scopo orientativo.",
+    "company": "Azienda",
+    "legal": "Note Legali",
+    "getStarted": "Inizia Subito",
+    "home": "Home",
+    "about": "Chi Siamo",
+    "blog": "Blog",
+    "interiorColors": "Colori per Interni",
+    "contact": "Contatti",
+    "privacy": "Informativa sulla Privacy",
+    "terms": "Termini di Servizio",
+    "howItWorks": "Come Funziona",
+    "rights": "© 2026 colorPaletteFinder. Tutti i diritti riservati."
+  },
+  "language": {
+    "label": "Lingua"
+  },
+  "home": {
+    "metaTitle": "Generatore di Palette di Colori Gratuito — Schemi Colore Hex Online",
+    "metaDescription": "Generatore di palette di colori gratuito basato sulla teoria del colore. Crea subito schemi complementari, analoghi e triadici con i codici hex — senza registrazione. Inizia ora.",
+    "ogDescription": "Generatore di palette di colori gratuito basato sulla teoria del colore. Crea subito schemi complementari, analoghi e triadici con i codici hex — senza registrazione.",
+    "twitterDescription": "Generatore di palette di colori gratuito basato sulla teoria del colore. Schemi hex complementari, analoghi e triadici, in un istante. Senza registrazione.",
+    "heroLine1": "Trova la Tua",
+    "heroLine2": "Palette di Colori Perfetta",
+    "heroSub": "Genera all'istante palette armoniose grazie a regole consolidate della teoria del colore. Pensato per designer, sviluppatori e creativi.",
+    "ctaOpen": "Apri il Generatore",
+    "ctaHow": "Come funziona",
+    "openWheelAria": "Apri il generatore di palette di colori",
+    "featuresTitle": "Tutto Quello che Ti Serve",
+    "featuresSub": "Potenti strumenti per il colore racchiusi in un'unica interfaccia pulita e interattiva.",
+    "features": [
+      {
+        "title": "Ruota dei Colori Interattiva",
+        "desc": "Trascina i punti direttamente sulla ruota HSL per esplorare in tempo reale le relazioni tra tonalità e saturazione."
+      },
+      {
+        "title": "7 Regole di Armonia",
+        "desc": "Complementare, Analoga, Triadica, Complementare Divisa, Tetradica, Quadrata, Monocromatica."
+      },
+      {
+        "title": "Copia Istantanea",
+        "desc": "Clicca su qualsiasi campione per copiare il codice hex. Condividi le palette e usale direttamente nel tuo codice."
+      },
+      {
+        "title": "Verifica del Contrasto",
+        "desc": "Controlla i rapporti di accessibilità WCAG AA / AAA tra due colori qualsiasi della tua palette."
+      },
+      {
+        "title": "Valori HSL e RGB",
+        "desc": "Ogni colore mostra la sua scomposizione completa in HSL e RGB — nessuna conversione manuale necessaria."
+      },
+      {
+        "title": "Tutte le Palette in una Volta",
+        "desc": "Confronta tutti i 7 schemi di armonia per il tuo colore base in una griglia di facile lettura in fondo allo strumento."
+      }
+    ],
+    "faqTitle": "Domande Frequenti",
+    "faqSub": "Tutto quello che c'è da sapere su colorPaletteFinder",
+    "faq": [
+      {
+        "q": "Che cos'è una palette di colori?",
+        "a": "Una palette di colori è un insieme selezionato di colori pensati per funzionare insieme in modo armonioso. I designer usano le palette per creare coerenza visiva in interfacce, branding e opere grafiche."
+      },
+      {
+        "q": "Come funziona l'armonia dei colori?",
+        "a": "L'armonia dei colori si basa sulle relazioni tra le tonalità sulla ruota dei colori. Regole come la complementare, l'analoga e la triadica garantiscono combinazioni gradevoli alla vista."
+      },
+      {
+        "q": "Qual è la differenza tra complementare e complementare divisa?",
+        "a": "La complementare usa due tonalità opposte per ottenere il massimo contrasto. La complementare divisa usa il colore base più due colori a ±30° dalla complementare diretta — più morbida e meno aggressiva."
+      },
+      {
+        "q": "Come si usa colorPaletteFinder?",
+        "a": "Apri lo strumento, scegli il tuo colore principale usando la ruota dei colori o l'inserimento del codice hex, poi seleziona una regola di armonia. Lo strumento genera all'istante una palette coordinata che puoi copiare con un solo clic."
+      },
+      {
+        "q": "Che cos'è il contrasto WCAG e perché è importante?",
+        "a": "Le WCAG definiscono i rapporti di contrasto per garantire che il testo sia leggibile da tutti gli utenti, comprese le persone con disabilità visive. Un rapporto di 4.5:1 soddisfa lo standard AA; 7:1 soddisfa il livello AAA."
+      },
+      {
+        "q": "Posso copiare i codici hex dalla palette generata?",
+        "a": "Sì — passa il mouse su qualsiasi campione di colore nella striscia della palette e clicca per copiarne all'istante il codice hex negli appunti."
+      }
+    ]
+  }
+}

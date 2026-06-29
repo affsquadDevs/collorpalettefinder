@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "siteTitle": "colorPaletteFinder — Générateur de palettes de couleurs gratuit",
+    "siteDescription": "Générez des palettes de couleurs harmonieuses grâce à la théorie des couleurs — complémentaires, analogues, triadiques et plus encore. Outil gratuit pour designers et développeurs."
+  },
+  "nav": {
+    "home": "Accueil",
+    "howItWorks": "Comment ça marche",
+    "about": "À propos",
+    "contact": "Contact",
+    "blog": "Blog",
+    "interiorColors": "Couleurs d'intérieur",
+    "openTool": "Ouvrir l'outil",
+    "menu": "Afficher le menu"
+  },
+  "footer": {
+    "tagline": "colorPaletteFinder propose des outils pédagogiques de théorie des couleurs et des générateurs de palettes pour les designers et les développeurs. Tous les calculs sont fournis à titre indicatif uniquement.",
+    "company": "Entreprise",
+    "legal": "Mentions légales",
+    "getStarted": "Commencer",
+    "home": "Accueil",
+    "about": "À propos",
+    "blog": "Blog",
+    "interiorColors": "Couleurs d'intérieur",
+    "contact": "Contact",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "howItWorks": "Comment ça marche",
+    "rights": "© 2026 colorPaletteFinder. Tous droits réservés."
+  },
+  "language": {
+    "label": "Langue"
+  },
+  "home": {
+    "metaTitle": "Générateur de palettes de couleurs gratuit — Nuanciers hexadécimaux en ligne",
+    "metaDescription": "Générateur de palettes de couleurs gratuit fondé sur la théorie des couleurs. Créez des combinaisons complémentaires, analogues et triadiques avec leurs codes hex instantanément — sans inscription. Lancez-vous.",
+    "ogDescription": "Générateur de palettes de couleurs gratuit fondé sur la théorie des couleurs. Créez des combinaisons complémentaires, analogues et triadiques avec leurs codes hex instantanément — sans inscription.",
+    "twitterDescription": "Générateur de palettes de couleurs gratuit fondé sur la théorie des couleurs. Combinaisons hex complémentaires, analogues et triadiques, en un instant. Sans inscription.",
+    "heroLine1": "Trouvez votre",
+    "heroLine2": "palette parfaite",
+    "heroSub": "Générez instantanément des palettes harmonieuses grâce à des règles éprouvées de théorie des couleurs. Conçu pour les designers, les développeurs et les créatifs.",
+    "ctaOpen": "Ouvrir le générateur",
+    "ctaHow": "Comment ça marche",
+    "openWheelAria": "Ouvrir le générateur de palettes de couleurs",
+    "featuresTitle": "Tout ce qu'il vous faut",
+    "featuresSub": "Des outils de couleur puissants réunis dans une interface claire et interactive.",
+    "features": [
+      {
+        "title": "Roue chromatique interactive",
+        "desc": "Déplacez les points directement sur la roue HSL pour explorer en temps réel les relations entre teinte et saturation."
+      },
+      {
+        "title": "7 règles d'harmonie",
+        "desc": "Complémentaire, analogue, triadique, complémentaire divisée, tétradique, carrée, monochromatique."
+      },
+      {
+        "title": "Copie instantanée",
+        "desc": "Cliquez sur n'importe quel échantillon pour copier son code hex. Partagez vos palettes et utilisez-les directement dans votre code."
+      },
+      {
+        "title": "Vérificateur de contraste",
+        "desc": "Vérifiez les ratios d'accessibilité WCAG AA / AAA entre deux couleurs de votre palette."
+      },
+      {
+        "title": "Valeurs HSL et RGB",
+        "desc": "Chaque couleur affiche son détail complet en HSL et RGB — aucune conversion manuelle nécessaire."
+      },
+      {
+        "title": "Toutes les palettes d'un coup",
+        "desc": "Comparez les 7 schémas d'harmonie de votre couleur de base dans une grille lisible en bas de l'outil."
+      }
+    ],
+    "faqTitle": "Questions fréquentes",
+    "faqSub": "Tout ce que vous devez savoir sur colorPaletteFinder",
+    "faq": [
+      {
+        "q": "Qu'est-ce qu'une palette de couleurs ?",
+        "a": "Une palette de couleurs est un ensemble de couleurs sélectionnées pour fonctionner harmonieusement ensemble. Les designers utilisent les palettes pour créer une cohérence visuelle dans les interfaces, l'identité de marque et les créations artistiques."
+      },
+      {
+        "q": "Comment fonctionne l'harmonie des couleurs ?",
+        "a": "L'harmonie des couleurs repose sur les relations entre les teintes sur la roue chromatique. Des règles comme la complémentaire, l'analogue et la triadique garantissent des combinaisons agréables à l'œil."
+      },
+      {
+        "q": "Quelle est la différence entre complémentaire et complémentaire divisée ?",
+        "a": "La complémentaire utilise deux teintes opposées pour un contraste maximal. La complémentaire divisée utilise la couleur de base plus deux couleurs situées à ±30° de la complémentaire directe — un rendu plus doux et moins tranché."
+      },
+      {
+        "q": "Comment utiliser colorPaletteFinder ?",
+        "a": "Ouvrez l'outil, choisissez votre couleur principale à l'aide de la roue chromatique ou du champ hex, puis sélectionnez une règle d'harmonie. L'outil génère instantanément une palette assortie que vous pouvez copier en un clic."
+      },
+      {
+        "q": "Qu'est-ce que le contraste WCAG et pourquoi est-ce important ?",
+        "a": "La norme WCAG définit des ratios de contraste pour garantir que le texte reste lisible par tous les utilisateurs, y compris les personnes ayant une déficience visuelle. Un ratio de 4.5:1 satisfait au niveau AA ; 7:1 satisfait au niveau AAA."
+      },
+      {
+        "q": "Puis-je copier les codes hex de la palette générée ?",
+        "a": "Oui — survolez n'importe quel échantillon de la bande de palette et cliquez pour copier instantanément son code hex dans votre presse-papiers."
+      }
+    ]
+  }
+}

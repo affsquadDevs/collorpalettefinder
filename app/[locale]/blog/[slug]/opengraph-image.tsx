@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { getPost, BLOG_POSTS } from "../../lib/blog";
+import { getPost, BLOG_POSTS } from "@/app/lib/blog";
 
 // Per-article 1200x630 Open Graph image (shows the post title), generated at build time.
 export const alt = "colorPaletteFinder article";

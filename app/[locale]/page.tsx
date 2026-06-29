@@ -1,97 +1,41 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import { altLanguages, canonicalFor } from "@/app/lib/hreflang";
 
 const SITE_URL = "https://colorpalettefinder.com";
+const ICONS = ["◉", "◈", "⊡", "◑", "⬡", "▦"];
 
-export const metadata: Metadata = {
-  title: "Free Color Palette Generator — Hex Color Schemes Online",
-  description:
-    "Free color palette generator built on color theory. Create complementary, analogous & triadic schemes with hex codes instantly — no signup. Start now.",
-  alternates: {
-    canonical: SITE_URL,
-  },
-  openGraph: {
-    title: "Free Color Palette Generator — Hex Color Schemes Online",
-    description:
-      "Free color palette generator built on color theory. Create complementary, analogous & triadic color schemes with hex codes instantly — no signup.",
-    url: SITE_URL,
-    siteName: "colorPaletteFinder",
-    type: "website",
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Free Color Palette Generator — Hex Color Schemes Online",
-    description:
-      "Free color palette generator built on color theory. Complementary, analogous & triadic hex schemes, instantly. No signup.",
-  },
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "home" });
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    alternates: { canonical: canonicalFor(locale, ""), languages: altLanguages("") },
+    openGraph: {
+      title: t("metaTitle"),
+      description: t("ogDescription"),
+      url: canonicalFor(locale, ""),
+      siteName: "colorPaletteFinder",
+      type: "website",
+      locale,
+    },
+    twitter: { card: "summary_large_image", title: t("metaTitle"), description: t("twitterDescription") },
+  };
+}
 
-const FAQ = [
-  {
-    q: "What is a color palette?",
-    a: "A color palette is a curated set of colors intended to work together harmoniously. Designers use palettes to create visual consistency in interfaces, branding, and artwork.",
-  },
-  {
-    q: "How does color harmony work?",
-    a: "Color harmony is based on the relationships between hues on the color wheel. Rules like complementary, analogous, and triadic ensure combinations are visually pleasing.",
-  },
-  {
-    q: "What is the difference between complementary and split-complementary?",
-    a: "Complementary uses two opposite hues for maximum contrast. Split-complementary uses the base color plus two colors ±30° from the direct complement — softer and less harsh.",
-  },
-  {
-    q: "How do I use colorPaletteFinder?",
-    a: "Open the tool, pick your primary color using the color wheel or hex input, then choose a harmony rule. The tool instantly generates a matching palette you can copy with one click.",
-  },
-  {
-    q: "What is WCAG contrast and why does it matter?",
-    a: "WCAG defines contrast ratios to ensure text is readable for all users, including those with visual impairments. A ratio of 4.5:1 meets AA standard; 7:1 meets AAA.",
-  },
-  {
-    q: "Can I copy the hex codes from the generated palette?",
-    a: "Yes — hover over any color swatch in the palette strip and click to instantly copy its hex code to your clipboard.",
-  },
-];
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("home");
+  const features = t.raw("features") as { title: string; desc: string }[];
+  const faq = t.raw("faq") as { q: string; a: string }[];
 
-const FEATURES = [
-  {
-    icon: "◉",
-    title: "Interactive Color Wheel",
-    desc: "Drag dots directly on the HSL wheel to explore hue and saturation relationships in real time.",
-  },
-  {
-    icon: "◈",
-    title: "7 Harmony Rules",
-    desc: "Complementary, Analogous, Triadic, Split-Complementary, Tetradic, Square, Monochromatic.",
-  },
-  {
-    icon: "⊡",
-    title: "Instant Copy",
-    desc: "Click any swatch to copy the hex code. Share palettes and use them directly in your code.",
-  },
-  {
-    icon: "◑",
-    title: "Contrast Checker",
-    desc: "Check WCAG AA / AAA accessibility ratios between any two colors in your palette.",
-  },
-  {
-    icon: "⬡",
-    title: "HSL & RGB Values",
-    desc: "Every color shows its full HSL and RGB breakdown — no manual conversion needed.",
-  },
-  {
-    icon: "▦",
-    title: "All Palettes at Once",
-    desc: "Compare all 7 harmony schemes for your base color in a scannable grid at the bottom of the tool.",
-  },
-];
-
-export default function HomePage() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: FAQ.map(({ q, a }) => ({
+    mainEntity: faq.map(({ q, a }) => ({
       "@type": "Question",
       name: q,
       acceptedAnswer: { "@type": "Answer", text: a },
@@ -103,18 +47,13 @@ export default function HomePage() {
     "@type": "WebSite",
     name: "colorPaletteFinder",
     url: SITE_URL,
+    inLanguage: locale,
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <main className="flex flex-col min-h-screen bg-[#fafafa] text-gray-900 font-sans">
 
         {/* HERO */}
@@ -124,15 +63,14 @@ export default function HomePage() {
             {/* Left Column: Text & CTA */}
             <div className="flex-1 text-center lg:text-left z-10">
               <h1 className="text-[3rem] sm:text-[4.5rem] md:text-[5.5rem] leading-[1.1] font-extrabold tracking-tight mb-8">
-                <span className="block text-gray-900">Find Your Perfect</span>
+                <span className="block text-gray-900">{t("heroLine1")}</span>
                 <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent pb-2">
-                  Color Palette
+                  {t("heroLine2")}
                 </span>
               </h1>
 
               <p className="max-w-xl mx-auto lg:mx-0 text-lg md:text-xl text-gray-500 mb-10 leading-relaxed">
-                Instantly generate harmonious palettes using proven color theory rules.
-                Built for designers, developers, and creatives.
+                {t("heroSub")}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -140,13 +78,13 @@ export default function HomePage() {
                   href="/color-palette-generator"
                   className="inline-flex items-center justify-center bg-gray-900 text-white text-base font-semibold py-3.5 px-8 rounded-full transition-all duration-200 hover:bg-black hover:shadow-[0_6px_20px_rgba(0,0,0,0.18)] hover:-translate-y-[1px] active:scale-95"
                 >
-                  Open the Generator
+                  {t("ctaOpen")}
                 </Link>
                 <Link
                   href="/how-it-works"
                   className="inline-flex items-center justify-center text-base font-semibold py-3.5 px-8 rounded-full border border-gray-300 text-gray-700 transition-colors hover:border-gray-400 hover:text-gray-900"
                 >
-                  How it works
+                  {t("ctaHow")}
                 </Link>
               </div>
 
@@ -154,7 +92,7 @@ export default function HomePage() {
 
             {/* Right Column: Animated Colorful Cards */}
             <div className="hidden lg:flex flex-1 justify-center items-center w-full min-h-[350px] md:min-h-[450px] relative mt-10 lg:mt-0 lg:pr-10">
-              <Link href="/color-palette-generator" aria-label="Open the color palette generator" className="relative flex items-center justify-center w-full h-full">
+              <Link href="/color-palette-generator" aria-label={t("openWheelAria")} className="relative flex items-center justify-center w-full h-full">
                 {[
                   { color: 'bg-rose-500', rotate: '-24deg', delay: '0s', offset: '-120px' },
                   { color: 'bg-orange-400', rotate: '-12deg', delay: '0.2s', offset: '-60px' },
@@ -187,21 +125,21 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto text-center">
 
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
-              Everything You Need
+              {t("featuresTitle")}
             </h2>
 
             <p className="text-lg text-gray-500 mb-20 max-w-2xl mx-auto">
-              Powerful color tools packed into one clean, interactive interface.
+              {t("featuresSub")}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-              {FEATURES.map((f) => (
+              {features.map((f, i) => (
                 <div
                   key={f.title}
                   className="p-12 rounded-3xl bg-white shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center"
                 >
                   <div className="w-16 h-16 mx-auto rounded-2xl bg-gray-50 flex items-center justify-center text-3xl mb-8 shadow-sm border border-gray-100">
-                    {f.icon}
+                    {ICONS[i]}
                   </div>
 
                   <h3 className="text-xl font-bold mb-4 text-gray-900">
@@ -223,15 +161,15 @@ export default function HomePage() {
           <div className="w-[90%] max-w-4xl mx-auto text-center">
 
             <h2 className="text-4xl md:text-5xl font-extrabold mb-8">
-              Frequently Asked Questions
+              {t("faqTitle")}
             </h2>
 
             <p className="text-lg text-gray-500 mb-16">
-              Everything you need to know about colorPaletteFinder
+              {t("faqSub")}
             </p>
 
             <div className="flex flex-col gap-8 text-left">
-              {FAQ.map(({ q, a }) => (
+              {faq.map(({ q, a }) => (
                 <details
                   key={q}
                   className="rounded-2xl border border-gray-200 p-6 hover:shadow-sm transition-all"

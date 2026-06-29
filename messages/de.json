@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "siteTitle": "colorPaletteFinder — Kostenloser Farbpaletten-Generator",
+    "siteDescription": "Erstelle harmonische Farbpaletten mit Farbtheorie — Komplementär, Analog, Triade und mehr. Kostenloses Tool für Designer und Entwickler."
+  },
+  "nav": {
+    "home": "Start",
+    "howItWorks": "So funktioniert's",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "blog": "Blog",
+    "interiorColors": "Wohnfarben",
+    "openTool": "Tool öffnen",
+    "menu": "Menü umschalten"
+  },
+  "footer": {
+    "tagline": "colorPaletteFinder bietet lehrreiche Farbtheorie-Tools und Paletten-Generatoren für Designer und Entwickler. Alle Berechnungen dienen ausschließlich zur Orientierung.",
+    "company": "Unternehmen",
+    "legal": "Rechtliches",
+    "getStarted": "Loslegen",
+    "home": "Start",
+    "about": "Über uns",
+    "blog": "Blog",
+    "interiorColors": "Wohnfarben",
+    "contact": "Kontakt",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen",
+    "howItWorks": "So funktioniert's",
+    "rights": "© 2026 colorPaletteFinder. Alle Rechte vorbehalten."
+  },
+  "language": {
+    "label": "Sprache"
+  },
+  "home": {
+    "metaTitle": "Kostenloser Farbpaletten-Generator — Hex-Farbschemata online",
+    "metaDescription": "Kostenloser Farbpaletten-Generator auf Basis der Farbtheorie. Erstelle komplementäre, analoge & Triaden-Farbschemata mit Hex-Codes — sofort, ohne Anmeldung. Jetzt starten.",
+    "ogDescription": "Kostenloser Farbpaletten-Generator auf Basis der Farbtheorie. Erstelle komplementäre, analoge & Triaden-Farbschemata mit Hex-Codes — sofort und ohne Anmeldung.",
+    "twitterDescription": "Kostenloser Farbpaletten-Generator auf Basis der Farbtheorie. Komplementäre, analoge & Triaden-Hex-Schemata, sofort. Ohne Anmeldung.",
+    "heroLine1": "Finde deine perfekte",
+    "heroLine2": "Farbpalette",
+    "heroSub": "Erstelle in Sekunden harmonische Paletten nach bewährten Regeln der Farbtheorie. Gemacht für Designer, Entwickler und Kreative.",
+    "ctaOpen": "Generator öffnen",
+    "ctaHow": "So funktioniert's",
+    "openWheelAria": "Den Farbpaletten-Generator öffnen",
+    "featuresTitle": "Alles, was du brauchst",
+    "featuresSub": "Leistungsstarke Farbwerkzeuge, vereint in einer übersichtlichen, interaktiven Oberfläche.",
+    "features": [
+      {
+        "title": "Interaktiver Farbkreis",
+        "desc": "Ziehe die Punkte direkt auf dem HSL-Farbkreis, um Farbton- und Sättigungsbeziehungen in Echtzeit zu erkunden."
+      },
+      {
+        "title": "7 Harmonieregeln",
+        "desc": "Komplementär, Analog, Triade, Split-Komplementär, Tetradisch, Quadratisch, Monochromatisch."
+      },
+      {
+        "title": "Sofort kopieren",
+        "desc": "Klicke auf ein beliebiges Farbfeld, um den Hex-Code zu kopieren. Teile Paletten und verwende sie direkt in deinem Code."
+      },
+      {
+        "title": "Kontrastprüfer",
+        "desc": "Prüfe das WCAG-AA-/AAA-Barrierefreiheitsverhältnis zwischen zwei beliebigen Farben deiner Palette."
+      },
+      {
+        "title": "HSL- & RGB-Werte",
+        "desc": "Jede Farbe zeigt ihre vollständigen HSL- und RGB-Werte — kein manuelles Umrechnen nötig."
+      },
+      {
+        "title": "Alle Paletten auf einen Blick",
+        "desc": "Vergleiche alle 7 Harmonieschemata für deine Basisfarbe in einem übersichtlichen Raster am unteren Rand des Tools."
+      }
+    ],
+    "faqTitle": "Häufig gestellte Fragen",
+    "faqSub": "Alles Wissenswerte über colorPaletteFinder",
+    "faq": [
+      {
+        "q": "Was ist eine Farbpalette?",
+        "a": "Eine Farbpalette ist eine zusammengestellte Auswahl von Farben, die harmonisch zusammenwirken sollen. Designer nutzen Paletten, um visuelle Konsistenz in Oberflächen, im Branding und in Grafiken zu schaffen."
+      },
+      {
+        "q": "Wie funktioniert Farbharmonie?",
+        "a": "Farbharmonie beruht auf den Beziehungen zwischen Farbtönen auf dem Farbkreis. Regeln wie Komplementär, Analog und Triade sorgen dafür, dass Kombinationen optisch ansprechend wirken."
+      },
+      {
+        "q": "Was ist der Unterschied zwischen komplementär und split-komplementär?",
+        "a": "Komplementär nutzt zwei gegenüberliegende Farbtöne für maximalen Kontrast. Split-Komplementär nutzt die Basisfarbe plus zwei Farben ±30° von der direkten Komplementärfarbe — weicher und weniger hart."
+      },
+      {
+        "q": "Wie verwende ich colorPaletteFinder?",
+        "a": "Öffne das Tool, wähle deine Primärfarbe über den Farbkreis oder die Hex-Eingabe und entscheide dich dann für eine Harmonieregel. Das Tool erstellt sofort eine passende Palette, die du mit einem Klick kopieren kannst."
+      },
+      {
+        "q": "Was ist WCAG-Kontrast und warum ist er wichtig?",
+        "a": "WCAG legt Kontrastverhältnisse fest, damit Text für alle Nutzer lesbar ist — auch für Menschen mit Sehbeeinträchtigungen. Ein Verhältnis von 4.5:1 erfüllt den AA-Standard, 7:1 erfüllt AAA."
+      },
+      {
+        "q": "Kann ich die Hex-Codes aus der erzeugten Palette kopieren?",
+        "a": "Ja — fahre mit der Maus über ein beliebiges Farbfeld im Palettenstreifen und klicke darauf, um den Hex-Code sofort in die Zwischenablage zu kopieren."
+      }
+    ]
+  }
+}

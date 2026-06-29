@@ -1,7 +1,9 @@
-import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function Footer() {
+    const t = useTranslations("footer");
     return (
         <footer className="bg-white border-t border-gray-100 pt-12 pb-8 px-6 sm:px-10 lg:px-16">
             <div className="max-w-6xl mx-auto flex flex-col gap-10">
@@ -16,33 +18,33 @@ export default function Footer() {
                             <span className="tracking-tight font-light">colorPalette<strong className="font-extrabold text-blue-600">Finder</strong></span>
                         </Link>
                         <p className="text-gray-500 text-sm leading-relaxed">
-                            colorPaletteFinder provides educational color theory tools and palette generators for designers and developers. All calculations are intended for guidance only.
+                            {t("tagline")}
                         </p>
                     </div>
 
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 w-full">
                         {/* Quick Links */}
                         <div className="flex flex-col gap-3">
-                            <span className="font-semibold text-gray-900 mb-1">Company</span>
-                            <Link href="/" className="text-gray-500 hover:text-blue-600 transition-colors text-sm w-fit">Home</Link>
-                            <Link href="/about" className="text-gray-500 hover:text-blue-600 transition-colors text-sm w-fit">About</Link>
-                            <Link href="/blog" className="text-gray-500 hover:text-blue-600 transition-colors text-sm w-fit">Blog</Link>
-                            <Link href="/interior-color-palettes" className="text-gray-500 hover:text-blue-600 transition-colors text-sm w-fit">Interior Colors</Link>
-                            <Link href="/contact" className="text-gray-500 hover:text-blue-600 transition-colors text-sm w-fit">Contact</Link>
+                            <span className="font-semibold text-gray-900 mb-1">{t("company")}</span>
+                            <Link href="/" className="text-gray-500 hover:text-blue-600 transition-colors text-sm w-fit">{t("home")}</Link>
+                            <Link href="/about" className="text-gray-500 hover:text-blue-600 transition-colors text-sm w-fit">{t("about")}</Link>
+                            <Link href="/blog" className="text-gray-500 hover:text-blue-600 transition-colors text-sm w-fit">{t("blog")}</Link>
+                            <Link href="/interior-color-palettes" className="text-gray-500 hover:text-blue-600 transition-colors text-sm w-fit">{t("interiorColors")}</Link>
+                            <Link href="/contact" className="text-gray-500 hover:text-blue-600 transition-colors text-sm w-fit">{t("contact")}</Link>
                         </div>
 
                         {/* Legal Links */}
                         <div className="flex flex-col gap-3">
-                            <span className="font-semibold text-gray-900 mb-1">Legal</span>
-                            <Link href="/privacy-policy" className="text-gray-500 hover:text-blue-600 transition-colors text-sm w-fit">Privacy Policy</Link>
-                            <Link href="/terms-of-service" className="text-gray-500 hover:text-blue-600 transition-colors text-sm w-fit">Terms of Service</Link>
+                            <span className="font-semibold text-gray-900 mb-1">{t("legal")}</span>
+                            <Link href="/privacy-policy" className="text-gray-500 hover:text-blue-600 transition-colors text-sm w-fit">{t("privacy")}</Link>
+                            <Link href="/terms-of-service" className="text-gray-500 hover:text-blue-600 transition-colors text-sm w-fit">{t("terms")}</Link>
                         </div>
 
                         {/* Primary Focus */}
                         <div className="flex flex-col gap-3 col-span-2 sm:col-span-1 border-t border-gray-100 pt-6 sm:border-0 sm:pt-0">
-                            <span className="font-semibold text-gray-900 mb-1">Get Started</span>
+                            <span className="font-semibold text-gray-900 mb-1">{t("getStarted")}</span>
                             <Link href="/how-it-works" className="font-bold text-blue-600 hover:text-blue-700 transition-colors text-base flex items-center gap-1 group w-fit">
-                                How It Works <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                                {t("howItWorks")} <span className="group-hover:translate-x-1 transition-transform">&rarr;</span>
                             </Link>
                         </div>
                     </div>
@@ -51,7 +53,7 @@ export default function Footer() {
                 {/* Bottom Section */}
                 <div className="flex flex-col-reverse md:flex-row justify-between items-center md:items-end gap-6 pt-8 border-t border-gray-100">
                     <span className="text-gray-400 text-sm">
-                        &copy; 2026 colorPaletteFinder. All rights reserved.
+                        {t("rights")}
                     </span>
 
                     <div className="flex items-center gap-5 justify-center md:justify-end">

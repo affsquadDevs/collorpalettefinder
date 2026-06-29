@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { BLOG_POSTS, readingTimeLabel, formatDate } from "../lib/blog";
+import { Link } from "@/i18n/navigation";
+import { BLOG_POSTS, readingTimeLabel, formatDate } from "@/app/lib/blog";
 
 const SITE_URL = "https://colorpalettefinder.com";
 

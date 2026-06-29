@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "siteTitle": "colorPaletteFinder — Gerador de Paletas de Cores Gratuito",
+    "siteDescription": "Crie paletas de cores harmoniosas com base na teoria das cores — complementares, análogas, tríades e muito mais. Ferramenta gratuita para designers e programadores."
+  },
+  "nav": {
+    "home": "Início",
+    "howItWorks": "Como Funciona",
+    "about": "Sobre",
+    "contact": "Contacto",
+    "blog": "Blogue",
+    "interiorColors": "Cores de Interiores",
+    "openTool": "Abrir Ferramenta",
+    "menu": "Alternar menu"
+  },
+  "footer": {
+    "tagline": "O colorPaletteFinder disponibiliza ferramentas educativas de teoria das cores e geradores de paletas para designers e programadores. Todos os cálculos servem apenas como orientação.",
+    "company": "Empresa",
+    "legal": "Aspetos Legais",
+    "getStarted": "Começar",
+    "home": "Início",
+    "about": "Sobre",
+    "blog": "Blogue",
+    "interiorColors": "Cores de Interiores",
+    "contact": "Contacto",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "howItWorks": "Como Funciona",
+    "rights": "© 2026 colorPaletteFinder. Todos os direitos reservados."
+  },
+  "language": {
+    "label": "Idioma"
+  },
+  "home": {
+    "metaTitle": "Gerador de Paletas de Cores Gratuito — Esquemas de Cores Hex Online",
+    "metaDescription": "Gerador de paletas de cores gratuito baseado na teoria das cores. Crie esquemas complementares, análogos e em tríade com códigos hex num instante — sem registo. Comece já.",
+    "ogDescription": "Gerador de paletas de cores gratuito baseado na teoria das cores. Crie esquemas de cores complementares, análogos e em tríade com códigos hex num instante — sem registo.",
+    "twitterDescription": "Gerador de paletas de cores gratuito baseado na teoria das cores. Esquemas hex complementares, análogos e em tríade, num instante. Sem registo.",
+    "heroLine1": "Encontre a Sua",
+    "heroLine2": "Paleta de Cores Perfeita",
+    "heroSub": "Gere paletas harmoniosas num instante, com regras comprovadas da teoria das cores. Feito para designers, programadores e criativos.",
+    "ctaOpen": "Abrir o Gerador",
+    "ctaHow": "Como funciona",
+    "openWheelAria": "Abrir o gerador de paletas de cores",
+    "featuresTitle": "Tudo o Que Precisa",
+    "featuresSub": "Ferramentas de cor poderosas reunidas numa interface limpa e interativa.",
+    "features": [
+      {
+        "title": "Roda de Cores Interativa",
+        "desc": "Arraste os pontos diretamente na roda HSL para explorar as relações de matiz e saturação em tempo real."
+      },
+      {
+        "title": "7 Regras de Harmonia",
+        "desc": "Complementar, Análoga, Tríade, Complementar Dividida, Tétrade, Quadrada e Monocromática."
+      },
+      {
+        "title": "Cópia Instantânea",
+        "desc": "Clique em qualquer amostra para copiar o código hex. Partilhe paletas e use-as diretamente no seu código."
+      },
+      {
+        "title": "Verificador de Contraste",
+        "desc": "Verifique os rácios de acessibilidade WCAG AA / AAA entre quaisquer duas cores da sua paleta."
+      },
+      {
+        "title": "Valores HSL e RGB",
+        "desc": "Cada cor mostra a sua decomposição completa em HSL e RGB — sem necessidade de conversão manual."
+      },
+      {
+        "title": "Todas as Paletas de Uma Vez",
+        "desc": "Compare os 7 esquemas de harmonia para a sua cor base numa grelha de leitura rápida, no fundo da ferramenta."
+      }
+    ],
+    "faqTitle": "Perguntas Frequentes",
+    "faqSub": "Tudo o que precisa de saber sobre o colorPaletteFinder",
+    "faq": [
+      {
+        "q": "O que é uma paleta de cores?",
+        "a": "Uma paleta de cores é um conjunto selecionado de cores pensado para funcionar em harmonia. Os designers usam paletas para criar consistência visual em interfaces, identidade de marca e trabalhos artísticos."
+      },
+      {
+        "q": "Como funciona a harmonia das cores?",
+        "a": "A harmonia das cores assenta nas relações entre os matizes na roda de cores. Regras como a complementar, a análoga e a tríade garantem combinações visualmente agradáveis."
+      },
+      {
+        "q": "Qual é a diferença entre complementar e complementar dividida?",
+        "a": "A complementar usa dois matizes opostos para um contraste máximo. A complementar dividida usa a cor base mais duas cores a ±30° da complementar direta — mais suave e menos agressiva."
+      },
+      {
+        "q": "Como utilizo o colorPaletteFinder?",
+        "a": "Abra a ferramenta, escolha a sua cor principal através da roda de cores ou inserindo um código hex e, depois, selecione uma regra de harmonia. A ferramenta gera de imediato uma paleta correspondente que pode copiar com um clique."
+      },
+      {
+        "q": "O que é o contraste WCAG e por que razão é importante?",
+        "a": "As WCAG definem rácios de contraste para garantir que o texto é legível para todos os utilizadores, incluindo pessoas com deficiência visual. Um rácio de 4.5:1 cumpre o nível AA; 7:1 cumpre o nível AAA."
+      },
+      {
+        "q": "Posso copiar os códigos hex da paleta gerada?",
+        "a": "Sim — passe o cursor sobre qualquer amostra de cor na faixa da paleta e clique para copiar de imediato o respetivo código hex para a área de transferência."
+      }
+    ]
+  }
+}

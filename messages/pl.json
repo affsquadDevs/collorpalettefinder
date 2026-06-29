@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "siteTitle": "colorPaletteFinder — Darmowy generator palet kolorów",
+    "siteDescription": "Twórz harmonijne palety kolorów w oparciu o teorię barw — dopełniające, analogiczne, triadyczne i więcej. Darmowe narzędzie dla projektantów i programistów."
+  },
+  "nav": {
+    "home": "Strona główna",
+    "howItWorks": "Jak to działa",
+    "about": "O nas",
+    "contact": "Kontakt",
+    "blog": "Blog",
+    "interiorColors": "Kolory wnętrz",
+    "openTool": "Otwórz narzędzie",
+    "menu": "Przełącz menu"
+  },
+  "footer": {
+    "tagline": "colorPaletteFinder udostępnia edukacyjne narzędzia z zakresu teorii barw oraz generatory palet dla projektantów i programistów. Wszystkie obliczenia mają charakter wyłącznie poglądowy.",
+    "company": "Firma",
+    "legal": "Informacje prawne",
+    "getStarted": "Zacznij teraz",
+    "home": "Strona główna",
+    "about": "O nas",
+    "blog": "Blog",
+    "interiorColors": "Kolory wnętrz",
+    "contact": "Kontakt",
+    "privacy": "Polityka prywatności",
+    "terms": "Regulamin",
+    "howItWorks": "Jak to działa",
+    "rights": "© 2026 colorPaletteFinder. Wszelkie prawa zastrzeżone."
+  },
+  "language": {
+    "label": "Język"
+  },
+  "home": {
+    "metaTitle": "Darmowy generator palet kolorów — schematy kolorów hex online",
+    "metaDescription": "Darmowy generator palet kolorów oparty na teorii barw. Twórz schematy dopełniające, analogiczne i triadyczne z kodami hex w mgnieniu oka — bez rejestracji. Zacznij teraz.",
+    "ogDescription": "Darmowy generator palet kolorów oparty na teorii barw. Twórz dopełniające, analogiczne i triadyczne schematy kolorów z kodami hex w mgnieniu oka — bez rejestracji.",
+    "twitterDescription": "Darmowy generator palet kolorów oparty na teorii barw. Schematy hex: dopełniające, analogiczne i triadyczne — od razu. Bez rejestracji.",
+    "heroLine1": "Znajdź swoją idealną",
+    "heroLine2": "Paletę kolorów",
+    "heroSub": "Twórz harmonijne palety w mgnieniu oka, korzystając ze sprawdzonych zasad teorii barw. Stworzone dla projektantów, programistów i twórców.",
+    "ctaOpen": "Otwórz generator",
+    "ctaHow": "Jak to działa",
+    "openWheelAria": "Otwórz generator palet kolorów",
+    "featuresTitle": "Wszystko, czego potrzebujesz",
+    "featuresSub": "Zaawansowane narzędzia do pracy z kolorem w jednym przejrzystym, interaktywnym interfejsie.",
+    "features": [
+      {
+        "title": "Interaktywne koło barw",
+        "desc": "Przeciągaj punkty bezpośrednio na kole HSL, aby na bieżąco odkrywać zależności między odcieniem a nasyceniem."
+      },
+      {
+        "title": "7 zasad harmonii",
+        "desc": "Dopełniająca, analogiczna, triadyczna, dopełniająca dzielona, tetradyczna, kwadratowa, monochromatyczna."
+      },
+      {
+        "title": "Błyskawiczne kopiowanie",
+        "desc": "Kliknij dowolną próbkę, aby skopiować kod hex. Udostępniaj palety i używaj ich bezpośrednio w swoim kodzie."
+      },
+      {
+        "title": "Sprawdzanie kontrastu",
+        "desc": "Sprawdź współczynniki dostępności WCAG AA / AAA między dowolnymi dwoma kolorami z palety."
+      },
+      {
+        "title": "Wartości HSL i RGB",
+        "desc": "Przy każdym kolorze widać pełny rozkład HSL i RGB — bez ręcznego przeliczania."
+      },
+      {
+        "title": "Wszystkie palety naraz",
+        "desc": "Porównaj wszystkie 7 schematów harmonii dla swojego koloru bazowego w czytelnej siatce na dole narzędzia."
+      }
+    ],
+    "faqTitle": "Najczęściej zadawane pytania",
+    "faqSub": "Wszystko, co warto wiedzieć o colorPaletteFinder",
+    "faq": [
+      {
+        "q": "Czym jest paleta kolorów?",
+        "a": "Paleta kolorów to starannie dobrany zestaw barw, które mają ze sobą harmonijnie współgrać. Projektanci wykorzystują palety, aby zachować spójność wizualną w interfejsach, identyfikacji wizualnej i grafice."
+      },
+      {
+        "q": "Jak działa harmonia kolorów?",
+        "a": "Harmonia kolorów opiera się na zależnościach między odcieniami na kole barw. Zasady takie jak dopełniająca, analogiczna czy triadyczna sprawiają, że zestawienia są przyjemne dla oka."
+      },
+      {
+        "q": "Czym różni się harmonia dopełniająca od dopełniającej dzielonej?",
+        "a": "Harmonia dopełniająca wykorzystuje dwa przeciwległe odcienie dla maksymalnego kontrastu. Dopełniająca dzielona łączy kolor bazowy z dwiema barwami oddalonymi o ±30° od bezpośredniego dopełnienia — daje łagodniejszy, mniej ostry efekt."
+      },
+      {
+        "q": "Jak korzystać z colorPaletteFinder?",
+        "a": "Otwórz narzędzie, wybierz kolor główny za pomocą koła barw lub wpisując kod hex, a następnie wskaż zasadę harmonii. Narzędzie natychmiast wygeneruje dopasowaną paletę, którą skopiujesz jednym kliknięciem."
+      },
+      {
+        "q": "Czym jest kontrast WCAG i dlaczego ma znaczenie?",
+        "a": "WCAG określa współczynniki kontrastu, które gwarantują, że tekst jest czytelny dla wszystkich użytkowników, w tym osób z wadami wzroku. Współczynnik 4,5:1 spełnia poziom AA, a 7:1 — poziom AAA."
+      },
+      {
+        "q": "Czy mogę skopiować kody hex z wygenerowanej palety?",
+        "a": "Tak — najedź na dowolną próbkę koloru na pasku palety i kliknij, aby natychmiast skopiować jej kod hex do schowka."
+      }
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "siteTitle": "colorPaletteFinder — Free Color Palette Generator",
+    "siteDescription": "Generate harmonious color palettes using color theory — complementary, analogous, triadic, and more. Free tool for designers and developers."
+  },
+  "nav": {
+    "home": "Home",
+    "howItWorks": "How It Works",
+    "about": "About",
+    "contact": "Contact",
+    "blog": "Blog",
+    "interiorColors": "Interior Colors",
+    "openTool": "Open Tool",
+    "menu": "Toggle menu"
+  },
+  "footer": {
+    "tagline": "colorPaletteFinder provides educational color theory tools and palette generators for designers and developers. All calculations are intended for guidance only.",
+    "company": "Company",
+    "legal": "Legal",
+    "getStarted": "Get Started",
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "interiorColors": "Interior Colors",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "howItWorks": "How It Works",
+    "rights": "© 2026 colorPaletteFinder. All rights reserved."
+  },
+  "language": {
+    "label": "Language"
+  },
+  "home": {
+    "metaTitle": "Free Color Palette Generator — Hex Color Schemes Online",
+    "metaDescription": "Free color palette generator built on color theory. Create complementary, analogous & triadic schemes with hex codes instantly — no signup. Start now.",
+    "ogDescription": "Free color palette generator built on color theory. Create complementary, analogous & triadic color schemes with hex codes instantly — no signup.",
+    "twitterDescription": "Free color palette generator built on color theory. Complementary, analogous & triadic hex schemes, instantly. No signup.",
+    "heroLine1": "Find Your Perfect",
+    "heroLine2": "Color Palette",
+    "heroSub": "Instantly generate harmonious palettes using proven color theory rules. Built for designers, developers, and creatives.",
+    "ctaOpen": "Open the Generator",
+    "ctaHow": "How it works",
+    "openWheelAria": "Open the color palette generator",
+    "featuresTitle": "Everything You Need",
+    "featuresSub": "Powerful color tools packed into one clean, interactive interface.",
+    "features": [
+      {
+        "title": "Interactive Color Wheel",
+        "desc": "Drag dots directly on the HSL wheel to explore hue and saturation relationships in real time."
+      },
+      {
+        "title": "7 Harmony Rules",
+        "desc": "Complementary, Analogous, Triadic, Split-Complementary, Tetradic, Square, Monochromatic."
+      },
+      {
+        "title": "Instant Copy",
+        "desc": "Click any swatch to copy the hex code. Share palettes and use them directly in your code."
+      },
+      {
+        "title": "Contrast Checker",
+        "desc": "Check WCAG AA / AAA accessibility ratios between any two colors in your palette."
+      },
+      {
+        "title": "HSL & RGB Values",
+        "desc": "Every color shows its full HSL and RGB breakdown — no manual conversion needed."
+      },
+      {
+        "title": "All Palettes at Once",
+        "desc": "Compare all 7 harmony schemes for your base color in a scannable grid at the bottom of the tool."
+      }
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "faqSub": "Everything you need to know about colorPaletteFinder",
+    "faq": [
+      {
+        "q": "What is a color palette?",
+        "a": "A color palette is a curated set of colors intended to work together harmoniously. Designers use palettes to create visual consistency in interfaces, branding, and artwork."
+      },
+      {
+        "q": "How does color harmony work?",
+        "a": "Color harmony is based on the relationships between hues on the color wheel. Rules like complementary, analogous, and triadic ensure combinations are visually pleasing."
+      },
+      {
+        "q": "What is the difference between complementary and split-complementary?",
+        "a": "Complementary uses two opposite hues for maximum contrast. Split-complementary uses the base color plus two colors ±30° from the direct complement — softer and less harsh."
+      },
+      {
+        "q": "How do I use colorPaletteFinder?",
+        "a": "Open the tool, pick your primary color using the color wheel or hex input, then choose a harmony rule. The tool instantly generates a matching palette you can copy with one click."
+      },
+      {
+        "q": "What is WCAG contrast and why does it matter?",
+        "a": "WCAG defines contrast ratios to ensure text is readable for all users, including those with visual impairments. A ratio of 4.5:1 meets AA standard; 7:1 meets AAA."
+      },
+      {
+        "q": "Can I copy the hex codes from the generated palette?",
+        "a": "Yes — hover over any color swatch in the palette strip and click to instantly copy its hex code to your clipboard."
+      }
+    ]
+  }
+}

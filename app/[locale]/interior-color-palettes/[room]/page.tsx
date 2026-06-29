@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
-import { Markdown } from "../../components/Markdown";
-import PaletteCard from "../../components/PaletteCard";
-import { INTERIOR_PALETTES } from "../../lib/interiorPalettes";
-import { INTERIOR_ROOM_GUIDES, getRoomGuide } from "../../lib/interiorRooms";
+import { Markdown } from "@/app/components/Markdown";
+import PaletteCard from "@/app/components/PaletteCard";
+import { INTERIOR_PALETTES } from "@/app/lib/interiorPalettes";
+import { INTERIOR_ROOM_GUIDES, getRoomGuide } from "@/app/lib/interiorRooms";
 
 const SITE_URL = "https://colorpalettefinder.com";
 

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { Markdown } from "../components/Markdown";
-import PaletteCard from "../components/PaletteCard";
-import { INTERIOR_PALETTES, INTERIOR_ROOMS } from "../lib/interiorPalettes";
-import { INTERIOR_HUB } from "../lib/interiorContent";
-import { INTERIOR_ROOM_GUIDES } from "../lib/interiorRooms";
+import { Link } from "@/i18n/navigation";
+import { Markdown } from "@/app/components/Markdown";
+import PaletteCard from "@/app/components/PaletteCard";
+import { INTERIOR_PALETTES, INTERIOR_ROOMS } from "@/app/lib/interiorPalettes";
+import { INTERIOR_HUB } from "@/app/lib/interiorContent";
+import { INTERIOR_ROOM_GUIDES } from "@/app/lib/interiorRooms";
 
 const SITE_URL = "https://colorpalettefinder.com";
 const PAGE_URL = `${SITE_URL}/interior-color-palettes`;

@@ -1,8 +1,8 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
-import { BLOG_POSTS, getPost, readingTimeLabel, formatDate } from "../../lib/blog";
+import { BLOG_POSTS, getPost, readingTimeLabel, formatDate } from "@/app/lib/blog";
 
 const SITE_URL = "https://colorpalettefinder.com";
 const AUTHOR_NAME = "colorPaletteFinder Team";

@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useRef } from "react";
 import dynamic from "next/dynamic";
-import styles from "../page.module.css";
+import styles from "@/app/page.module.css";
 import {
     getTextColor,
     hexToHsl,
@@ -11,12 +11,12 @@ import {
     contrastRatio,
     type PaletteRule,
     CURATED_PALETTES,
-} from "../lib/colorUtils";
-import { copyToClipboard } from "../lib/clipboard";
-import { makeDots, HARMONY_OFFSETS } from "../components/ColorWheel";
-import type { WheelDot } from "../components/ColorWheel";
+} from "@/app/lib/colorUtils";
+import { copyToClipboard } from "@/app/lib/clipboard";
+import { makeDots, HARMONY_OFFSETS } from "@/app/components/ColorWheel";
+import type { WheelDot } from "@/app/components/ColorWheel";
 
-const ColorWheel = dynamic(() => import("../components/ColorWheel"), { ssr: false });
+const ColorWheel = dynamic(() => import("@/app/components/ColorWheel"), { ssr: false });
 
 const RULES: { rule: PaletteRule; label: string }[] = [
     { rule: "analogous", label: "Analogous" },
