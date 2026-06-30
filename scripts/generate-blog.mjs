@@ -40,8 +40,45 @@ const NO_WRITE = args.includes("--no-write");
 const BLOG_TS = path.join(ROOT, "app/lib/blog.ts");
 const localeFile = (l) => path.join(ROOT, `content/blog/${l}.json`);
 
-// ─── Anthropic Messages API ───────────────────────────────────────────────────
-async function claude(prompt, maxTokens = 16000) {
+// JSON Schema for a single post object (shared by generation + translation).
+const POST_SCHEMA = {
+    type: "object",
+    properties: {
+        slug: { type: "string" },
+        title: { type: "string" },
+        description: { type: "string" },
+        metaTitle: { type: "string" },
+        metaDescription: { type: "string" },
+        keywords: { type: "array", items: { type: "string" } },
+        category: { type: "string" },
+        faq: {
+            type: "array",
+            items: {
+                type: "object",
+                properties: { q: { type: "string" }, a: { type: "string" } },
+                required: ["q", "a"],
+            },
+        },
+        body: { type: "string" },
+    },
+    required: ["slug", "title", "description", "metaTitle", "metaDescription", "keywords", "category", "faq", "body"],
+};
+
+const POSTS_TOOL = {
+    name: "submit_posts",
+    description: "Submit the finished blog post objects.",
+    input_schema: {
+        type: "object",
+        properties: { posts: { type: "array", items: POST_SCHEMA } },
+        required: ["posts"],
+    },
+};
+
+// ─── Anthropic Messages API (tool use → structured, valid JSON) ───────────────
+// Forces the model to call submit_posts; the API returns input already parsed as
+// an object, so there is no manual JSON.parse (and no "bad control character"
+// failures from raw newlines in the body).
+async function claudePosts(prompt, maxTokens = 16000) {
     if (!API_KEY) throw new Error("ANTHROPIC_API_KEY is not set");
     const res = await fetch("https://api.anthropic.com/v1/messages", {
         method: "POST",
@@ -53,6 +90,8 @@ async function claude(prompt, maxTokens = 16000) {
         body: JSON.stringify({
             model: MODEL,
             max_tokens: maxTokens,
+            tools: [POSTS_TOOL],
+            tool_choice: { type: "tool", name: "submit_posts" },
             messages: [{ role: "user", content: prompt }],
         }),
     });
@@ -61,22 +100,11 @@ async function claude(prompt, maxTokens = 16000) {
         throw new Error(`Anthropic API ${res.status}: ${text.slice(0, 500)}`);
     }
     const data = await res.json();
-    return data.content.map((b) => (b.type === "text" ? b.text : "")).join("");
-}
-
-// Parse a JSON value out of a model response (tolerates ```json fences / preamble).
-function parseJson(raw) {
-    let s = raw.trim();
-    const fence = s.match(/```(?:json)?\s*([\s\S]*?)```/);
-    if (fence) s = fence[1].trim();
-    try {
-        return JSON.parse(s);
-    } catch {
-        const start = s.search(/[[{]/);
-        const end = Math.max(s.lastIndexOf("]"), s.lastIndexOf("}"));
-        if (start >= 0 && end > start) return JSON.parse(s.slice(start, end + 1));
-        throw new Error("Could not parse JSON from model response");
+    const tool = (data.content || []).find((b) => b.type === "tool_use");
+    if (!tool || !Array.isArray(tool.input?.posts)) {
+        throw new Error(`Model did not return posts (stop_reason: ${data.stop_reason})`);
     }
+    return tool.input.posts;
 }
 
 // ─── Read the English source of truth out of blog.ts ──────────────────────────
@@ -111,7 +139,7 @@ STRICT REQUIREMENTS for each new post object:
 
 Pick fresh, non-overlapping topics that are NOT already covered by the existing slugs. Each post must be on a distinct topic.
 
-Respond with ONLY a JSON array of ${COUNT} post object(s) and nothing else.`;
+Call the submit_posts tool with exactly ${COUNT} post object(s).`;
 }
 
 function translationPrompt(localeName, posts) {
@@ -127,7 +155,7 @@ RULES:
 English posts:
 ${JSON.stringify(posts, null, 2)}
 
-Respond with ONLY a JSON array of ${posts.length} translated object(s) and nothing else.`;
+Call the submit_posts tool with exactly ${posts.length} translated post object(s).`;
 }
 
 // ─── Serialize an English post as a blog.ts array element (4-space indented) ───
@@ -177,7 +205,7 @@ async function main() {
     const samples = english.slice(-2).map((p) => ({ ...p, faq: p.faq.slice(0, 2) }));
 
     console.log(`→ Generating ${COUNT} new English post(s) with ${MODEL}…`);
-    const generated = parseJson(await claude(generationPrompt(samples, existingSlugs, categories)));
+    const generated = await claudePosts(generationPrompt(samples, existingSlugs, categories));
 
     const today = new Date().toISOString().slice(0, 10);
     const seen = new Set(existingSlugs);
@@ -195,8 +223,7 @@ async function main() {
     const translations = {}; // locale -> array (slug-aligned to newPosts)
     for (const loc of LOCALES) {
         console.log(`→ Translating to ${LOCALE_NAMES[loc]} (${loc})…`);
-        const out = parseJson(await claude(translationPrompt(LOCALE_NAMES[loc], newPosts)));
-        const arr = Array.isArray(out) ? out : [out];
+        const arr = await claudePosts(translationPrompt(LOCALE_NAMES[loc], newPosts));
         const byOrder = newPosts.map((en, i) => {
             const tr = arr.find((t) => t && t.slug === en.slug) || arr[i] || {};
             return toLocaleEntry({ ...en, ...tr, slug: en.slug }); // force English slug

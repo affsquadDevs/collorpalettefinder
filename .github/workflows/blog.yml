@@ -1,13 +1,17 @@
 name: Daily Blog
 
-# Generates 2 brand-new blog posts every day with the Claude API (matching the
-# existing posts' style + on-page SEO), writes them into app/lib/blog.ts (English)
-# and every content/blog/<locale>.json, then commits to main. That push triggers
-# the Vercel production deploy and the IndexNow ping (see .github/workflows/indexnow.yml).
+# Generates 2 brand-new blog posts with the Claude API (matching the existing
+# posts' style + on-page SEO), writes them into app/lib/blog.ts (English) and
+# every content/blog/<locale>.json, then commits to main. That push triggers the
+# Vercel production deploy and the IndexNow ping (see indexnow.yml).
+#
+# The cron fires daily, but scripts/should-run-blog.mjs gates it down to 2 random
+# days per ISO week, so posts are generated only ~twice a week (4 posts/week).
+# A manual "Run workflow" always generates, regardless of the day.
 
 on:
   schedule:
-    - cron: "0 6 * * *" # daily at 06:00 UTC
+    - cron: "0 6 * * *" # daily at 06:00 UTC — gated to 2 random days/week below
   workflow_dispatch:
     inputs:
       count:
@@ -32,7 +36,14 @@ jobs:
         with:
           node-version: 20
 
+      # On scheduled runs, only proceed on this week's 2 random days. Manual runs
+      # skip the gate (always generate).
+      - name: Weekly run gate
+        id: gate
+        run: echo "run=$(node scripts/should-run-blog.mjs)" >> "$GITHUB_OUTPUT"
+
       - name: Generate posts
+        if: github.event_name == 'workflow_dispatch' || steps.gate.outputs.run == 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_MODEL: claude-opus-4-8
@@ -40,6 +51,7 @@ jobs:
 
       - name: Commit & push
         id: commit
+        if: github.event_name == 'workflow_dispatch' || steps.gate.outputs.run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
