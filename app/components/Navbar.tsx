@@ -83,7 +83,7 @@ export default function Navbar() {
                             </li>
                         ))}
                         <li className="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between">
-                            <LanguageSwitcher />
+                            <LanguageSwitcher align="left" />
                             <Link
                                 href="/color-palette-generator"
                                 onClick={() => setIsMobileMenuOpen(false)}
