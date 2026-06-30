@@ -1,0 +1,64 @@
+name: Daily Blog
+
+# Generates 2 brand-new blog posts every day with the Claude API (matching the
+# existing posts' style + on-page SEO), writes them into app/lib/blog.ts (English)
+# and every content/blog/<locale>.json, then commits to main. That push triggers
+# the Vercel production deploy and the IndexNow ping (see .github/workflows/indexnow.yml).
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # daily at 06:00 UTC
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many new posts to generate"
+        type: string
+        default: "2"
+
+concurrency:
+  group: daily-blog
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate posts
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: claude-opus-4-8
+        run: node scripts/generate-blog.mjs --count "${{ inputs.count || '2' }}"
+
+      - name: Commit & push
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "No changes to commit."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          DATE=$(date -u +%Y-%m-%d)
+          git add app/lib/blog.ts content/blog/
+          git commit -m "blog: add daily posts ($DATE)"
+          git push
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      # A push made with GITHUB_TOKEN does NOT trigger indexnow.yml (on: push),
+      # so submit the new URLs here instead. Vercel deploys this push on its own;
+      # wait for it to go live, then ping IndexNow with every sitemap URL.
+      - name: Ping IndexNow
+        if: steps.commit.outputs.pushed == 'true'
+        run: |
+          sleep 90
+          node scripts/indexnow.mjs --all
