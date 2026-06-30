@@ -61,16 +61,18 @@ jobs:
             exit 0
           fi
           DATE=$(date -u +%Y-%m-%d)
+          echo "before=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
           git add app/lib/blog.ts content/blog/
           git commit -m "blog: add daily posts ($DATE)"
           git push
           echo "pushed=true" >> "$GITHUB_OUTPUT"
 
       # A push made with GITHUB_TOKEN does NOT trigger indexnow.yml (on: push),
-      # so submit the new URLs here instead. Vercel deploys this push on its own;
-      # wait for it to go live, then ping IndexNow with every sitemap URL.
+      # so submit here instead. Vercel deploys this push on its own; wait for it
+      # to go live, then ping IndexNow with ONLY the URLs this commit affected
+      # (the blog section) — not the whole site.
       - name: Ping IndexNow
         if: steps.commit.outputs.pushed == 'true'
         run: |
           sleep 90
-          node scripts/indexnow.mjs --all
+          node scripts/indexnow.mjs --since "${{ steps.commit.outputs.before }}" --to HEAD
