@@ -1,0 +1,47 @@
+name: IndexNow
+
+# Pings IndexNow (Bing + partner engines) on every push to main — which is what
+# triggers the Vercel production deploy. Submits ONLY the URLs affected by that
+# deploy's diff (see scripts/indexnow.mjs). Use the manual trigger with mode=all
+# for the first run or a full re-submit.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "all = submit every URL · changed = only the diff since last push"
+        type: choice
+        options: [all, changed]
+        default: all
+
+concurrency:
+  group: indexnow-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history so the commit-range diff resolves
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Give the Vercel production deploy (triggered by the same push) time to go
+      # live before we ping. IndexNow crawling is async, so this is just hygiene.
+      - name: Wait for deploy
+        if: github.event_name == 'push'
+        run: sleep 75
+
+      - name: Submit URLs to IndexNow
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.mode }}" = "all" ]; then
+            node scripts/indexnow.mjs --all
+          else
+            node scripts/indexnow.mjs --since "${{ github.event.before }}" --to "${{ github.sha }}"
+          fi
