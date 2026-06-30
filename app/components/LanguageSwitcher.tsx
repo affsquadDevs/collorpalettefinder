@@ -5,7 +5,7 @@ import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing, LOCALE_LABELS } from "@/i18n/routing";
 
-export default function LanguageSwitcher({ className = "" }: { className?: string }) {
+export default function LanguageSwitcher({ className = "", align = "right" }: { className?: string; align?: "left" | "right" }) {
     const locale = useLocale();
     const pathname = usePathname();
     const router = useRouter();
@@ -50,7 +50,7 @@ export default function LanguageSwitcher({ className = "" }: { className?: strin
             {open && (
                 <ul
                     role="listbox"
-                    className="absolute right-0 top-[calc(100%+6px)] z-[300] min-w-[160px] bg-white border border-gray-200 rounded-xl shadow-lg py-1.5"
+                    className={`absolute ${align === "left" ? "left-0" : "right-0"} top-[calc(100%+6px)] z-[300] min-w-[160px] bg-white border border-gray-200 rounded-xl shadow-lg py-1.5`}
                 >
                     {routing.locales.map((l) => (
                         <li key={l}>
